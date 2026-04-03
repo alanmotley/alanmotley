@@ -312,7 +312,7 @@
       top: -1px;
       width: min(180px, 32%);
       height: 1px;
-      background: linear-gradient(90deg, var(--slate), rgba(51, 75, 110, 0));
+      background: linear-gradient(90deg, var(--oxblood), rgba(122, 48, 48, 0));
     }
     .hero-quote p {
       margin: 0;
@@ -440,6 +440,7 @@
       margin: 0 0 8px;
       font-size: 1rem;
       font-family: Sora, Inter, sans-serif;
+      color: var(--charcoal);
     }
     .signal p { margin: 0; color: var(--steel); line-height: 1.62; font-size: 0.95rem; }
     .signal-list { display: grid; gap: 10px; margin-top: 16px; }
@@ -481,7 +482,7 @@
       left: 0;
       width: 54px;
       height: 1px;
-      background: linear-gradient(90deg, var(--slate), rgba(51, 75, 110, 0.12));
+      background: linear-gradient(90deg, var(--pine), rgba(54, 85, 74, 0.12));
     }
     .section-head h2 {
       margin: 0 0 10px;
@@ -576,6 +577,10 @@
       font-size: 0.72rem;
       letter-spacing: 0.08em;
       text-transform: uppercase;
+    }
+    .tag:nth-child(3n) {
+      color: var(--pine);
+      border-color: rgba(54, 85, 74, 0.16);
     }
 
     #about .diag-grid,
@@ -735,7 +740,7 @@
       left: 0;
       width: 36px;
       height: 1px;
-      background: rgba(51, 75, 110, 0.24);
+      background: rgba(54, 85, 74, 0.24);
     }
 
     .transition-callout {
@@ -757,7 +762,7 @@
       font-size: 11px;
       text-transform: uppercase;
       letter-spacing: 0.16em;
-      color: var(--steel);
+      color: var(--pine);
       margin-bottom: 12px;
     }
     .transition-callout .quote-wrap { display: block; }
@@ -844,6 +849,10 @@
       padding: 6px 0;
       color: var(--charcoal);
       letter-spacing: 0.02em;
+    }
+    .portal-rail span:nth-child(2),
+    .portal-rail span:nth-child(4) {
+      color: var(--pine);
     }
     #norynthe .portal .btn.primary {
       min-width: 190px;
@@ -1040,13 +1049,12 @@
       filter: saturate(1.03) contrast(1.02);
     }
 
-    .micro,
-    .transition-callout .label {
+    .micro {
       color: var(--slate);
     }
 
     .micro::before {
-      background: linear-gradient(90deg, var(--slate), rgba(51, 75, 110, 0.18));
+      background: linear-gradient(90deg, var(--oxblood), rgba(122, 48, 48, 0.18));
     }
 
     .section {
@@ -1173,6 +1181,12 @@
       padding: 8px 0 8px 24px;
       position: relative;
     }
+    #recommendations .quote:nth-child(odd) {
+      border-left-color: rgba(122, 48, 48, 0.24);
+    }
+    #recommendations .quote:nth-child(even) {
+      border-left-color: rgba(54, 85, 74, 0.24);
+    }
 
     #recommendations .quote::before,
     #recommendations .quote::after {
@@ -1236,7 +1250,7 @@
       text-transform: uppercase;
       letter-spacing: 0.12em;
       font-size: 0.76rem;
-      color: var(--slate);
+      color: var(--pine);
     }
 
     #writing .essay p {
@@ -1291,6 +1305,10 @@
       font-size: 0.8rem;
       letter-spacing: 0.06em;
       text-transform: uppercase;
+    }
+    .footer-links a:hover {
+      border-color: rgba(122, 48, 48, 0.24);
+      color: var(--oxblood);
     }
 
     @media (max-width: 1080px) {
