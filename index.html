@@ -1,636 +1,720 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5KLCRKBJH8"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-5KLCRKBJH8', { anonymize_ip: true, send_page_view: true });
-  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alan Motley - Creative Technologist, AI Systems Strategist, and Founder</title>
+  <meta
+    name="description"
+    content="Alan Motley is a creative technologist, AI systems strategist, and founder building governable intelligence, narrative systems, and modern production workflows."
+  >
+  <meta name="theme-color" content="#F6F8FA">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="canonical" href="https://www.alanmotley.com/">
 
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Alan Motley — Creative Technologist, AI Systems Strategist, and Founder</title>
-  <meta name="description" content="Alan Motley is a creative technologist, AI systems strategist, and founder building governable intelligence, narrative systems, and modern production workflows." />
-  <meta property="og:title" content="Alan Motley — Creative Technologist, AI Systems Strategist, and Founder">
-  <meta property="og:description" content="Governable intelligence, narrative systems, and modern production workflows — built with clarity, structure, and real-world execution.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://alanmotley.com/">
-  <meta property="og:image" content="https://preview.ibb.co/eVa3Fk/Alan_Child_2.jpg">
+  <meta property="og:url" content="https://www.alanmotley.com/">
+  <meta property="og:title" content="Alan Motley - Creative Technologist, AI Systems Strategist, and Founder">
+  <meta
+    property="og:description"
+    content="Governable intelligence, narrative systems, and modern production workflows - built with clarity, structure, and real-world execution."
+  >
+  <meta property="og:image" content="https://www.alanmotley.com/AM.jpeg">
+  <meta property="og:image:secure_url" content="https://www.alanmotley.com/AM.jpeg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Alan Motley">
+
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Alan Motley — Creative Technologist, AI Systems Strategist, and Founder">
-  <meta name="twitter:description" content="Governable intelligence, narrative systems, and modern production workflows — built with clarity, structure, and real-world execution.">
-  <meta name="twitter:image" content="https://preview.ibb.co/eVa3Fk/Alan_Child_2.jpg">
+  <meta name="twitter:title" content="Alan Motley - Creative Technologist, AI Systems Strategist, and Founder">
+  <meta
+    name="twitter:description"
+    content="Governable intelligence, narrative systems, and modern production workflows - built with clarity, structure, and real-world execution."
+  >
+  <meta name="twitter:image" content="https://www.alanmotley.com/AM.jpeg">
 
   <link rel="icon" type="image/png" sizes="32x32" href="https://i.ibb.co/tTZqVkf4/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="64x64" href="https://i.ibb.co/8DykfX9w/favicon-64x64.png">
   <link rel="apple-touch-icon" sizes="180x180" href="https://i.ibb.co/SXHpbNvv/favicon-180x180.png">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..900&display=swap" rel="stylesheet">
 
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5KLCRKBJH8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag("js", new Date());
+    gtag("config", "G-5KLCRKBJH8", { anonymize_ip: true, send_page_view: true });
+  </script>
+
   <style>
-    :root{
-      --bone:#F6F8FA;
-      --mist:#E9EDF2;
-      --charcoal:#0F1115;
-      --slate:#334B6E;
-      --steel:#52667A;
-      --pine:#36554A;
-      --oxblood:#7A3030;
-      --max:1280px;
-      --line:rgba(15,17,21,.10);
-      --line-2:rgba(15,17,21,.18);
-      --shadow:0 18px 50px rgba(15,17,21,.08);
-      --shadow-soft:0 10px 28px rgba(15,17,21,.05);
+    :root {
+      --bone: #F6F8FA;
+      --mist: #E9EDF2;
+      --charcoal: #0F1115;
+      --slate: #334B6E;
+      --steel: #52667A;
+      --pine: #36554A;
+      --oxblood: #7A3030;
+      --max: 1280px;
+      --line: rgba(15, 17, 21, 0.10);
+      --line-2: rgba(15, 17, 21, 0.18);
+      --shadow: 0 18px 50px rgba(15, 17, 21, 0.08);
+      --shadow-soft: 0 10px 28px rgba(15, 17, 21, 0.05);
     }
 
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
-      margin:0;
-      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-      color:var(--charcoal);
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color: var(--charcoal);
       background:
-        radial-gradient(900px 620px at -6% -8%, rgba(51,75,110,.10), transparent 55%),
-        radial-gradient(900px 620px at 108% 0%, rgba(54,85,74,.10), transparent 55%),
+        radial-gradient(900px 620px at -6% -8%, rgba(51, 75, 110, 0.10), transparent 55%),
+        radial-gradient(900px 620px at 108% 0%, rgba(54, 85, 74, 0.10), transparent 55%),
         linear-gradient(180deg, #F6F8FA 0%, #EEF2F5 50%, #F6F8FA 100%);
-      overflow-x:hidden;
+      overflow-x: hidden;
     }
-    body::before{
-      content:"";
-      position:fixed;
-      inset:0;
-      pointer-events:none;
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
       background-image:
-        linear-gradient(rgba(15,17,21,.022) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(15,17,21,.022) 1px, transparent 1px);
-      background-size:48px 48px;
-      mask-image:radial-gradient(circle at center, black 36%, transparent 85%);
-      opacity:.34;
+        linear-gradient(rgba(15, 17, 21, 0.022) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(15, 17, 21, 0.022) 1px, transparent 1px);
+      background-size: 48px 48px;
+      mask-image: radial-gradient(circle at center, black 36%, transparent 85%);
+      opacity: 0.34;
     }
 
-    a{color:inherit;text-decoration:none}
-    img,video{display:block;max-width:100%}
-    .container{max-width:var(--max);margin:0 auto;padding:0 30px}
-    .section{padding:0 0 clamp(52px,5vw,74px)}
+    a { color: inherit; text-decoration: none; }
+    img, video { display: block; max-width: 100%; }
+    .container { max-width: var(--max); margin: 0 auto; padding: 0 30px; }
+    .section { padding: 0 0 clamp(52px, 5vw, 74px); }
 
-    .site-header{
-      position:sticky; top:0; z-index:50;
-      background:rgba(246,248,250,.92);
-      border-bottom:1px solid rgba(15,17,21,.08);
-      backdrop-filter:blur(8px);
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(246, 248, 250, 0.92);
+      border-bottom: 1px solid rgba(15, 17, 21, 0.08);
+      backdrop-filter: blur(8px);
     }
-    .nav-shell{
-      min-height:78px;
-      display:flex; align-items:center; justify-content:space-between; gap:20px;
+    .nav-shell {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
     }
-    .brand{display:flex; align-items:center; gap:14px}
-    .brand-mark{
-      width:42px; height:42px; display:grid; place-items:center;
-      font-weight:800; font-size:15px; color:var(--bone);
-      background:linear-gradient(135deg,var(--slate),var(--pine));
-      clip-path:polygon(0 0,100% 0,100% 78%,78% 100%,0 100%);
-      box-shadow:var(--shadow);
+    .brand { display: flex; align-items: center; gap: 14px; }
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      font-size: 15px;
+      color: var(--bone);
+      background: linear-gradient(135deg, var(--slate), var(--pine));
+      clip-path: polygon(0 0, 100% 0, 100% 78%, 78% 100%, 0 100%);
+      box-shadow: var(--shadow);
     }
-    .brand-copy strong{display:block; font-size:14px; letter-spacing:.02em}
-    .brand-copy span{display:block; font-size:12px; color:var(--steel); margin-top:2px}
-    .nav-links{display:flex; gap:8px; flex-wrap:wrap}
-    .nav-links a{
-      padding:10px 12px;
-      font-size:14px;
-      color:var(--steel);
-      position:relative;
+    .brand-copy strong { display: block; font-size: 14px; letter-spacing: 0.02em; }
+    .brand-copy span { display: block; font-size: 12px; color: var(--steel); margin-top: 2px; }
+    .nav-links { display: flex; gap: 8px; flex-wrap: wrap; }
+    .nav-links a {
+      padding: 10px 12px;
+      font-size: 14px;
+      color: var(--steel);
+      position: relative;
     }
-    .nav-links a::after{
-      content:""; position:absolute; left:12px; right:12px; bottom:6px;
-      height:1px; background:var(--slate);
-      transform:scaleX(0); transform-origin:left;
-      transition:transform .2s ease;
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 12px;
+      right: 12px;
+      bottom: 6px;
+      height: 1px;
+      background: var(--slate);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.2s ease;
     }
-    .nav-links a:hover{color:var(--charcoal)}
-    .nav-links a:hover::after{transform:scaleX(1)}
+    .nav-links a:hover { color: var(--charcoal); }
+    .nav-links a:hover::after { transform: scaleX(1); }
 
-    .hero{padding:42px 0 clamp(72px,7vw,96px); position:relative}
-    .hero-grid{
-      display:grid;
-      grid-template-columns:minmax(0,1.12fr) minmax(320px,.88fr);
-      gap:52px;
-      align-items:start;
+    .hero { padding: 42px 0 clamp(72px, 7vw, 96px); position: relative; }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.12fr) minmax(320px, 0.88fr);
+      gap: 52px;
+      align-items: start;
     }
-    .micro{
-      display:inline-flex; gap:10px; align-items:center;
-      font-size:12px; text-transform:uppercase; letter-spacing:.20em; color:var(--steel);
-      margin-bottom:28px;
+    .hero-copy { position: relative; }
+    .hero-copy::before {
+      content: "\201C";
+      position: absolute;
+      top: 72px;
+      right: 22px;
+      font-size: clamp(7rem, 12vw, 10rem);
+      line-height: 0.8;
+      color: rgba(51, 75, 110, 0.08);
+      font-weight: 900;
+      pointer-events: none;
     }
-    .micro::before{content:""; width:38px; height:1px; background:var(--slate); display:block}
-
-    .hero-copy h1{
-      margin:0 0 20px;
-      font-size:clamp(4.8rem,9.2vw,8.8rem);
-      line-height:.84;
-      letter-spacing:-.09em;
-      max-width:6.8ch;
-      font-weight:900;
+    .micro {
+      display: inline-flex;
+      gap: 10px;
+      align-items: center;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.20em;
+      color: var(--steel);
+      margin-bottom: 28px;
     }
-    .hero-copy .lead{
-      margin:0;
-      max-width:700px;
-      color:var(--steel);
-      font-size:clamp(1.02rem,1.45vw,1.12rem);
-      line-height:1.95;
+    .micro::before {
+      content: "";
+      width: 38px;
+      height: 1px;
+      background: var(--slate);
+      display: block;
     }
-    .actions{display:flex; flex-wrap:wrap; gap:14px; margin-top:34px}
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center; gap:10px;
-      min-height:48px; padding:0 18px;
-      border:1px solid var(--line-2);
-      font-weight:700; font-size:14px; letter-spacing:.01em;
-      background:rgba(255,255,255,.78);
-      box-shadow:var(--shadow-soft);
-      transition:transform .18s ease, border-color .18s ease, background .18s ease;
+    .hero-copy h1 {
+      margin: 0 0 20px;
+      font-size: clamp(4.8rem, 9.2vw, 8.8rem);
+      line-height: 0.84;
+      letter-spacing: -0.09em;
+      max-width: 6.8ch;
+      font-weight: 900;
     }
-    .btn:hover{transform:translateY(-1px); border-color:var(--slate)}
-    .btn.primary{
-      background:linear-gradient(180deg,var(--slate),#435b7d);
-      color:var(--bone);
-      border-color:rgba(51,75,110,.48);
-      box-shadow:0 16px 34px rgba(51,75,110,.20);
+    .accent-line { color: var(--slate); }
+    .hero-copy .lead {
+      margin: 0;
+      max-width: 700px;
+      color: var(--steel);
+      font-size: clamp(1.02rem, 1.45vw, 1.12rem);
+      line-height: 1.95;
     }
-    .btn.ghost{background:transparent}
-
-    .hero-quote{
-      display:grid;
-      grid-template-columns:1fr auto;
-      gap:18px;
-      align-items:end;
-      margin-top:34px;
-      padding-top:24px;
-      border-top:1px solid var(--line);
+    .actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 34px; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 48px;
+      padding: 0 18px;
+      border: 1px solid var(--line-2);
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 0.01em;
+      background: rgba(255, 255, 255, 0.78);
+      box-shadow: var(--shadow-soft);
+      transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
     }
-    .hero-quote p{
-      margin:0;
-      color:var(--charcoal);
-      font-size:1.08rem;
-      line-height:1.8;
-      max-width:560px;
-      letter-spacing:-.01em;
+    .btn:hover { transform: translateY(-1px); border-color: var(--slate); }
+    .btn.primary {
+      background: linear-gradient(180deg, var(--slate), #435b7d);
+      color: var(--bone);
+      border-color: rgba(51, 75, 110, 0.48);
+      box-shadow: 0 16px 34px rgba(51, 75, 110, 0.20);
     }
-    .hero-quote span{
-      color:var(--steel);
-      font-size:.9rem;
-      white-space:nowrap;
-    }
-
-    .hero-metrics{
-      max-width:calc(var(--max) - 60px);
-      margin:54px auto 6px;
-      padding:26px 34px 0;
-      display:grid;
-      grid-template-columns:repeat(3,minmax(0,1fr));
-      gap:28px;
-      border-top:1px solid var(--line);
-      justify-content:center;
-      align-items:start;
-    }
-    .metric{
-      padding-right:18px;
-      min-height:100%;
-    }
-    .metric:not(:last-child){
-      border-right:1px solid var(--line);
-    }
-    .metric strong{
-      display:block;
-      font-size:1.52rem;
-      margin-bottom:8px;
-      letter-spacing:-.045em;
-    }
-    .metric span{
-      display:block;
-      color:var(--steel);
-      line-height:1.62;
-      font-size:.96rem;
-      max-width:34ch;
+    .btn.ghost { background: transparent; }
+    a:focus-visible,
+    button:focus-visible {
+      outline: 2px solid var(--slate);
+      outline-offset: 3px;
     }
 
-    .hero-side{display:grid; gap:22px; padding-top:18px}
-    .shape-card{
-      background:rgba(255,255,255,.60);
-      border:1px solid var(--line);
-      box-shadow:var(--shadow);
-      overflow:hidden;
-      position:relative;
+    .hero-quote {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 18px;
+      align-items: end;
+      margin-top: 34px;
+      padding-top: 24px;
+      border-top: 1px solid var(--line);
     }
-    .portrait{clip-path:polygon(0 0,100% 0,100% 86%,86% 100%,0 100%); padding:16px}
-    .portrait-frame{
-      aspect-ratio:4/4.75; overflow:hidden; background:#000;
-      clip-path:polygon(0 0,100% 0,100% 88%,88% 100%,0 100%);
+    .hero-quote p {
+      margin: 0;
+      color: var(--charcoal);
+      font-size: 1.08rem;
+      line-height: 1.8;
+      max-width: 560px;
+      letter-spacing: -0.01em;
     }
-    .portrait-frame video{width:100%; height:100%; object-fit:cover}
-    .portrait-meta{
-      display:grid; grid-template-columns:1fr auto; gap:16px;
-      align-items:start; margin-top:16px;
+    .hero-quote span {
+      color: var(--steel);
+      font-size: 0.9rem;
+      white-space: nowrap;
     }
-    .portrait-meta strong{display:block; font-size:1rem; margin-bottom:6px}
-    .portrait-meta span{display:block; color:var(--steel); font-size:.95rem; line-height:1.68}
-    .signal{
-      padding:22px 22px 20px;
-      clip-path:polygon(0 0,100% 0,100% 78%,94% 100%,0 100%);
+    .hero-quote .quote-text {
+      position: relative;
+      padding-left: 26px;
+      max-width: 620px;
     }
-    .signal h3{margin:0 0 8px; font-size:1rem}
-    .signal p{margin:0; color:var(--steel); line-height:1.68}
-    .signal-list{display:grid; gap:10px; margin-top:16px}
-    .signal-row{
-      display:grid; grid-template-columns:1fr auto; gap:16px; align-items:center;
-      padding:12px 0; border-top:1px solid var(--line); font-size:.92rem;
+    .hero-quote .quote-text::before {
+      content: "\201C";
+      position: absolute;
+      left: 0;
+      top: -10px;
+      font-size: 2.6rem;
+      line-height: 1;
+      color: var(--slate);
+      font-weight: 800;
     }
-    .signal-row strong{
-      color:var(--oxblood); font-size:.84rem; letter-spacing:.08em; text-transform:uppercase;
-    }
-
-    .section-head{
-      display:grid; grid-template-columns:minmax(0,1fr) auto; gap:24px; align-items:end; margin-bottom:34px;
-    }
-    .section-head h2{
-      margin:0 0 10px;
-      font-size:clamp(2.5rem,4vw,4.1rem);
-      line-height:.90; letter-spacing:-.075em;
-    }
-    .section-head p{margin:0; color:var(--steel); max-width:760px; line-height:1.88}
-
-    .diag-grid{
-      display:grid; gap:20px; grid-template-columns:repeat(12,minmax(0,1fr));
-    }
-    .slab{
-      grid-column:span 12;
-      padding:30px;
-      background:rgba(255,255,255,.72);
-      border:1px solid var(--line);
-      box-shadow:var(--shadow);
-      position:relative; overflow:hidden;
-    }
-    .cut-a{clip-path:polygon(0 0,100% 0,100% 88%,94% 100%,0 100%)}
-    .cut-b{clip-path:polygon(0 0,94% 0,100% 12%,100% 100%,0 100%)}
-    .cut-c{clip-path:polygon(0 0,100% 0,100% 100%,6% 100%,0 86%)}
-    .cut-d{clip-path:polygon(0 12%,6% 0,100% 0,100% 100%,0 100%)}
-    .span-7{grid-column:span 7}
-    .span-5{grid-column:span 5}
-    .span-6{grid-column:span 6}
-    .span-4{grid-column:span 4}
-    .span-8{grid-column:span 8}
-    .slab h3{margin:0 0 10px; font-size:1.28rem; letter-spacing:-.02em}
-    .slab p{margin:0; color:var(--steel); line-height:1.86}
-    .tag-row{display:flex; flex-wrap:wrap; gap:10px; margin-top:18px}
-    .tag{
-      display:inline-flex; align-items:center; padding:7px 12px;
-      border:1px solid var(--line-2); background:rgba(255,255,255,.74);
-      color:var(--slate); font-size:.83rem; letter-spacing:.02em;
+    .hero-quote .quote-text::after {
+      content: "\201D";
+      display: inline-block;
+      margin-left: 6px;
+      color: var(--slate);
+      font-weight: 800;
     }
 
-    .media{
-      margin-top:18px; border:1px solid var(--line); overflow:hidden; background:#05070b; position:relative;
+    .hero-metrics {
+      max-width: calc(var(--max) - 60px);
+      margin: 54px auto 6px;
+      padding: 26px 34px 0;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 28px;
+      border-top: 1px solid var(--line);
+      justify-content: center;
+      align-items: start;
     }
-    .media.cut-a{clip-path:polygon(0 0,100% 0,100% 88%,94% 100%,0 100%)}
-    .media.cut-b{clip-path:polygon(0 0,94% 0,100% 12%,100% 100%,0 100%)}
-    .media.cut-c{clip-path:polygon(0 0,100% 0,100% 100%,6% 100%,0 86%)}
-    .media.cut-d{clip-path:polygon(0 12%,6% 0,100% 0,100% 100%,0 100%)}
-    .media img,.media iframe{width:100%; display:block; border:0}
-    .media.video::before,.media.deck::before{content:""; display:block; padding-top:56.25%}
-    .media.video iframe,.media.deck iframe{position:absolute; inset:0; height:100%}
-    .slab-actions{display:flex; flex-wrap:wrap; gap:10px; margin-top:18px}
-
-    .two-col{display:grid; grid-template-columns:1fr 1fr; gap:20px}
-
-    .about-rhythm{
-      display:grid;
-      grid-template-columns:1.1fr .9fr;
-      gap:24px;
-      margin-top:32px;
+    .metric { padding-right: 18px; min-height: 100%; }
+    .metric:not(:last-child) { border-right: 1px solid var(--line); }
+    .metric strong {
+      display: block;
+      font-size: 1.52rem;
+      margin-bottom: 8px;
+      letter-spacing: -0.045em;
     }
-    .number-rail{
-      padding:24px 0 0;
-      border-top:1px solid var(--line);
-      display:grid;
-      grid-template-columns:repeat(3,minmax(0,1fr));
-      gap:22px;
-    }
-    .number-rail .item strong{
-      display:block;
-      font-size:1.56rem;
-      margin-bottom:8px;
-      letter-spacing:-.05em;
-    }
-    .number-rail .item span{
-      display:block;
-      color:var(--steel);
-      line-height:1.62;
-      font-size:.93rem;
+    .metric span {
+      display: block;
+      color: var(--steel);
+      line-height: 1.62;
+      font-size: 0.96rem;
+      max-width: 34ch;
     }
 
-    
-    .portal{
-      position:relative; overflow:hidden;
-      background:
-        linear-gradient(180deg, rgba(233,237,242,.92) 0%, rgba(246,248,250,.96) 100%);
-      border:1px solid rgba(51,75,110,.18);
-      padding:42px;
-      clip-path:polygon(0 0,96% 0,100% 10%,100% 100%,4% 100%,0 90%);
-      box-shadow:0 18px 50px rgba(15,17,21,.06);
+    .hero-side { display: grid; gap: 22px; padding-top: 18px; }
+    .shape-card {
+      background: rgba(255, 255, 255, 0.60);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      position: relative;
     }
-    .portal::before{
-      content:"";
-      position:absolute;
-      inset:18px 18px 22px 18px;
-      border:1px solid rgba(51,75,110,.12);
-      clip-path:polygon(0 0,96% 0,100% 10%,100% 100%,4% 100%,0 90%);
-      pointer-events:none;
+    .portrait { clip-path: polygon(0 0, 100% 0, 100% 86%, 86% 100%, 0 100%); padding: 16px; }
+    .portrait-frame {
+      aspect-ratio: 4 / 4.75;
+      overflow: hidden;
+      background: #000;
+      clip-path: polygon(0 0, 100% 0, 100% 88%, 88% 100%, 0 100%);
     }
-
-
-    .portal-grid{
-      display:grid; grid-template-columns:1.06fr .94fr; gap:20px; align-items:start; margin-top:26px;
+    .portrait-frame video { width: 100%; height: 100%; object-fit: cover; }
+    .portrait-meta {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 16px;
+      align-items: start;
+      margin-top: 16px;
     }
-    .portal-rail{
-      margin-top:24px;
-      padding-top:18px;
-      border-top:1px solid var(--line);
-      display:flex;
-      flex-wrap:wrap;
-      gap:18px;
-      color:var(--steel);
-      font-size:.92rem;
+    .portrait-meta strong { display: block; font-size: 1rem; margin-bottom: 6px; }
+    .portrait-meta span { display: block; color: var(--steel); font-size: 0.95rem; line-height: 1.68; }
+    .signal {
+      padding: 22px 22px 20px;
+      clip-path: polygon(0 0, 100% 0, 100% 78%, 94% 100%, 0 100%);
     }
-
-    .cred-grid{display:grid; grid-template-columns:repeat(6,1fr); gap:16px}
-    .cred-grid img{
-      width:100%; max-height:74px; object-fit:contain; padding:14px;
-      border:1px solid var(--line); background:rgba(255,255,255,.7); box-shadow:var(--shadow);
-      clip-path:polygon(0 0,100% 0,100% 82%,90% 100%,0 100%);
+    .signal h3 { margin: 0 0 8px; font-size: 1rem; }
+    .signal p { margin: 0; color: var(--steel); line-height: 1.68; }
+    .signal-list { display: grid; gap: 10px; margin-top: 16px; }
+    .signal-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 16px;
+      align-items: center;
+      padding: 12px 0;
+      border-top: 1px solid var(--line);
+      font-size: 0.92rem;
     }
-
-    .quote-grid,.writing-grid{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px}
-    .quote-grid{grid-template-columns:repeat(3,minmax(0,1fr)); align-items:stretch}
-    .quote,.essay{
-      padding:28px;
-      background:rgba(255,255,255,.72);
-      border:1px solid var(--line);
-      box-shadow:var(--shadow);
-    }
-    .quote{clip-path:polygon(0 0,100% 0,100% 88%,94% 100%,0 100%)}
-    .essay{clip-path:polygon(0 12%,6% 0,100% 0,100% 100%,0 100%)}
-    .quote p,.essay p{margin:0 0 14px; color:var(--steel); line-height:1.84}
-    .quote strong,.essay h3{display:block; margin:0 0 6px}
-    .quote span,.essay time{color:var(--steel); font-size:.9rem}
-    .essay h3{font-size:1.14rem; line-height:1.44; letter-spacing:-.02em}
-    .essay .btn{margin-top:4px}
-
-    .resume-shell{
-      background:rgba(255,255,255,.72);
-      border:1px solid var(--line);
-      box-shadow:var(--shadow);
-      overflow:hidden;
-      clip-path:polygon(0 0,100% 0,100% 94%,97% 100%,0 100%);
-    }
-    .resume-top{
-      display:flex; align-items:center; justify-content:space-between; gap:14px;
-      padding:16px 18px; border-bottom:1px solid var(--line);
-    }
-    .resume-actions{display:flex; flex-wrap:wrap; gap:10px}
-    .resume-frame{width:100%; height:820px; border:0; display:block; background:#fff}
-
-    footer{padding:18px 0 58px; text-align:center; color:var(--steel)}
-    .footer-links{
-      display:flex; justify-content:center; gap:10px; flex-wrap:wrap; margin-top:16px;
-    }
-    .footer-links a{
-      padding:8px 12px;
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.55);
+    .signal-row strong {
+      color: var(--oxblood);
+      font-size: 0.84rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
     }
 
-    @media (max-width:1080px){
-      .hero-grid,.portal-grid,.two-col,.about-rhythm{grid-template-columns:1fr}
-      .span-7,.span-5,.span-6,.span-4,.span-8{grid-column:span 12}
-      .cred-grid{grid-template-columns:repeat(3,1fr)}
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 24px;
+      align-items: end;
+      margin-bottom: 34px;
     }
-    @media (max-width:760px){
-      .nav-links{display:none}
-      .hero-copy h1{max-width:none}
-      .hero-metrics,.number-rail{grid-template-columns:1fr}
-      .metric{padding-right:0}
-      .metric:not(:last-child){
-        border-right:0;
-        border-bottom:1px solid var(--line);
-        padding-bottom:18px;
+    .section-head h2 {
+      margin: 0 0 10px;
+      max-width: 10ch;
+      font-size: clamp(2.5rem, 4vw, 4.1rem);
+      line-height: 0.90;
+      letter-spacing: -0.075em;
+    }
+    .section-head p {
+      margin: 0;
+      max-width: 700px;
+      color: var(--steel);
+      line-height: 1.88;
+    }
+
+    .diag-grid {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+    }
+    .slab {
+      grid-column: span 12;
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+    .cut-a { clip-path: polygon(0 0, 100% 0, 100% 88%, 94% 100%, 0 100%); }
+    .cut-b { clip-path: polygon(0 0, 94% 0, 100% 12%, 100% 100%, 0 100%); }
+    .cut-c { clip-path: polygon(0 0, 100% 0, 100% 100%, 6% 100%, 0 86%); }
+    .cut-d { clip-path: polygon(0 12%, 6% 0, 100% 0, 100% 100%, 0 100%); }
+    .span-7 { grid-column: span 7; }
+    .span-5 { grid-column: span 5; }
+    .span-6 { grid-column: span 6; }
+    .span-4 { grid-column: span 4; }
+    .span-8 { grid-column: span 8; }
+    .slab h3 {
+      margin: 0 0 10px;
+      font-size: 1.18rem;
+      letter-spacing: -0.02em;
+      text-transform: none;
+    }
+    .slab p { margin: 0; color: var(--steel); line-height: 1.86; }
+    .tag-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 7px 12px;
+      border: 1px solid var(--line-2);
+      background: rgba(255, 255, 255, 0.74);
+      color: var(--slate);
+      font-size: 0.83rem;
+      letter-spacing: 0.02em;
+    }
+
+    .media {
+      margin-top: 18px;
+      border: 1px solid var(--line);
+      overflow: hidden;
+      background: #05070b;
+      position: relative;
+    }
+    .media.cut-a { clip-path: polygon(0 0, 100% 0, 100% 88%, 94% 100%, 0 100%); }
+    .media.cut-b { clip-path: polygon(0 0, 94% 0, 100% 12%, 100% 100%, 0 100%); }
+    .media.cut-c { clip-path: polygon(0 0, 100% 0, 100% 100%, 6% 100%, 0 86%); }
+    .media.cut-d { clip-path: polygon(0 12%, 6% 0, 100% 0, 100% 100%, 0 100%); }
+    .media img,
+    .media iframe {
+      width: 100%;
+      display: block;
+      border: 0;
+    }
+    .media.video::before,
+    .media.deck::before {
+      content: "";
+      display: block;
+      padding-top: 56.25%;
+    }
+    .media.video iframe,
+    .media.deck iframe {
+      position: absolute;
+      inset: 0;
+      height: 100%;
+    }
+    .slab-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+
+    .about-rhythm {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: stretch;
+      gap: 22px;
+      margin-top: 32px;
+    }
+    .number-rail {
+      min-height: 100%;
+      align-content: start;
+      padding: 24px 0 0;
+      border-top: 1px solid var(--line);
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+    }
+    .number-rail .item strong {
+      display: block;
+      font-size: 1.56rem;
+      margin-bottom: 8px;
+      letter-spacing: -0.05em;
+    }
+    .number-rail .item span {
+      display: block;
+      color: var(--steel);
+      line-height: 1.62;
+      font-size: 0.93rem;
+    }
+
+    .transition-callout {
+      align-self: start;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 100%;
+      padding: 24px 26px;
+      background: rgba(255, 255, 255, 0.62);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-soft);
+      clip-path: polygon(0 10%, 6% 0, 100% 0, 100% 90%, 94% 100%, 0 100%);
+    }
+    .transition-callout .label {
+      display: block;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--steel);
+      margin-bottom: 12px;
+    }
+    .transition-callout .quote-wrap { display: block; }
+    .transition-callout p {
+      margin: 0;
+      max-width: none;
+      color: var(--charcoal);
+      font-size: 1.02rem;
+      line-height: 1.78;
+      letter-spacing: -0.01em;
+      position: relative;
+      padding-left: 22px;
+    }
+    .transition-callout p::before {
+      content: "\201C";
+      position: absolute;
+      left: 0;
+      top: -6px;
+      color: var(--slate);
+      font-size: 2rem;
+      line-height: 1;
+      font-weight: 800;
+    }
+    .transition-callout p::after {
+      content: "\201D";
+      color: var(--slate);
+      margin-left: 4px;
+      font-weight: 800;
+    }
+    .transition-callout .byline {
+      display: block;
+      margin-top: 12px;
+      color: var(--steel);
+      font-size: 0.88rem;
+    }
+
+    .portal {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(180deg, rgba(233, 237, 242, 0.92) 0%, rgba(246, 248, 250, 0.96) 100%);
+      border: 1px solid rgba(51, 75, 110, 0.18);
+      padding: 42px;
+      clip-path: polygon(0 0, 96% 0, 100% 10%, 100% 100%, 4% 100%, 0 90%);
+      box-shadow: 0 18px 50px rgba(15, 17, 21, 0.06);
+    }
+    .portal::before {
+      content: "";
+      position: absolute;
+      inset: 18px 18px 22px 18px;
+      border: 1px solid rgba(51, 75, 110, 0.12);
+      clip-path: polygon(0 0, 96% 0, 100% 10%, 100% 100%, 4% 100%, 0 90%);
+      pointer-events: none;
+    }
+    .portal-grid {
+      display: grid;
+      grid-template-columns: 1.06fr 0.94fr;
+      gap: 20px;
+      align-items: start;
+      margin-top: 26px;
+    }
+    .portal-rail {
+      margin-top: 24px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      color: var(--steel);
+      font-size: 0.92rem;
+    }
+
+    .cred-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px; }
+    .cred-grid img {
+      width: 100%;
+      max-height: 74px;
+      object-fit: contain;
+      padding: 14px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.7);
+      box-shadow: var(--shadow);
+      clip-path: polygon(0 0, 100% 0, 100% 82%, 90% 100%, 0 100%);
+    }
+
+    .quote-grid,
+    .writing-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+    .quote-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: stretch; }
+    .quote,
+    .essay {
+      padding: 28px;
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+    .quote { clip-path: polygon(0 0, 100% 0, 100% 88%, 94% 100%, 0 100%); }
+    .essay { clip-path: polygon(0 12%, 6% 0, 100% 0, 100% 100%, 0 100%); }
+    .quote p,
+    .essay p { margin: 0 0 14px; color: var(--steel); line-height: 1.84; }
+    .quote .quote-text::before {
+      content: "\201C";
+      color: var(--slate);
+      font-weight: 800;
+      margin-right: 4px;
+    }
+    .quote .quote-text::after {
+      content: "\201D";
+      color: var(--slate);
+      font-weight: 800;
+      margin-left: 4px;
+    }
+    .quote strong,
+    .essay h3 { display: block; margin: 0 0 6px; }
+    .quote span,
+    .essay time { color: var(--steel); font-size: 0.9rem; }
+    .essay h3 { font-size: 1.14rem; line-height: 1.44; letter-spacing: -0.02em; }
+    .essay .btn { margin-top: 4px; }
+
+    .resume-shell {
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      clip-path: polygon(0 0, 100% 0, 100% 94%, 97% 100%, 0 100%);
+    }
+    .resume-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 16px 18px;
+      border-bottom: 1px solid var(--line);
+    }
+    .resume-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+    .resume-frame { width: 100%; height: 820px; border: 0; display: block; background: #fff; }
+
+    .blink-dot {
+      display: inline-block;
+      color: var(--oxblood);
+      animation: blinkDot 1.15s steps(1) infinite;
+    }
+    @keyframes blinkDot {
+      0%, 49% { opacity: 1; }
+      50%, 100% { opacity: 0.18; }
+    }
+
+    .norynthe-logo {
+      width: min(320px, 100%);
+      height: auto;
+      display: block;
+      margin: 2px 0 18px;
+      object-fit: contain;
+    }
+
+    #work .section-head {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      align-items: start;
+    }
+    #work .section-head > div:last-child { min-height: 1px; }
+
+    footer { padding: 18px 0 58px; text-align: center; color: var(--steel); }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 16px;
+    }
+    .footer-links a {
+      padding: 8px 12px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.55);
+    }
+
+    @media (max-width: 1080px) {
+      .hero-grid,
+      .portal-grid,
+      .two-col,
+      .about-rhythm { grid-template-columns: 1fr; }
+      .span-7,
+      .span-5,
+      .span-6,
+      .span-4,
+      .span-8 { grid-column: span 12; }
+      .cred-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    @media (max-width: 760px) {
+      .nav-links { display: none; }
+      .hero { padding-top: 22px; }
+      .hero-copy h1 { max-width: none; }
+      .hero-metrics,
+      .number-rail,
+      .quote-grid,
+      .writing-grid,
+      .section-head { grid-template-columns: 1fr; }
+      .metric { padding-right: 0; }
+      .metric:not(:last-child) {
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+        padding-bottom: 18px;
       }
-      .section-head{grid-template-columns:1fr}
-      .quote-grid,.writing-grid{grid-template-columns:1fr}
-      .cred-grid{grid-template-columns:repeat(2,1fr)}
-      .resume-frame{height:620px}
-      .container{padding:0 18px}
-      .hero{padding-top:22px}
-      .hero-quote{grid-template-columns:1fr}
-      .hero-metrics{
-        margin:34px auto 0;
-        padding:24px 18px 0;
-        max-width:none;
+      .cred-grid { grid-template-columns: repeat(2, 1fr); }
+      .resume-frame { height: 620px; }
+      .container { padding: 0 18px; }
+      .hero-quote { grid-template-columns: 1fr; }
+      .hero-metrics {
+        margin: 34px auto 0;
+        padding: 24px 18px 0;
+        max-width: none;
       }
     }
 
-    .hero-copy{
-      position:relative;
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
     }
-    .hero-copy::before{
-      content:"“";
-      position:absolute;
-      top:72px;
-      right:22px;
-      font-size:clamp(7rem, 12vw, 10rem);
-      line-height:.8;
-      color:rgba(51,75,110,.08);
-      font-weight:900;
-      pointer-events:none;
-    }
-    .hero-quote{
-      position:relative;
-    }
-    .hero-quote .quote-text{
-      position:relative;
-      padding-left:26px;
-      max-width:620px;
-    }
-    .hero-quote .quote-text::before{
-      content:"“";
-      position:absolute;
-      left:0;
-      top:-10px;
-      font-size:2.6rem;
-      line-height:1;
-      color:var(--slate);
-      font-weight:800;
-    }
-    .hero-quote .quote-text::after{
-      content:"”";
-      display:inline-block;
-      margin-left:6px;
-      color:var(--slate);
-      font-weight:800;
-    }
-    .section-head h2{
-      max-width:10ch;
-    }
-    .section-head p{
-      max-width:700px;
-    }
-    .slab h3{
-      font-size:1.18rem;
-      text-transform:none;
-    }
-    .quote .quote-text::before{
-      content:"“";
-      color:var(--slate);
-      font-weight:800;
-      margin-right:4px;
-    }
-    .quote .quote-text::after{
-      content:"”";
-      color:var(--slate);
-      font-weight:800;
-      margin-left:4px;
-    }
-
-
-
-    .blink-dot{
-      display:inline-block;
-      color:var(--oxblood);
-      animation:blinkDot 1.15s steps(1) infinite;
-    }
-    @keyframes blinkDot{
-      0%, 49%{opacity:1}
-      50%, 100%{opacity:.18}
-    }
-
-
-    .about-rhythm{
-      align-items:start;
-    }
-    .transition-callout{
-      align-self:start;
-      padding:22px 24px;
-      background:rgba(255,255,255,.62);
-      border:1px solid var(--line);
-      box-shadow:var(--shadow-soft);
-      clip-path:polygon(0 10%,6% 0,100% 0,100% 90%,94% 100%,0 100%);
-      min-height:100%;
-    }
-    .transition-callout .label{
-      display:block;
-      font-size:11px;
-      text-transform:uppercase;
-      letter-spacing:.18em;
-      color:var(--steel);
-      margin-bottom:12px;
-    }
-    .transition-callout p{
-      margin:0;
-      color:var(--charcoal);
-      font-size:1.02rem;
-      line-height:1.78;
-      letter-spacing:-.01em;
-      position:relative;
-      padding-left:22px;
-    }
-    .transition-callout p::before{
-      content:"“";
-      position:absolute;
-      left:0;
-      top:-6px;
-      color:var(--slate);
-      font-size:2rem;
-      line-height:1;
-      font-weight:800;
-    }
-    .transition-callout p::after{
-      content:"”";
-      color:var(--slate);
-      margin-left:4px;
-      font-weight:800;
-    }
-    .transition-callout .byline{
-      display:block;
-      margin-top:12px;
-      color:var(--steel);
-      font-size:.88rem;
-    }
-
-
-    .about-rhythm{
-      grid-template-columns:1fr 1fr;
-      align-items:stretch;
-      gap:22px;
-    }
-    .number-rail{
-      min-height:100%;
-      align-content:start;
-    }
-    .transition-callout{
-      display:flex;
-      flex-direction:column;
-      justify-content:space-between;
-      min-height:100%;
-      padding:24px 26px;
-    }
-    .transition-callout .quote-wrap{
-      display:block;
-    }
-    .transition-callout p{
-      max-width:none;
-    }
-    #work .section-head{
-      grid-template-columns:minmax(0,1fr) minmax(0,1fr);
-      align-items:start;
-    }
-    #work .section-head > div:last-child{
-      min-height:1px;
-    }
-
-
-    .norynthe-logo{
-      width:min(320px, 100%);
-      height:auto;
-      display:block;
-      margin:2px 0 18px;
-      object-fit:contain;
-    }
-</style>
-
-<meta property="og:image" content="https://www.alanmotley.com/AM.jpeg">
-<meta property="og:image:secure_url" content="https://www.alanmotley.com/AM.jpeg">
-<meta name="twitter:image" content="https://www.alanmotley.com/AM.jpeg">
-
-<meta property="og:image" content="https://www.alanmotley.com/AM.jpeg">
-<meta property="og:image:secure_url" content="https://www.alanmotley.com/AM.jpeg">
-<meta name="twitter:image" content="https://www.alanmotley.com/AM.jpeg">
-
-<meta property="og:image" content="https://www.alanmotley.com/AM.jpeg">
-<meta property="og:image:secure_url" content="https://www.alanmotley.com/AM.jpeg">
-<meta name="twitter:image" content="https://www.alanmotley.com/AM.jpeg">
-
-<meta property="og:image" content="https://www.alanmotley.com/AM.jpeg">
-<meta property="og:image:secure_url" content="https://www.alanmotley.com/AM.jpeg">
-<meta name="twitter:image" content="https://www.alanmotley.com/AM.jpeg">
-<meta name="twitter:card" content="summary_large_image">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Alan Motley — Creative Technologist, AI Systems Strategist, and Founder">
-<meta property="og:description" content="Governable intelligence, narrative systems, and modern production workflows — built with clarity, structure, and real-world execution.">
-<meta property="og:url" content="https://www.alanmotley.com/">
-<meta property="og:image:alt" content="Alan Motley">
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -660,7 +744,7 @@
         <div class="hero-copy">
           <div class="micro">Governance, narrative, and authorship</div>
           <h1>Strategy, systems, and authorship <span class="accent-line">for the AI era</span><span class="blink-dot">.</span></h1>
-          <p class="lead">I’m a creative technologist, AI systems strategist, and founder shaping work where intelligence, governance, narrative, and production meet. I help turn complex ideas into systems, experiences, and signals people can trust.</p>
+          <p class="lead">I'm a creative technologist, AI systems strategist, and founder shaping work where intelligence, governance, narrative, and production meet. I help turn complex ideas into systems, experiences, and signals people can trust.</p>
           <div class="actions">
             <a class="btn primary" href="#work">View selected work</a>
             <a class="btn" href="#norynthe">Explore Norynthe.</a>
@@ -670,13 +754,12 @@
             <p class="quote-text">Governable intelligence is not just about what a system can do. It is about what it presents as credible, what it leaves out, and whether that framing still holds when the stakes are real.</p>
             <span>Alan Motley</span>
           </div>
-          
         </div>
 
         <div class="hero-side">
           <div class="shape-card portrait">
             <div class="portrait-frame">
-              <video autoplay muted loop playsinline poster="https://media.giphy.com/media/eJesqlXse6Ipe9mFuq/giphy_s.gif">
+              <video autoplay muted loop playsinline poster="https://media.giphy.com/media/eJesqlXse6Ipe9mFuq/giphy_s.gif" aria-label="Portrait motion reel">
                 <source src="https://media.giphy.com/media/eJesqlXse6Ipe9mFuq/giphy.mp4" type="video/mp4">
               </video>
             </div>
@@ -702,19 +785,19 @@
       </div>
 
       <div class="hero-metrics">
-            <div class="metric">
-              <strong>MSc AI</strong>
-              <span>Graduate-level work spanning AI systems, governance, and production logic.</span>
-            </div>
-            <div class="metric">
-              <strong>Enterprise + Creative</strong>
-              <span>Consulting, digital optimization, narrative systems, and technical execution.</span>
-            </div>
-            <div class="metric">
-              <strong>Now building</strong>
-              <span>Norynthe. — independent standards for trusted intelligence.</span>
-            </div>
-          </div>
+        <div class="metric">
+          <strong>MSc AI</strong>
+          <span>Graduate-level work spanning AI systems, governance, and production logic.</span>
+        </div>
+        <div class="metric">
+          <strong>Enterprise + Creative</strong>
+          <span>Consulting, digital optimization, narrative systems, and technical execution.</span>
+        </div>
+        <div class="metric">
+          <strong>Now building</strong>
+          <span>Norynthe. - independent standards for trusted intelligence.</span>
+        </div>
+      </div>
     </section>
 
     <section class="section" id="about">
@@ -722,16 +805,16 @@
         <div class="section-head">
           <div>
             <h2>About</h2>
-            <p>Creative technologist and strategist in Seattle. I bridge narrative, data, and delivery through AI and design — helping teams move with more clarity, structure, and creative intent. My background spans consulting, enterprise systems thinking, narrative design, digital optimization, and hands-on execution, which lets me move from strategy to build without losing coherence.</p>
+            <p>Creative technologist and strategist in Seattle. I bridge narrative, data, and delivery through AI and design - helping teams move with more clarity, structure, and creative intent. My background spans consulting, enterprise systems thinking, narrative design, digital optimization, and hands-on execution, which lets me move from strategy to build without losing coherence.</p>
           </div>
         </div>
 
         <div class="diag-grid">
           <article class="slab span-7 cut-a">
             <h3>What I build</h3>
-            <p>I modernize how teams build and communicate — linking strategy to experiments to results. That means governable intelligence, trust-aware workflows, narrative systems, and digital experiences designed to be useful in practice, not just compelling in theory.</p>
+            <p>I modernize how teams build and communicate - linking strategy to experiments to results. That means governable intelligence, trust-aware workflows, narrative systems, and digital experiences designed to be useful in practice, not just compelling in theory.</p>
             <div class="tag-row">
-              <span class="tag">AI Trust & Governance</span>
+              <span class="tag">AI Trust &amp; Governance</span>
               <span class="tag">Creative Systems</span>
               <span class="tag">Modern Production</span>
             </div>
@@ -768,52 +851,46 @@
       </div>
     </section>
 
-
     <section class="section" id="capabilities">
       <div class="container">
         <div class="section-head">
           <div>
-            <h2>Where I’m Most Useful</h2>
+            <h2>Where I'm Most Useful</h2>
             <p>I work best where strategy, systems, trust, and execution need to connect. The value is not just in ideas. It is in turning them into something usable, credible, and ready to move.</p>
           </div>
         </div>
 
         <div class="diag-grid">
           <article class="slab span-4 cut-a">
-            <h3>AI Systems & Workflow Strategy</h3>
+            <h3>AI Systems &amp; Workflow Strategy</h3>
             <p>Use-case discovery, workflow design, governance-aware prototyping, and systems thinking for teams trying to move from AI interest to AI utility.</p>
           </article>
-
           <article class="slab span-4 cut-d">
-            <h3>Digital Optimization & Experimentation</h3>
+            <h3>Digital Optimization &amp; Experimentation</h3>
             <p>Journey mapping, analytics-informed decision making, experimentation logic, and practical optimization work that improves clarity, performance, and adoption.</p>
           </article>
-
           <article class="slab span-4 cut-b">
-            <h3>Narrative, Positioning, & Communication</h3>
+            <h3>Narrative, Positioning, &amp; Communication</h3>
             <p>Positioning systems, editorial thinking, presentation strategy, and messaging that helps complex ideas land with more precision and force.</p>
           </article>
-
           <article class="slab span-6 cut-c">
-            <h3>Media, Production, & Creative Systems</h3>
+            <h3>Media, Production, &amp; Creative Systems</h3>
             <p>Doc-style video, editorial, audio, branded storytelling, and production-minded systems that connect story to real delivery.</p>
           </article>
-
           <article class="slab span-6 cut-a">
-            <h3>Advisory, Trust, & Change Enablement</h3>
+            <h3>Advisory, Trust, &amp; Change Enablement</h3>
             <p>Selective guidance for leaders navigating AI, content operations, systems change, and the structural questions behind trust, clarity, and execution.</p>
           </article>
         </div>
       </div>
     </section>
 
-
     <section class="section" id="work">
       <div class="container">
         <div class="section-head">
           <div>
             <h2>Selected Work</h2>
-            <p>Selected work across AI systems, creative production, enterprise strategy, and modern digital experiences — shaped with structure, trust, and authorship in mind.</p>
+            <p>Selected work across AI systems, creative production, enterprise strategy, and modern digital experiences - shaped with structure, trust, and authorship in mind.</p>
           </div>
           <div></div>
         </div>
@@ -828,7 +905,7 @@
               <span class="tag">Creative workflow systems</span>
             </div>
             <div class="media deck cut-a">
-              <iframe src="https://docs.google.com/presentation/d/1W79ETljq-xENte8OypJwu6ZH0iXV31ZQU8T8yN0__Bw/embed?start=false&loop=false&delayms=3000" title="MSc AI Thesis — Defense Deck" loading="lazy" allowfullscreen></iframe>
+              <iframe src="https://docs.google.com/presentation/d/1W79ETljq-xENte8OypJwu6ZH0iXV31ZQU8T8yN0__Bw/embed?start=false&amp;loop=false&amp;delayms=3000" title="MSc AI Thesis - Defense Deck" loading="lazy" allowfullscreen></iframe>
             </div>
             <div class="slab-actions">
               <a class="btn" href="https://docs.google.com/presentation/d/1W79ETljq-xENte8OypJwu6ZH0iXV31ZQU8T8yN0__Bw/view" target="_blank" rel="noopener">Open deck</a>
@@ -837,7 +914,7 @@
           </article>
 
           <article class="slab span-5 cut-b">
-            <h3>Explore Surface & Sustainability Experience</h3>
+            <h3>Explore Surface &amp; Sustainability Experience</h3>
             <p><strong>Creative lead, technologist, and consultant.</strong> Led UX and digital experience work across Explore Surface and sustainability scenarios, including early GPT-powered support for more dynamic interaction.</p>
             <div class="media cut-b">
               <a href="https://exploresurface.microsoft.com/" target="_blank" rel="noopener">
@@ -848,9 +925,9 @@
 
           <article class="slab span-6 cut-c">
             <h3>Beneath the Surface</h3>
-            <p><strong>Program management and production leadership</strong> for Microsoft’s technical YouTube series — aligning content, audience, execution, and delivery quality.</p>
+            <p><strong>Program management and production leadership</strong> for Microsoft's technical YouTube series - aligning content, audience, execution, and delivery quality.</p>
             <div class="media video cut-c">
-              <iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLNA-j_cL4mUSMy6sCtGa4bam0nrkXD1As" title="Beneath the Surface — Playlist" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              <iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLNA-j_cL4mUSMy6sCtGa4bam0nrkXD1As" title="Beneath the Surface - Playlist" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
           </article>
 
@@ -864,15 +941,15 @@
 
           <article class="slab span-12 cut-b">
             <h3>Creative AI Explorations</h3>
-            <p>Work exploring motion, identity, archival material, and synthetic storytelling — not as novelty, but as part of a broader interest in authorship, media systems, and the trust layer around generated content.</p>
-            <div class="two-col creative-ai-pair" style="margin-top:18px;">
+            <p>Work exploring motion, identity, archival material, and synthetic storytelling - not as novelty, but as part of a broader interest in authorship, media systems, and the trust layer around generated content.</p>
+            <div class="two-col creative-ai-pair" style="margin-top: 18px;">
               <a class="media cut-a creative-ai-image" href="https://i.ibb.co/13rJKZ6/1-Great-Grandfather-Original-Image.jpg" target="_blank" rel="noopener">
                 <img src="https://i.ibb.co/13rJKZ6/1-Great-Grandfather-Original-Image.jpg" alt="Original archival portrait used as source for AI motion" loading="lazy" decoding="async">
               </a>
               <div class="media video cut-c creative-ai-video">
-                <iframe src="https://drive.google.com/file/d/1Ik-FNrBrrAO3Z22xdN19_p41yRN7FapJ/preview" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; fullscreen; web-share" allowfullscreen loading="lazy"></iframe>
+                <iframe src="https://drive.google.com/file/d/1Ik-FNrBrrAO3Z22xdN19_p41yRN7FapJ/preview" title="Creative AI motion study" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; fullscreen; web-share" allowfullscreen loading="lazy"></iframe>
               </div>
-</div>
+            </div>
           </article>
         </div>
       </div>
@@ -903,19 +980,19 @@
     <section class="section" id="norynthe">
       <div class="container">
         <div class="portal">
-          <div class="section-head" style="margin-bottom:0;">
+          <div class="section-head" style="margin-bottom: 0;">
             <div>
               <h2>Now Building:</h2>
               <img class="norynthe-logo" src="Norynthe_master.png" alt="Norynthe.">
-              <p>Independent standards for trusted intelligence — and a clearer outside view of what AI systems are actually doing.</p>
+              <p>Independent standards for trusted intelligence - and a clearer outside view of what AI systems are actually doing.</p>
             </div>
           </div>
           <div class="portal-grid">
-            <article class="slab cut-a" style="padding:24px;">
+            <article class="slab cut-a" style="padding: 24px;">
               <h3>The idea</h3>
               <p>Norynthe. is an independent AI trust infrastructure company designed to evaluate how models construct answers, where they diverge, what they omit, how their framing shifts, and how trustworthy those outputs are under pressure.</p>
             </article>
-            <article class="slab cut-d" style="padding:24px;">
+            <article class="slab cut-d" style="padding: 24px;">
               <h3>Why it matters</h3>
               <p>As AI becomes embedded into products, workflows, and public understanding, organizations need a clearer outside standard for comparison, trust, grounding, evidence strength, and framing stability.</p>
             </article>
@@ -926,7 +1003,7 @@
             <span>Placeholder site today · larger company in motion</span>
             <span>A standard outside the model.</span>
           </div>
-          <div class="slab-actions" style="margin-top:22px;">
+          <div class="slab-actions" style="margin-top: 22px;">
             <a class="btn primary" href="https://www.norynthe.com/" target="_blank" rel="noopener">Visit Norynthe.</a>
           </div>
         </div>
@@ -944,7 +1021,7 @@
         <div class="cred-grid">
           <img loading="lazy" decoding="async" src="https://i.ibb.co/KXRcqGq/cosd-logo-stacked-full-color-300ppi.webp" alt="City of San Diego">
           <img loading="lazy" decoding="async" src="https://i.ibb.co/Vxdzg5B/MSSurface-Logo-stacked-C-Gray-RGB.png" alt="Microsoft Surface">
-          <img loading="lazy" decoding="async" src="https://i.ibb.co/23GDtpR/Amazon-Web Services-AWS-Logo-Transparent-PNG.png" alt="Amazon Web Services">
+          <img loading="lazy" decoding="async" src="https://i.ibb.co/23GDtpR/Amazon-Web-Services-AWS-Logo-Transparent-PNG.png" alt="Amazon Web Services">
           <img loading="lazy" decoding="async" src="https://i.ibb.co/cL3FGNm/Splunk-logo.png" alt="Splunk">
           <img loading="lazy" decoding="async" src="https://i.ibb.co/6gv4VWp/Veeam-Logo-Bounce-Oct23.jpg" alt="Veeam">
           <img loading="lazy" decoding="async" src="https://i.ibb.co/KXw44RG/8867-Microsoft-5-F00-Logo-2-D00-for-2-D00-screen.jpg" alt="Microsoft">
@@ -952,13 +1029,12 @@
       </div>
     </section>
 
-
     <section class="section" id="linkedin-signal">
       <div class="container">
         <div class="section-head">
           <div>
             <h2>LinkedIn Signal</h2>
-            <p>Ideas, systems, and public thinking with real reach — presented here as signal, not noise.</p>
+            <p>Ideas, systems, and public thinking with real reach - presented here as signal, not noise.</p>
           </div>
         </div>
 
@@ -979,43 +1055,42 @@
       </div>
     </section>
 
-
     <section class="section" id="recommendations">
       <div class="container">
         <div class="section-head">
           <div>
             <h2>Recommendations</h2>
-            <p>Proof that clarity, creativity, and delivery can coexist — and that the work lands with both technical and human credibility.</p>
+            <p>Proof that clarity, creativity, and delivery can coexist - and that the work lands with both technical and human credibility.</p>
           </div>
         </div>
         <div class="quote-grid">
           <article class="quote">
-            <p>This isn’t a student exercise—this is a production-ready architecture for AI-augmented creative workflows… governable, accountable, and built for real deployment.</p>
+            <p class="quote-text">This isn't a student exercise - this is a production-ready architecture for AI-augmented creative workflows... governable, accountable, and built for real deployment.</p>
             <strong>Thiago Meireles Grabe</strong>
             <span>Professional Industry Defense Reviewer · Woolf University</span>
           </article>
           <article class="quote">
-            <p>Alan combines the rare combination of technological prowess and creativity that makes him a powerhouse consultant.</p>
+            <p class="quote-text">Alan combines the rare combination of technological prowess and creativity that makes him a powerhouse consultant.</p>
             <strong>Jeff Roach</strong>
             <span>Managing Partner · Manager</span>
           </article>
           <article class="quote">
-            <p>Alan is the definition of great… you can expect Alan to deliver excellence.</p>
+            <p class="quote-text">Alan is the definition of great... you can expect Alan to deliver excellence.</p>
             <strong>Candice Bonfiglio</strong>
             <span>Senior Peer</span>
           </article>
           <article class="quote">
-            <p>Excellent at scoping requirements and communicating complex technical concepts clearly to clients.</p>
+            <p class="quote-text">Excellent at scoping requirements and communicating complex technical concepts clearly to clients.</p>
             <strong>Anish Sharda</strong>
             <span>Colleague</span>
           </article>
           <article class="quote">
-            <p>Remarkable blend of technical expertise, creativity, and enthusiasm… his ability to inspire and motivate created a collaborative environment where goals were exceeded.</p>
+            <p class="quote-text">Remarkable blend of technical expertise, creativity, and enthusiasm... his ability to inspire and motivate created a collaborative environment where goals were exceeded.</p>
             <strong>Katherine Zatt</strong>
             <span>Teammate</span>
           </article>
           <article class="quote">
-            <p>Brought a consistent stream of energy and creativity… built a world-class production studio during Covid with little supervision and delivered an impactful solution.</p>
+            <p class="quote-text">Brought a consistent stream of energy and creativity... built a world-class production studio during Covid with little supervision and delivered an impactful solution.</p>
             <strong>Frank Buchholz</strong>
             <span>Director of Product Marketing · Manager</span>
           </article>
@@ -1058,13 +1133,13 @@
         </div>
         <div class="resume-shell">
           <div class="resume-top">
-            <strong>Alan Motley — Resume</strong>
+            <strong>Alan Motley - Resume</strong>
             <div class="resume-actions">
               <a class="btn" href="https://docs.google.com/document/d/16ialPoU7HJwtpiC7MH2rvaKF3k_TYZ4P/export?format=pdf" target="_blank" rel="noopener">Download PDF</a>
               <a class="btn" href="https://docs.google.com/document/d/16ialPoU7HJwtpiC7MH2rvaKF3k_TYZ4P/view" target="_blank" rel="noopener">Open Doc</a>
             </div>
           </div>
-          <iframe class="resume-frame" src="https://docs.google.com/document/d/16ialPoU7HJwtpiC7MH2rvaKF3k_TYZ4P/preview" title="Alan Motley Resume"></iframe>
+          <iframe class="resume-frame" src="https://docs.google.com/document/d/16ialPoU7HJwtpiC7MH2rvaKF3k_TYZ4P/preview" title="Alan Motley Resume" loading="lazy"></iframe>
         </div>
       </div>
     </section>
@@ -1073,8 +1148,8 @@
   <footer>
     <div class="container">
       <div>
-<p>Bringing clarity to complex systems — shaping trust, narrative, and outcomes.</p>
-</div>
+        <p>Bringing clarity to complex systems - shaping trust, narrative, and outcomes.</p>
+      </div>
       <div class="footer-links">
         <a href="mailto:am@alanmotley.com">Email</a>
         <a href="https://medium.com/@alanmotley" target="_blank" rel="noopener">Medium</a>
