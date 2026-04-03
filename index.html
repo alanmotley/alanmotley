@@ -1,408 +1,1057 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-5KLCRKBJH8"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){ dataLayer.push(arguments); }
-  gtag('js', new Date());
-  gtag('config', 'G-5KLCRKBJH8', { anonymize_ip: true, send_page_view: true });
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5KLCRKBJH8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-5KLCRKBJH8', { anonymize_ip: true, send_page_view: true });
+  </script>
 
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Alan Motley — Creative Technologist, AI Systems Strategist, and Founder</title>
-<meta name="description" content="Alan Motley is a creative technologist, AI systems strategist, and founder building governable intelligence, narrative systems, and modern production workflows." />
-<meta property="og:title" content="Alan Motley — Creative Technologist, AI Systems Strategist, and Founder">
-<meta property="og:description" content="Governable intelligence, narrative systems, and modern production workflows — built with clarity, structure, and real-world execution.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://alanmotley.com/">
-<meta property="og:image" content="https://preview.ibb.co/eVa3Fk/Alan_Child_2.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Alan Motley">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Alan Motley — Creative Technologist, AI Systems Strategist, and Founder">
-<meta name="twitter:description" content="Governable intelligence, narrative systems, and modern production workflows — built with clarity, structure, and real-world execution.">
-<meta name="twitter:image" content="https://preview.ibb.co/eVa3Fk/Alan_Child_2.jpg">
-<link rel="icon" type="image/png" sizes="32x32" href="https://i.ibb.co/tTZqVkf4/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="64x64" href="https://i.ibb.co/8DykfX9w/favicon-64x64.png">
-<link rel="apple-touch-icon" sizes="180x180" href="https://i.ibb.co/SXHpbNvv/favicon-180x180.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..900&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="https://i.ibb.co/DDQnT69j/sideframe.png">
-<style>
-  :root{
-    --bg:#fbfdff; --ink:#0f1720; --muted:#546173; --line:#e6edf3; --panel:#ffffff;
-    --brand:#E7B84B; --brand-ink:#111; --brand-soft:#fff8e8;
-    --radius:18px; --shadow:0 18px 48px rgba(14,30,64,.08); --max:1220px; --pad:24px;
-    --ap-top:55px; --ap-right:35px; --ap-bottom:28px; --ap-left:45px;
-    --video-scale:.90; --video-y:8%; --video-x:50%;
-  }
-  @media (prefers-color-scheme: dark){
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alan Motley — Creative Technologist, AI Systems Strategist, and Founder</title>
+  <meta name="description" content="Alan Motley is a creative technologist, AI systems strategist, and founder building governable intelligence, narrative systems, and modern production workflows." />
+
+  <meta property="og:title" content="Alan Motley — Creative Technologist, AI Systems Strategist, and Founder">
+  <meta property="og:description" content="Governable intelligence, narrative systems, and modern production workflows — built with clarity, structure, and real-world execution.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://alanmotley.com/">
+  <meta property="og:image" content="https://preview.ibb.co/eVa3Fk/Alan_Child_2.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Alan Motley">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Alan Motley — Creative Technologist, AI Systems Strategist, and Founder">
+  <meta name="twitter:description" content="Governable intelligence, narrative systems, and modern production workflows — built with clarity, structure, and real-world execution.">
+  <meta name="twitter:image" content="https://preview.ibb.co/eVa3Fk/Alan_Child_2.jpg">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="https://i.ibb.co/tTZqVkf4/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="https://i.ibb.co/8DykfX9w/favicon-64x64.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://i.ibb.co/SXHpbNvv/favicon-180x180.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..900&display=swap" rel="stylesheet">
+
+  <style>
     :root{
-      --bg:#101418; --ink:#e9eef3; --muted:#9fb0be; --line:#22303b; --panel:#12181e;
-      --brand:#FFD166; --brand-ink:#151515; --brand-soft:#2b2514; --shadow:0 22px 60px rgba(0,0,0,.45);
+      --bg:#090c12;
+      --bg-soft:#0f1420;
+      --panel:rgba(16,22,34,.72);
+      --panel-strong:#0f1726;
+      --panel-light:rgba(255,255,255,.04);
+      --ink:#edf2ff;
+      --muted:#a4b0c3;
+      --line:rgba(255,255,255,.10);
+      --line-strong:rgba(255,255,255,.16);
+      --brand:#e7b84b;
+      --brand-2:#6ea7ff;
+      --brand-ink:#151515;
+      --shadow:0 20px 70px rgba(0,0,0,.35);
+      --radius:24px;
+      --radius-sm:18px;
+      --max:1240px;
+      --section-pad: clamp(72px, 8vw, 120px);
     }
-  }
-  *,*::before,*::after{ box-sizing:border-box }
-  html{ scroll-behavior:smooth }
-  body{
-    margin:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; color:var(--ink);
-    background:radial-gradient(900px 600px at -10% -10%, rgba(231,184,75,.15), transparent 60%),radial-gradient(900px 600px at 110% 0%, rgba(88,143,255,.10), transparent 55%),var(--bg);
-  }
-  a{ color:inherit; text-decoration:none }
-  img, video{ display:block; max-width:100% }
-  .wrap{ max-width:var(--max); margin:0 auto; padding:0 20px }
-  .app{ display:grid; gap:24px; grid-template-columns:350px 1fr }
-  @media (max-width:980px){ .app{ grid-template-columns:1fr } .sidebar{ position:static } }
-  .sidebar{ position:sticky; top:18px; align-self:start; border:1px solid var(--line); background:linear-gradient(180deg,#fff, color-mix(in srgb, #fff 92%, var(--brand-soft))); border-radius:var(--radius); padding:18px; box-shadow:var(--shadow); z-index:5 }
-  .brand h1{ margin:2px 0 4px; font-size:clamp(30px,3.6vw,46px); line-height:1.03; letter-spacing:-0.02em; font-weight:900 }
-  .eyebrow{ font-size:12px; letter-spacing:.2em; text-transform:uppercase; color:color-mix(in srgb, var(--muted) 90%, #000) }
-  .bio{ color:var(--muted); margin:12px 0 14px; font-size:15px; line-height:1.55 }
-  .chips{ display:flex; flex-wrap:wrap; gap:10px; margin:0 0 12px }
-  .chip{ font-size:12.5px; padding:7px 12px; border-radius:999px; border:1px solid var(--line); background:color-mix(in srgb, var(--brand) 12%, #fff) }
-  .rate{ font-weight:800; background:linear-gradient(180deg,var(--brand),color-mix(in srgb, var(--brand) 82%, #fff)); color:var(--brand-ink); border:1px solid color-mix(in srgb, var(--brand) 60%, #b08a2e); box-shadow:0 10px 24px rgba(231,184,75,.28) }
-  .nav{ display:flex; flex-direction:column; gap:6px; margin-top:12px }
-  .nav a{ padding:10px 12px; border-radius:10px; color:var(--muted); border:1px solid transparent }
-  .nav a:hover,.nav a.active{ background:color-mix(in srgb, var(--brand) 10%, #fff); color:var(--ink); border-color:color-mix(in srgb, var(--brand) 18%, var(--line)) }
-  .cta-row{ display:flex; gap:8px; flex-wrap:wrap; margin:14px 0 4px }
-  .btn{ display:inline-flex; align-items:center; gap:8px; padding:12px 16px; border-radius:14px; font-weight:800; border:1px solid var(--brand); background:var(--brand); color:var(--brand-ink); box-shadow:0 8px 20px rgba(231,184,75,.25); cursor:pointer }
-  .btn.outline{ background:transparent; color:var(--ink); border:1px solid var(--line); box-shadow:none }
-  .main{ display:grid; gap:20px }
-  .banner{ position:relative; border-radius:var(--radius); padding:18px 0 8px; display:flex; justify-content:center }
-  .frame-box{ position:relative; display:inline-block; --tilt:0deg; transform:rotate(calc(1.4deg + var(--tilt))); transform-origin:50% 8%; transition:transform 120ms ease-out; will-change:transform }
-  .frame-box::before{ content:""; position:absolute; z-index:0; inset:12px 18px 28px 18px; background:radial-gradient(140% 80% at 50% 35%, rgba(0,0,0,.16), rgba(0,0,0,0) 60%); filter:blur(18px); opacity:.9; pointer-events:none }
-  .frame-img{ position:relative; z-index:2; max-width:100%; pointer-events:none; filter:drop-shadow(0 22px 32px rgba(14,30,64,.22)) drop-shadow(0 6px 10px rgba(14,30,64,.14)) }
-  .aperture{ position:absolute; z-index:1; top:var(--ap-top); right:var(--ap-right); bottom:var(--ap-bottom); left:var(--ap-left); overflow:hidden; border-radius:10px; background:#000 }
-  .aperture>video{ width:100%; height:100%; object-fit:cover; object-position:var(--video-x) var(--video-y); transform:scale(var(--video-scale)); transform-origin:center; opacity:0; transition:opacity .35s ease; background:#000 }
-  .aperture>video.ready{ opacity:1 }
-  .hero-copy,.panel{ border:1px solid var(--line); border-radius:var(--radius); background:var(--panel); box-shadow:var(--shadow) }
-  .hero-copy{ padding:44px 20px; max-width:900px }
-  .hero-copy h2{ margin:0 0 18px; font-size:clamp(34px,4.6vw,60px); line-height:1.02; letter-spacing:-0.03em }
-  .hero-copy p{ margin:0; color:var(--muted); max-width:760px; font-size:17px; line-height:1.65 }
-  section{ scroll-margin-top:14px }
-  .panel{ padding:var(--pad) }
-  .title{ font-size:clamp(20px,2.4vw,30px); margin:0 0 6px }
-  .sub{ color:var(--muted); margin:0 0 14px; line-height:1.6 }
-  .grid{ display:grid; gap:14px }
-  @media (min-width:900px){ .cols-2{ grid-template-columns:repeat(2,1fr) } }
-  .card,.quote{ border:1px solid var(--line); border-radius:14px; padding:16px; background:#fff }
-  @media (prefers-color-scheme: dark){ .card,.quote{ background:var(--panel) } }
-  .card h3,.quote .who{ margin:4px 0 6px; font-size:18px }
-  .card p,.quote p{ margin:0; color:var(--muted); line-height:1.6 }
-  .card p + p{ margin-top:10px }
-  ul.tidy{ margin:0; padding-left:18px }
-  ul.tidy li{ margin:6px 0 }
-  .row-actions{ display:flex; gap:8px; flex-wrap:wrap }
-  .pill-link{ font-size:12px; border:1px solid var(--line); border-radius:999px; padding:6px 10px; display:inline-flex; align-items:center }
-  .frame{ width:100%; height:820px; border:1px solid var(--line); border-radius:14px; overflow:hidden; background:#fff }
-  .frame iframe,.deck-wrap iframe,.video-wrap iframe{ width:100%; height:100%; border:0; display:block }
-  .viewer-shell{ margin-top:14px; border:1px solid var(--line); border-radius:14px; overflow:hidden; background:var(--panel); box-shadow:var(--shadow) }
-  .viewer-bar{ display:flex; gap:10px; align-items:center; justify-content:space-between; padding:12px; border-bottom:1px solid var(--line); background:color-mix(in srgb, var(--brand-soft) 70%, #fff 30%) }
-  .viewer-title{ font-weight:800 }
-  .viewer-actions{ display:flex; gap:8px; flex-wrap:wrap }
-  .logos-section .logo-grid{ display:grid; gap:14px; align-items:center; grid-template-columns:repeat(6,1fr) }
-  @media (max-width:1100px){ .logos-section .logo-grid{ grid-template-columns:repeat(4,1fr) } }
-  @media (max-width:700px){ .logos-section .logo-grid{ grid-template-columns:repeat(3,1fr) } }
-  @media (max-width:480px){ .logos-section .logo-grid{ grid-template-columns:repeat(2,1fr) } }
-  .logos-section img{ width:100%; max-height:64px; object-fit:contain; padding:10px; border:1px solid var(--line); border-radius:12px; filter:grayscale(100%) contrast(95%); opacity:.92; background:#fff; box-shadow:var(--shadow) }
-  .video-wrap,.deck-wrap{ position:relative; width:100%; border-radius:12px; overflow:hidden; border:1px solid var(--line); background:#000; box-shadow:var(--shadow) }
-  .video-wrap::before,.deck-wrap::before{ content:""; display:block; padding-top:56.25% }
-  .video-wrap iframe,.deck-wrap iframe{ position:absolute; inset:0 }
-  .image-wrap{ border:1px solid var(--line); border-radius:12px; overflow:hidden; box-shadow:var(--shadow); background:#fff }
-  .image-wrap img{ width:100%; height:auto; display:block }
-  .media-split{ display:grid; gap:14px }
-  @media (min-width:900px){ .media-split{ grid-template-columns:1fr 1fr } }
-  .linkedin-wrap{ max-width:760px; margin:0 auto }
-  .linkedin-embed{ width:100%; max-width:100%; border:0 }
-  .linkedin-note,.quote .meta{ font-size:12px; color:var(--muted); margin-top:10px }
-  .linkedin-stats{ padding:18px 16px; margin:0 auto 18px; max-width:760px; border-radius:14px; background:color-mix(in srgb, var(--brand-soft) 80%, #fff 20%); border:1px solid color-mix(in srgb, var(--brand) 30%, var(--line)); box-shadow:var(--shadow) }
-  .linkedin-stats-grid{ display:flex; flex-wrap:wrap; gap:16px 24px; align-items:flex-end }
-  .linkedin-stat-label{ font-size:13px; color:var(--muted); margin-bottom:4px }
-  .linkedin-stat-value{ font-size:clamp(24px,3vw,32px); font-weight:800 }
-  .list{ list-style:none; padding:0; margin:0 }
-  .post{ display:grid; grid-template-columns:84px 110px 1fr auto; gap:12px; align-items:center; padding:10px 0; border-bottom:1px dashed var(--line) }
-  .post:last-child{ border-bottom:0 }
-  .post .thumb{ width:84px; height:64px; border-radius:10px; overflow:hidden; border:1px solid var(--line); background:#f7f9fd; display:flex; align-items:center; justify-content:center }
-  .post .thumb img{ width:100%; height:100%; object-fit:cover }
-  .post time{ color:var(--muted); font-size:12px }
-  .post a.title{ font-weight:700 }
-  @media (max-width:680px){ .post{ grid-template-columns:84px 1fr; grid-template-areas:"thumb title" "thumb meta" "thumb actions"; align-items:start } .post .thumb{ grid-area:thumb } .post time{ grid-area:meta } .post a.title{ grid-area:title } .post .row-actions{ grid-area:actions } }
-  footer{ text-align:center; color:var(--muted); padding:18px 0 32px }
-  .social{ display:flex; gap:10px; justify-content:center; margin-top:8px; flex-wrap:wrap }
-  .social a{ border:1px solid var(--line); padding:6px 10px; border-radius:999px; display:inline-flex; align-items:center }
-  .typed-wrap{ display:inline; white-space:normal }
-  .typed-caret{ display:inline-block; width:2px; height:1em; margin-left:6px; vertical-align:-0.12em; background:currentColor; animation:caretBlink .9s steps(1) infinite; border-radius:2px }
-  @keyframes caretBlink{ 0%,49%{ opacity:1 } 50%,100%{ opacity:0 } }
-</style>
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      color:var(--ink);
+      background:
+        radial-gradient(900px 600px at 10% -10%, rgba(231,184,75,.14), transparent 55%),
+        radial-gradient(900px 600px at 110% 10%, rgba(110,167,255,.16), transparent 55%),
+        linear-gradient(180deg, #070a10 0%, #0a0f18 40%, #090c12 100%);
+      overflow-x:hidden;
+    }
+
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      background-image:
+        linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+      background-size: 48px 48px;
+      mask-image: radial-gradient(circle at center, black 35%, transparent 85%);
+      opacity:.18;
+    }
+
+    a{color:inherit;text-decoration:none}
+    img,video{display:block;max-width:100%}
+    .container{max-width:var(--max);margin:0 auto;padding:0 24px}
+    .section{padding:0 0 var(--section-pad)}
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:8px 14px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      color:#d7deea;
+      font-size:12px;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      background:rgba(255,255,255,.04);
+      backdrop-filter:blur(12px);
+    }
+    .eyebrow::before{
+      content:"";
+      width:8px;
+      height:8px;
+      border-radius:999px;
+      background:linear-gradient(180deg,var(--brand),#fff1b7);
+      box-shadow:0 0 20px rgba(231,184,75,.65);
+      flex:0 0 auto;
+    }
+
+    .site-header{
+      position:sticky;
+      top:0;
+      z-index:50;
+      backdrop-filter:blur(18px);
+      background:linear-gradient(180deg, rgba(9,12,18,.88), rgba(9,12,18,.58));
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+    .nav-shell{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+      min-height:78px;
+    }
+    .brand-lockup{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      min-width:0;
+    }
+    .brand-mark{
+      width:42px;
+      height:42px;
+      border-radius:14px;
+      background:
+        radial-gradient(circle at 30% 30%, rgba(255,255,255,.24), transparent 38%),
+        linear-gradient(135deg, rgba(231,184,75,.22), rgba(110,167,255,.22)),
+        rgba(255,255,255,.04);
+      border:1px solid rgba(255,255,255,.12);
+      box-shadow:var(--shadow);
+      display:grid;
+      place-items:center;
+      font-weight:800;
+      color:#fff4ca;
+    }
+    .brand-copy{min-width:0}
+    .brand-copy strong{
+      display:block;
+      font-size:14px;
+      letter-spacing:.02em;
+    }
+    .brand-copy span{
+      display:block;
+      color:var(--muted);
+      font-size:12px;
+      margin-top:2px;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+      max-width:320px;
+    }
+
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap:8px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+    .nav-links a{
+      padding:10px 12px;
+      color:var(--muted);
+      border-radius:12px;
+      font-size:14px;
+    }
+    .nav-links a:hover{
+      color:var(--ink);
+      background:rgba(255,255,255,.05);
+    }
+
+    .hero{
+      padding:44px 0 var(--section-pad);
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns: minmax(0,1.15fr) minmax(320px,.85fr);
+      gap:28px;
+      align-items:stretch;
+    }
+    .hero-copy{
+      padding:34px;
+      border:1px solid var(--line);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)),
+        rgba(12,18,28,.72);
+      border-radius:32px;
+      box-shadow:var(--shadow);
+      backdrop-filter:blur(20px);
+      position:relative;
+      overflow:hidden;
+    }
+    .hero-copy::after{
+      content:"";
+      position:absolute;
+      inset:auto -10% -25% auto;
+      width:300px;
+      height:300px;
+      border-radius:50%;
+      background:radial-gradient(circle, rgba(231,184,75,.22), transparent 70%);
+      pointer-events:none;
+    }
+    h1{
+      font-size:clamp(3.3rem, 7vw, 6.4rem);
+      line-height:.94;
+      letter-spacing:-.05em;
+      margin:16px 0 18px;
+      max-width:10ch;
+    }
+    .hero-lead{
+      max-width:740px;
+      color:#c6d0df;
+      font-size:clamp(1.02rem, 1.5vw, 1.14rem);
+      line-height:1.75;
+      margin:0 0 28px;
+    }
+    .hero-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin:0 0 26px;
+    }
+    .button{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:14px 18px;
+      border-radius:16px;
+      font-weight:700;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.04);
+      color:var(--ink);
+      box-shadow:0 10px 24px rgba(0,0,0,.18);
+    }
+    .button.primary{
+      background:linear-gradient(180deg, var(--brand), #f2cc72);
+      color:var(--brand-ink);
+      border-color:rgba(231,184,75,.6);
+    }
+    .button:hover{transform:translateY(-1px)}
+    .hero-meta{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:12px;
+      margin-top:10px;
+    }
+    .mini-stat{
+      padding:16px;
+      border-radius:18px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.04);
+    }
+    .mini-stat strong{
+      display:block;
+      font-size:1.2rem;
+      margin-bottom:6px;
+    }
+    .mini-stat span{
+      color:var(--muted);
+      font-size:.92rem;
+      line-height:1.45;
+    }
+
+    .hero-visual{
+      display:grid;
+      gap:18px;
+    }
+    .portrait-card, .signal-card{
+      border:1px solid var(--line);
+      border-radius:30px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02)),
+        rgba(12,18,28,.72);
+      box-shadow:var(--shadow);
+      backdrop-filter:blur(20px);
+      overflow:hidden;
+    }
+    .portrait-card{
+      padding:18px;
+      display:grid;
+      gap:14px;
+    }
+    .portrait-frame{
+      position:relative;
+      aspect-ratio: 4 / 4.7;
+      border-radius:22px;
+      overflow:hidden;
+      border:1px solid var(--line);
+      background:#000;
+    }
+    .portrait-frame video{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+    .portrait-caption{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:16px;
+    }
+    .portrait-caption strong{
+      display:block;
+      font-size:1rem;
+      margin-bottom:6px;
+    }
+    .portrait-caption span{
+      display:block;
+      color:var(--muted);
+      line-height:1.55;
+      font-size:.95rem;
+    }
+
+    .signal-card{
+      padding:20px;
+      display:grid;
+      gap:14px;
+    }
+    .signal-card h3{
+      margin:0;
+      font-size:1rem;
+      letter-spacing:.01em;
+    }
+    .signal-card p{
+      margin:0;
+      color:var(--muted);
+      line-height:1.6;
+      font-size:.95rem;
+    }
+    .signal-stack{
+      display:grid;
+      gap:10px;
+    }
+    .signal-pill{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      padding:12px 14px;
+      border-radius:16px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.03);
+      font-size:.93rem;
+    }
+    .signal-pill strong{
+      color:#fff5cc;
+      font-size:.9rem;
+      letter-spacing:.04em;
+      text-transform:uppercase;
+    }
+
+    .section-head{
+      display:flex;
+      align-items:end;
+      justify-content:space-between;
+      gap:18px;
+      margin-bottom:20px;
+    }
+    .section-head h2{
+      margin:0 0 8px;
+      font-size:clamp(2rem, 4vw, 3rem);
+      letter-spacing:-.04em;
+      line-height:1;
+    }
+    .section-head p{
+      margin:0;
+      color:var(--muted);
+      max-width:720px;
+      line-height:1.7;
+    }
+
+    .bento{
+      display:grid;
+      grid-template-columns:repeat(12,minmax(0,1fr));
+      gap:18px;
+    }
+    .panel{
+      grid-column:span 12;
+      border:1px solid var(--line);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02)),
+        rgba(12,18,28,.72);
+      border-radius:28px;
+      box-shadow:var(--shadow);
+      backdrop-filter:blur(18px);
+      padding:24px;
+      overflow:hidden;
+      position:relative;
+    }
+    .panel h3{
+      margin:0 0 8px;
+      font-size:1.25rem;
+      letter-spacing:-.02em;
+    }
+    .panel p{
+      margin:0;
+      color:var(--muted);
+      line-height:1.72;
+    }
+    .span-7{grid-column:span 7}
+    .span-5{grid-column:span 5}
+    .span-6{grid-column:span 6}
+    .span-4{grid-column:span 4}
+    .span-8{grid-column:span 8}
+    .work-media{
+      margin-top:18px;
+      border-radius:20px;
+      overflow:hidden;
+      border:1px solid var(--line);
+      background:#05070c;
+    }
+    .work-media iframe,
+    .work-media img{
+      width:100%;
+      display:block;
+      border:0;
+    }
+    .work-media.deck{position:relative}
+    .work-media.deck::before,
+    .work-media.video::before{
+      content:"";
+      display:block;
+      padding-top:56.25%;
+    }
+    .work-media.deck iframe,
+    .work-media.video iframe{
+      position:absolute;
+      inset:0;
+      height:100%;
+    }
+
+    .panel-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:16px;
+    }
+    .chip-list{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:16px;
+    }
+    .chip{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 12px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      color:#d9e1ee;
+      font-size:.84rem;
+      background:rgba(255,255,255,.04);
+    }
+
+    .portal{
+      padding:28px;
+      border-radius:32px;
+      border:1px solid rgba(231,184,75,.24);
+      background:
+        radial-gradient(500px 220px at 100% 0%, rgba(231,184,75,.15), transparent 60%),
+        linear-gradient(135deg, rgba(110,167,255,.12), rgba(231,184,75,.08)),
+        rgba(14,21,33,.8);
+    }
+    .portal-grid{
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:22px;
+      align-items:center;
+    }
+    .portal-card{
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.03);
+      border-radius:22px;
+      padding:18px;
+    }
+    .portal-card strong{
+      display:block;
+      font-size:1rem;
+      margin-bottom:8px;
+    }
+    .portal-card span{
+      display:block;
+      color:var(--muted);
+      line-height:1.6;
+    }
+
+    .logo-grid{
+      display:grid;
+      grid-template-columns:repeat(6,1fr);
+      gap:14px;
+      margin-top:18px;
+    }
+    .logo-grid img{
+      width:100%;
+      max-height:72px;
+      object-fit:contain;
+      padding:14px;
+      border:1px solid var(--line);
+      border-radius:18px;
+      background:rgba(255,255,255,.035);
+    }
+
+    .quote-grid, .writing-grid{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:18px;
+    }
+    blockquote{
+      margin:0;
+      padding:0;
+    }
+    .quote-card{
+      padding:22px;
+      border:1px solid var(--line);
+      border-radius:24px;
+      background:rgba(255,255,255,.035);
+      height:100%;
+    }
+    .quote-card p{
+      margin:0 0 14px;
+      color:#dbe3f0;
+      line-height:1.72;
+    }
+    .quote-card strong{
+      display:block;
+      font-size:.98rem;
+    }
+    .quote-card span{
+      color:var(--muted);
+      font-size:.9rem;
+    }
+
+    .writing-card{
+      padding:22px;
+      border:1px solid var(--line);
+      border-radius:24px;
+      background:rgba(255,255,255,.035);
+    }
+    .writing-card time{
+      display:block;
+      color:var(--muted);
+      font-size:.85rem;
+      margin-bottom:10px;
+    }
+    .writing-card h3{
+      margin:0 0 10px;
+      font-size:1.12rem;
+      line-height:1.35;
+    }
+    .writing-card p{
+      margin:0 0 16px;
+      color:var(--muted);
+      line-height:1.65;
+    }
+
+    .resume-shell{
+      overflow:hidden;
+      border-radius:26px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.03);
+      box-shadow:var(--shadow);
+    }
+    .resume-bar{
+      display:flex;
+      justify-content:space-between;
+      gap:14px;
+      align-items:center;
+      padding:14px 16px;
+      border-bottom:1px solid var(--line);
+      background:rgba(255,255,255,.04);
+    }
+    .resume-bar strong{font-size:1rem}
+    .resume-actions{display:flex;gap:10px;flex-wrap:wrap}
+    .resume-frame{
+      width:100%;
+      height:820px;
+      border:0;
+      display:block;
+      background:#fff;
+    }
+
+    footer{
+      padding:16px 0 56px;
+      text-align:center;
+      color:var(--muted);
+    }
+    .footer-links{
+      display:flex;
+      justify-content:center;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:16px;
+    }
+    .footer-links a{
+      padding:8px 12px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.03);
+    }
+
+    @media (max-width: 1080px){
+      .hero-grid,
+      .portal-grid{grid-template-columns:1fr}
+      .logo-grid{grid-template-columns:repeat(3,1fr)}
+      .span-7,.span-5,.span-6,.span-4,.span-8{grid-column:span 12}
+    }
+    @media (max-width: 760px){
+      .nav-links{display:none}
+      .hero-copy{padding:24px}
+      .hero-meta{grid-template-columns:1fr}
+      .quote-grid,.writing-grid{grid-template-columns:1fr}
+      .logo-grid{grid-template-columns:repeat(2,1fr)}
+      .resume-frame{height:620px}
+      .section-head{display:block}
+      h1{max-width:none}
+    }
+  </style>
 </head>
 <body>
-<div class="wrap app" id="app">
-  <aside class="sidebar">
-    <div class="brand">
-      <div>
-        <div class="eyebrow">Creative Technologist · AI Systems Strategist · Founder</div>
-        <h1>Alan Motley</h1>
+  <header class="site-header">
+    <div class="container nav-shell">
+      <div class="brand-lockup">
+        <div class="brand-mark">A</div>
+        <div class="brand-copy">
+          <strong>Alan Motley</strong>
+          <span>Creative Technologist · AI Systems Strategist · Founder</span>
+        </div>
       </div>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#perspective">Perspective</a>
+        <a href="#norynthe">Norynthe</a>
+        <a href="#writing">Writing</a>
+        <a href="#resume">Resume</a>
+      </nav>
     </div>
-    <p class="bio">I build governable intelligence, narrative systems, and modern production workflows that hold up in the real world.</p>
-    <div class="chips">
-      <span class="chip rate">Selective consulting</span>
-      <span class="chip">MSc Artificial Intelligence</span>
-      <span class="chip">Founder</span>
-      <span class="chip">AI Trust & Governance</span>
-      <span class="chip">Creative Systems</span>
-      <span class="chip">Modern Production</span>
-    </div>
-    <div class="cta-row">
-      <a class="btn" href="mailto:am@alanmotley.com" data-mail="am@alanmotley.com">Email me</a>
-      <a class="btn outline" href="https://docs.google.com/document/d/16ialPoU7HJwtpiC7MH2rvaKF3k_TYZ4P/export?format=pdf" target="_blank" rel="noopener">Download Resume</a>
-    </div>
-    <nav class="nav" aria-label="Sections" id="side-nav">
-      <a href="#banner">Top</a>
-      <a href="#about">About</a>
-      <a href="#selected-work">Selected Work</a>
-      <a href="#perspective">Perspective</a>
-      <a href="#norynthe">Norynthe</a>
-      <a href="#recommendations">Recommendations</a>
-      <a href="#linkedin-posts">LinkedIn</a>
-      <a href="#writing">Writing</a>
-      <a href="#resume">Resume</a>
-    </nav>
-  </aside>
-  <main class="main" id="main">
-    <section class="banner" id="banner" aria-label="Hero banner">
-      <div class="frame-box">
-        <img class="frame-img" src="https://i.ibb.co/DDQnT69j/sideframe.png" alt="" decoding="async" fetchpriority="high">
-        <div class="aperture">
-          <video autoplay muted loop playsinline preload="metadata" poster="https://preview.ibb.co/eVa3Fk/Alan_Child_2.jpg">
-            <source src="https://media.giphy.com/media/nc49NU6wEhOvmtBTiC/giphy.mp4" type="video/mp4">
-          </video>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Founder signal · Systems intelligence · Modern production</span>
+          <h1>Strategy, systems, and authorship for the AI era.</h1>
+          <p class="hero-lead">I’m a creative technologist, AI systems strategist, and founder shaping work where intelligence, governance, narrative, and production meet. I help turn complex ideas into systems, experiences, and signals people can trust.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#work">View selected work</a>
+            <a class="button" href="#norynthe">Explore Norynthe</a>
+            <a class="button" href="mailto:am@alanmotley.com">Email me</a>
+          </div>
+          <div class="hero-meta">
+            <div class="mini-stat">
+              <strong>MSc AI</strong>
+              <span>Graduate-level work spanning AI systems, governance, and production logic.</span>
+            </div>
+            <div class="mini-stat">
+              <strong>Enterprise + Creative</strong>
+              <span>Consulting, digital optimization, narrative systems, and technical execution.</span>
+            </div>
+            <div class="mini-stat">
+              <strong>Now building</strong>
+              <span>Norynthe — independent standards for trusted intelligence.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="portrait-card">
+            <div class="portrait-frame">
+              <video autoplay muted loop playsinline poster="https://media.giphy.com/media/eJesqlXse6Ipe9mFuq/giphy_s.gif">
+                <source src="https://media.giphy.com/media/eJesqlXse6Ipe9mFuq/giphy.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="portrait-caption">
+              <div>
+                <strong>Alan Motley</strong>
+                <span>Building governable intelligence, trust-aware workflows, narrative systems, and modern production environments.</span>
+              </div>
+              <a class="button" href="#resume">Resume</a>
+            </div>
+          </div>
+
+          <div class="signal-card">
+            <h3>Current positioning</h3>
+            <p>A premium personal brand site that introduces the larger company being built, without losing founder clarity or signal.</p>
+            <div class="signal-stack">
+              <div class="signal-pill"><span>Creative Technologist</span><strong>Founder</strong></div>
+              <div class="signal-pill"><span>AI Systems Strategist</span><strong>Governance</strong></div>
+              <div class="signal-pill"><span>Narrative + Build</span><strong>Execution</strong></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>About</h2>
+            <p>I work at the intersection of AI systems, creative technology, governance, and modern production. My background spans consulting, enterprise systems thinking, narrative design, digital optimization, and hands-on execution — which lets me move from strategy to build without losing clarity.</p>
+          </div>
+        </div>
+
+        <div class="bento">
+          <article class="panel span-6">
+            <h3>What I build</h3>
+            <p>Governable intelligence, trust-aware workflows, narrative systems, and digital experiences designed to be useful in practice — not just compelling in theory.</p>
+            <div class="chip-list">
+              <span class="chip">AI Trust & Governance</span>
+              <span class="chip">Creative Systems</span>
+              <span class="chip">Modern Production</span>
+            </div>
+          </article>
+          <article class="panel span-6">
+            <h3>How I work</h3>
+            <p>I translate ambiguity into structure, connect vision to implementation, and build with clarity, taste, and real-world constraints. I care about how systems behave under pressure and whether the result can actually be trusted, adopted, and extended.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="hero-copy" id="top">
-      <h2 id="typed-hero" data-text="Strategy, systems, and authorship for the AI era." aria-label="Strategy, systems, and authorship for the AI era.">
-        <span class="typed-wrap" aria-hidden="true"></span><span class="typed-caret" aria-hidden="true"></span>
-      </h2>
-      <p>I’m a creative technologist, AI systems strategist, and founder shaping work where intelligence, governance, narrative, and production meet. I help turn complex ideas into systems, experiences, and signals people can trust.</p>
-      <div class="cta-row" style="margin-top:14px">
-        <a class="btn" href="#selected-work">View selected work</a>
-        <a class="btn outline" href="#norynthe">Explore Norynthe</a>
-      </div>
-    </section>
-
-    <section class="panel" id="about">
-      <div style="display:flex; flex-direction:column; align-items:center; text-align:center; margin-bottom:16px;">
-        <video autoplay muted loop playsinline style="width:255px; height:255px; border-radius:24px; object-fit:cover; border:1px solid var(--line); box-shadow:var(--shadow); background:#000;" poster="https://media.giphy.com/media/eJesqlXse6Ipe9mFuq/giphy_s.gif">
-          <source src="https://media.giphy.com/media/eJesqlXse6Ipe9mFuq/giphy.mp4" type="video/mp4">
-        </video>
-      </div>
-      <h3 class="title">About</h3>
-      <p class="sub">I work at the intersection of AI systems, creative technology, governance, and modern production. My background spans consulting, enterprise systems thinking, narrative design, digital optimization, and hands-on execution — which lets me move from strategy to build without losing clarity.</p>
-      <div class="grid cols-2">
-        <article class="card">
-          <h3>What I build</h3>
-          <p>Governable intelligence, trust-aware workflows, narrative systems, and digital experiences designed to be useful in practice — not just compelling in theory.</p>
-          <p>I care about how systems behave under pressure, how they are framed, and whether the result can actually be trusted, adopted, and extended.</p>
-        </article>
-        <article class="card">
-          <h3>How I work</h3>
-          <ul class="tidy">
-            <li>Translate ambiguity into structure</li>
-            <li>Connect vision to implementation</li>
-            <li>Design for governance, not just novelty</li>
-            <li>Build with clarity, taste, and real-world constraints</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <section class="panel" id="selected-work">
-      <h3 class="title">Selected Work</h3>
-      <p class="sub">A curated body of work across AI systems, creative production, enterprise strategy, and modern digital experiences.</p>
-      <div class="grid" style="margin-bottom:14px">
-        <article class="card">
-          <h3>Studio AI Production Assistant</h3>
-          <p><strong>MSc Artificial Intelligence thesis and professional defense.</strong> A governance-first architecture for AI-augmented creative workflows designed around provenance, consent, oversight, and real deployment logic.</p>
-          <p style="margin-top:10px">This project sits at the center of how I think: intelligence should be useful, auditable, and accountable inside real workflows.</p>
-          <p style="margin-top:10px"><span class="pill-link">Governance-first</span> <span class="pill-link">Production-ready logic</span> <span class="pill-link">Creative workflow systems</span></p>
-          <div class="deck-wrap" style="margin-top:12px">
-            <iframe src="https://docs.google.com/presentation/d/1W79ETljq-xENte8OypJwu6ZH0iXV31ZQU8T8yN0__Bw/embed?start=false&loop=false&delayms=3000" title="MSc AI Thesis — Defense Deck" loading="lazy" allowfullscreen></iframe>
-          </div>
-          <p style="margin-top:10px" class="row-actions">
-            <a class="pill-link" href="https://docs.google.com/presentation/d/1W79ETljq-xENte8OypJwu6ZH0iXV31ZQU8T8yN0__Bw/view" target="_blank" rel="noopener">Open deck →</a>
-            <a class="pill-link" href="https://docs.google.com/presentation/d/1W79ETljq-xENte8OypJwu6ZH0iXV31ZQU8T8yN0__Bw/export/pdf" target="_blank" rel="noopener">Download PDF →</a>
-          </p>
-        </article>
-      </div>
-      <div class="grid cols-2">
-        <article class="card">
-          <h3>Beneath the Surface</h3>
-          <p><strong>Program management and production leadership</strong> for Microsoft’s technical YouTube series — aligning content, audience, execution, and delivery quality.</p>
-          <div class="video-wrap" style="margin-top:10px"><iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLNA-j_cL4mUSMy6sCtGa4bam0nrkXD1As" title="Beneath the Surface — Playlist" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
-        </article>
-        <article class="card">
-          <h3>AI in a Minute</h3>
-          <p><strong>Concept and script development</strong> for Microsoft Cloud storytelling that translated AI topics into accessible, business-facing narrative.</p>
-          <div class="video-wrap" style="margin-top:10px"><iframe src="https://www.youtube-nocookie.com/embed/om7iYSucLrk" title="AI in a Minute: Generative AI" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
-        </article>
-      </div>
-      <div class="grid" style="margin-top:14px">
-        <article class="card">
-          <h3><a href="https://exploresurface.microsoft.com/" target="_blank" rel="noopener">Explore Surface & Sustainability Experience</a></h3>
-          <p><strong>Creative lead, technologist, and consultant.</strong> Led UX and digital experience work across Explore Surface and sustainability scenarios, including early GPT-powered support for more dynamic user interaction.</p>
-          <a class="image-wrap" href="https://exploresurface.microsoft.com/" target="_blank" rel="noopener" style="display:block; margin-top:10px"><img src="https://i.ibb.co/rGynjHQb/Screenshot-11-11-2025-185624-exploresurface-microsoft-com.jpg" alt="Explore Surface website preview" loading="lazy" decoding="async"></a>
-        </article>
-      </div>
-      <div class="grid" style="margin-top:14px">
-        <article class="card">
-          <h3>Creative AI Explorations</h3>
-          <p>Work exploring motion, identity, archival material, and synthetic storytelling — not as novelty, but as part of a broader interest in authorship, media systems, and the trust layer around generated content.</p>
-          <div class="media-split" style="margin-top:12px">
-            <a class="image-wrap" href="https://i.ibb.co/13rJKZ6/1-Great-Grandfather-Original-Image.jpg" target="_blank" rel="noopener"><img src="https://i.ibb.co/13rJKZ6/1-Great-Grandfather-Original-Image.jpg" alt="Original archival portrait used as source for AI motion" loading="lazy" decoding="async"></a>
-            <div class="video-wrap"><iframe src="https://drive.google.com/file/d/1Ik-FNrBrrAO3Z22xdN19_p41yRN7FapJ/preview" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; fullscreen; web-share" allowfullscreen loading="lazy"></iframe></div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="panel" id="perspective">
-      <h3 class="title">Perspective</h3>
-      <p class="sub">My work is driven by a simple belief: the future of AI is not just about capability. It is about structure, framing, governance, and whether people can actually trust what systems produce.</p>
-      <div class="grid cols-2">
-        <article class="card">
-          <h3>Why this matters</h3>
-          <p>We are entering a period where AI systems increasingly shape what people experience as credible, useful, safe, and true. That means design choices, retrieval, ranking, tuning, and policy layers are governance decisions, not just product details.</p>
-        </article>
-        <article class="card">
-          <h3>What I bring</h3>
-          <p>I connect enterprise systems thinking, narrative sensitivity, engineering, and consulting execution. That combination lets me see not just what a system can do, but how it behaves, how it is understood, and what trust it actually earns.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="panel" id="norynthe">
-      <h3 class="title">Now Building: Norynthe</h3>
-      <p class="sub">Independent standards for trusted intelligence.</p>
-      <div class="grid cols-2">
-        <article class="card">
-          <h3>The idea</h3>
-          <p>Norynthe is an independent AI trust infrastructure company designed to evaluate how models construct answers, where they diverge, what they omit, how their framing shifts, and how trustworthy those outputs are under pressure.</p>
-          <p>Its role is not to outbuild the major labs. Its role is to create a standard outside the model.</p>
-        </article>
-        <article class="card">
-          <h3>Why it matters</h3>
-          <p>As AI becomes embedded into products, workflows, and public understanding, organizations need a clearer outside standard for comparison, trust, grounding, evidence strength, and framing stability.</p>
-          <p>This is currently a placeholder one-pager while the larger company and product direction continues to take shape.</p>
-        </article>
-      </div>
-      <div class="cta-row" style="margin-top:16px"><a class="btn" href="https://norynthe.com" target="_blank" rel="noopener">Visit Norynthe</a></div>
-    </section>
-
-    <section class="panel logos-section" id="companies" aria-labelledby="companies-title">
-      <h3 class="title" id="companies-title">Selected Credibility</h3>
-      <p class="sub">Work spanning enterprise technology, creative production, systems thinking, and public-facing storytelling.</p>
-      <div class="logo-grid">
-        <img loading="lazy" decoding="async" src="https://i.ibb.co/KXRcqGq/cosd-logo-stacked-full-color-300ppi.webp" alt="City of San Diego">
-        <img loading="lazy" decoding="async" src="https://i.ibb.co/Vxdzg5B/MSSurface-Logo-stacked-C-Gray-RGB.png" alt="Microsoft Surface">
-        <img loading="lazy" decoding="async" src="https://i.ibb.co/23GDtpR/Amazon-Web Services-AWS-Logo-Transparent-PNG.png" alt="Amazon Web Services (AWS)">
-        <img loading="lazy" decoding="async" src="https://i.ibb.co/cL3FGNm/Splunk-logo.png" alt="Splunk">
-        <img loading="lazy" decoding="async" src="https://i.ibb.co/6gv4VWp/Veeam-Logo-Bounce-Oct23.jpg" alt="Veeam">
-        <img loading="lazy" decoding="async" src="https://i.ibb.co/KXw44RG/8867-Microsoft-5-F00-Logo-2-D00-for-2-D00-screen.jpg" alt="Microsoft">
-      </div>
-    </section>
-
-    <section class="panel" id="process">
-      <h3 class="title">How I Work</h3>
-      <p class="sub">From ambiguity to structure, from structure to execution.</p>
-      <div class="grid cols-2">
-        <article class="card"><h3>Clarify</h3><p>Define the problem, audience, trust concerns, constraints, and signal that actually matters.</p></article>
-        <article class="card"><h3>Design</h3><p>Translate the problem into a system, narrative, workflow, experience, or evaluation logic that can be tested and understood.</p></article>
-        <article class="card"><h3>Build</h3><p>Create artifacts that hold up in practice: presentations, workflows, content systems, prototypes, evaluations, and strategic assets.</p></article>
-        <article class="card"><h3>Pressure-test</h3><p>Look at what shifts under real conditions — trust, framing, usability, consistency, quality, and operational fit.</p></article>
-      </div>
-    </section>
-
-    <section class="panel" id="recommendations">
-      <h3 class="title">Recommendations</h3>
-      <p class="sub">Proof that clarity, creativity, and delivery can coexist.</p>
-      <div class="grid cols-2">
-        <article class="quote"><p class="who">Thiago Meireles Grabe</p><p class="meta">Professional Industry Defense Reviewer · Woolf University</p><p>“This isn’t a student exercise—this is a production-ready architecture for AI-augmented creative workflows… governable, accountable, and built for real deployment.”</p></article>
-        <article class="quote"><p class="who">Jeff Roach</p><p class="meta">Managing Partner · Manager</p><p>“Alan combines the rare combination of technological prowess and creativity that makes him a powerhouse consultant.”</p></article>
-        <article class="quote"><p class="who">Candice Bonfiglio</p><p class="meta">Senior Peer</p><p>“Alan is the definition of great… you can expect Alan to deliver excellence.”</p></article>
-        <article class="quote"><p class="who">Anish Sharda</p><p class="meta">Colleague</p><p>“Excellent at scoping requirements and communicating complex technical concepts clearly to clients.”</p></article>
-      </div>
-    </section>
-
-    <section class="panel" id="linkedin-posts">
-      <h3 class="title">LinkedIn</h3>
-      <p class="sub">Thinking in public about systems, access, AI, and where the future is actually headed.</p>
-      <div class="linkedin-stats">
-        <div class="linkedin-stats-grid">
-          <div><div class="linkedin-stat-label">Impressions</div><div class="linkedin-stat-value" data-target="50000">50,000</div></div>
-          <div><div class="linkedin-stat-label">Members reached</div><div class="linkedin-stat-value" data-target="31000">31,000</div></div>
-          <div><div class="linkedin-stat-label">Likes</div><div class="linkedin-stat-value" data-target="625" data-suffix="+">625+</div></div>
-        </div>
-      </div>
-      <div class="linkedin-wrap" style="margin-bottom:18px;">
-        <iframe class="linkedin-embed" src="https://www.linkedin.com/embed/feed/update/urn:li:share:7395660320104439808" height="978" loading="lazy" title="Embedded LinkedIn post — Featured post 1"></iframe>
-        <p class="linkedin-note">If the embed doesn’t load, you can <a href="https://www.linkedin.com/feed/update/urn:li:share:7395660320104439808" target="_blank" rel="noopener">open this post directly on LinkedIn →</a></p>
-      </div>
-    </section>
-
-    <section class="panel" id="writing">
-      <h3 class="title">Writing</h3>
-      <p class="sub">Essays and editorial on systems, stories, power, technology, and culture. <a href="https://muckrack.com/alanmotley" target="_blank" rel="noopener">Read more via Muckrack</a>.</p>
-      <ul id="medium-list" class="list">
-        <li class="post"><div class="thumb">—</div><time datetime="2025-11-04">Nov 04, 2025</time><a class="title" href="https://medium.com/@alanmotley/some-people-are-built-to-create-they-just-need-room-to-become-b24b6eb2447b" target="_blank" rel="noopener">Some People Are Built to Create. They Just Need Room to Become.</a><div class="row-actions"><a class="pill-link" href="https://medium.com/@alanmotley/some-people-are-built-to-create-they-just-need-room-to-become-b24b6eb2447b" target="_blank" rel="noopener">Read</a></div></li>
-        <li class="post"><div class="thumb">—</div><time datetime="2025-10-28">Oct 28, 2025</time><a class="title" href="https://medium.com/@alanmotley/the-illusion-of-caring-how-whiteness-rebrands-itself-as-progress-c2df4a193fe2" target="_blank" rel="noopener">The Illusion of Caring: How Whiteness Rebrands Itself as Progress</a><div class="row-actions"><a class="pill-link" href="https://medium.com/@alanmotley/the-illusion-of-caring-how-whiteness-rebrands-itself-as-progress-c2df4a193fe2" target="_blank" rel="noopener">Read</a></div></li>
-      </ul>
-    </section>
-
-    <section class="panel" id="resume">
-      <h3 class="title">Resume</h3>
-      <p class="sub">A detailed view of experience across consulting, enterprise systems, creative production, digital optimization, and AI-focused work.</p>
-      <div class="viewer-shell">
-        <div class="viewer-bar">
-          <div class="viewer-title">Alan Motley — Resume</div>
-          <div class="viewer-actions">
-            <a class="pill-link" href="https://docs.google.com/document/d/16ialPoU7HJwtpiC7MH2rvaKF3k_TYZ4P/export?format=pdf" target="_blank" rel="noopener">Download PDF →</a>
-            <a class="pill-link" href="https://docs.google.com/document/d/16ialPoU7HJwtpiC7MH2rvaKF3k_TYZ4P/view" target="_blank" rel="noopener">Open Doc →</a>
+    <section class="section" id="work">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Selected Work</h2>
+            <p>A curated body of work across AI systems, creative production, enterprise strategy, and modern digital experiences.</p>
           </div>
         </div>
-        <div class="frame"><iframe src="https://docs.google.com/document/d/16ialPoU7HJwtpiC7MH2rvaKF3k_TYZ4P/preview" title="Alan Motley Resume"></iframe></div>
+
+        <div class="bento">
+          <article class="panel span-7">
+            <h3>Studio AI Production Assistant</h3>
+            <p><strong>MSc Artificial Intelligence thesis and professional defense.</strong> A governance-first architecture for AI-augmented creative workflows designed around provenance, consent, oversight, and real deployment logic.</p>
+            <div class="chip-list">
+              <span class="chip">Governance-first</span>
+              <span class="chip">Production-ready logic</span>
+              <span class="chip">Creative workflow systems</span>
+            </div>
+            <div class="work-media deck" style="margin-top:18px;">
+              <iframe src="https://docs.google.com/presentation/d/1W79ETljq-xENte8OypJwu6ZH0iXV31ZQU8T8yN0__Bw/embed?start=false&loop=false&delayms=3000" title="MSc AI Thesis — Defense Deck" loading="lazy" allowfullscreen></iframe>
+            </div>
+            <div class="panel-actions">
+              <a class="button" href="https://docs.google.com/presentation/d/1W79ETljq-xENte8OypJwu6ZH0iXV31ZQU8T8yN0__Bw/view" target="_blank" rel="noopener">Open deck</a>
+              <a class="button" href="https://docs.google.com/presentation/d/1W79ETljq-xENte8OypJwu6ZH0iXV31ZQU8T8yN0__Bw/export/pdf" target="_blank" rel="noopener">Download PDF</a>
+            </div>
+          </article>
+
+          <article class="panel span-5">
+            <h3>Explore Surface & Sustainability Experience</h3>
+            <p><strong>Creative lead, technologist, and consultant.</strong> Led UX and digital experience work across Explore Surface and sustainability scenarios, including early GPT-powered support for more dynamic interaction.</p>
+            <div class="work-media" style="margin-top:18px;">
+              <a href="https://exploresurface.microsoft.com/" target="_blank" rel="noopener">
+                <img src="https://i.ibb.co/rGynjHQb/Screenshot-11-11-2025-185624-exploresurface-microsoft-com.jpg" alt="Explore Surface website preview" loading="lazy" decoding="async">
+              </a>
+            </div>
+            <div class="panel-actions">
+              <a class="button" href="https://exploresurface.microsoft.com/" target="_blank" rel="noopener">Open experience</a>
+            </div>
+          </article>
+
+          <article class="panel span-6">
+            <h3>Beneath the Surface</h3>
+            <p><strong>Program management and production leadership</strong> for Microsoft’s technical YouTube series — aligning content, audience, execution, and delivery quality.</p>
+            <div class="work-media video">
+              <iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLNA-j_cL4mUSMy6sCtGa4bam0nrkXD1As" title="Beneath the Surface — Playlist" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+          </article>
+
+          <article class="panel span-6">
+            <h3>AI in a Minute</h3>
+            <p><strong>Concept and script development</strong> for Microsoft Cloud storytelling that translated AI topics into accessible, business-facing narrative.</p>
+            <div class="work-media video">
+              <iframe src="https://www.youtube-nocookie.com/embed/om7iYSucLrk" title="AI in a Minute: Generative AI" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+          </article>
+
+          <article class="panel span-12">
+            <h3>Creative AI Explorations</h3>
+            <p>Work exploring motion, identity, archival material, and synthetic storytelling — not as novelty, but as part of a broader interest in authorship, media systems, and the trust layer around generated content.</p>
+            <div class="media-split" style="margin-top:18px;">
+              <a class="image-wrap" href="https://i.ibb.co/13rJKZ6/1-Great-Grandfather-Original-Image.jpg" target="_blank" rel="noopener">
+                <img src="https://i.ibb.co/13rJKZ6/1-Great-Grandfather-Original-Image.jpg" alt="Original archival portrait used as source for AI motion" loading="lazy" decoding="async">
+              </a>
+              <div class="work-media video" style="margin-top:0;">
+                <iframe src="https://drive.google.com/file/d/1Ik-FNrBrrAO3Z22xdN19_p41yRN7FapJ/preview" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; fullscreen; web-share" allowfullscreen loading="lazy"></iframe>
+              </div>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
-    <footer role="contentinfo">
+    <section class="section" id="perspective">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Perspective</h2>
+            <p>My work is driven by a simple belief: the future of AI is not just about capability. It is about structure, framing, governance, and whether people can actually trust what systems produce.</p>
+          </div>
+        </div>
+
+        <div class="bento">
+          <article class="panel span-6">
+            <h3>Why this matters</h3>
+            <p>We are entering a period where AI systems increasingly shape what people experience as credible, useful, safe, and true. That means design choices, retrieval, ranking, tuning, and policy layers are governance decisions, not just product details.</p>
+          </article>
+          <article class="panel span-6">
+            <h3>What I bring</h3>
+            <p>I connect enterprise systems thinking, narrative sensitivity, engineering, and consulting execution. That combination lets me see not just what a system can do, but how it behaves, how it is understood, and what trust it actually earns.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="norynthe">
+      <div class="container">
+        <div class="portal">
+          <div class="section-head" style="margin-bottom:24px;">
+            <div>
+              <h2>Now Building: Norynthe</h2>
+              <p>Independent standards for trusted intelligence.</p>
+            </div>
+          </div>
+
+          <div class="portal-grid">
+            <div class="portal-card">
+              <strong>The idea</strong>
+              <span>Norynthe is an independent AI trust infrastructure company designed to evaluate how models construct answers, where they diverge, what they omit, how their framing shifts, and how trustworthy those outputs are under pressure.</span>
+            </div>
+            <div class="portal-card">
+              <strong>Why it matters</strong>
+              <span>As AI becomes embedded into products, workflows, and public understanding, organizations need a clearer outside standard for comparison, trust, grounding, evidence strength, and framing stability.</span>
+            </div>
+          </div>
+
+          <div class="panel-actions" style="margin-top:20px;">
+            <a class="button primary" href="https://norynthe.com" target="_blank" rel="noopener">Visit Norynthe</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="credibility">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Selected Credibility</h2>
+            <p>Work spanning enterprise technology, creative production, systems thinking, and public-facing storytelling.</p>
+          </div>
+        </div>
+        <div class="logo-grid">
+          <img loading="lazy" decoding="async" src="https://i.ibb.co/KXRcqGq/cosd-logo-stacked-full-color-300ppi.webp" alt="City of San Diego">
+          <img loading="lazy" decoding="async" src="https://i.ibb.co/Vxdzg5B/MSSurface-Logo-stacked-C-Gray-RGB.png" alt="Microsoft Surface">
+          <img loading="lazy" decoding="async" src="https://i.ibb.co/23GDtpR/Amazon-Web Services-AWS-Logo-Transparent-PNG.png" alt="Amazon Web Services">
+          <img loading="lazy" decoding="async" src="https://i.ibb.co/cL3FGNm/Splunk-logo.png" alt="Splunk">
+          <img loading="lazy" decoding="async" src="https://i.ibb.co/6gv4VWp/Veeam-Logo-Bounce-Oct23.jpg" alt="Veeam">
+          <img loading="lazy" decoding="async" src="https://i.ibb.co/KXw44RG/8867-Microsoft-5-F00-Logo-2-D00-for-2-D00-screen.jpg" alt="Microsoft">
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="recommendations">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Recommendations</h2>
+            <p>Proof that clarity, creativity, and delivery can coexist.</p>
+          </div>
+        </div>
+        <div class="quote-grid">
+          <div class="quote-card">
+            <blockquote>
+              <p>“This isn’t a student exercise—this is a production-ready architecture for AI-augmented creative workflows… governable, accountable, and built for real deployment.”</p>
+              <strong>Thiago Meireles Grabe</strong>
+              <span>Professional Industry Defense Reviewer · Woolf University</span>
+            </blockquote>
+          </div>
+          <div class="quote-card">
+            <blockquote>
+              <p>“Alan combines the rare combination of technological prowess and creativity that makes him a powerhouse consultant.”</p>
+              <strong>Jeff Roach</strong>
+              <span>Managing Partner · Manager</span>
+            </blockquote>
+          </div>
+          <div class="quote-card">
+            <blockquote>
+              <p>“Alan is the definition of great… you can expect Alan to deliver excellence.”</p>
+              <strong>Candice Bonfiglio</strong>
+              <span>Senior Peer</span>
+            </blockquote>
+          </div>
+          <div class="quote-card">
+            <blockquote>
+              <p>“Excellent at scoping requirements and communicating complex technical concepts clearly to clients.”</p>
+              <strong>Anish Sharda</strong>
+              <span>Colleague</span>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="writing">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Writing</h2>
+            <p>Essays and editorial on systems, stories, power, technology, and culture.</p>
+          </div>
+        </div>
+        <div class="writing-grid">
+          <article class="writing-card">
+            <time datetime="2025-11-04">Nov 04, 2025</time>
+            <h3>Some People Are Built to Create. They Just Need Room to Become.</h3>
+            <p>A piece on creative capacity, material conditions, and what happens when people finally get room to build.</p>
+            <a class="button" href="https://medium.com/@alanmotley/some-people-are-built-to-create-they-just-need-room-to-become-b24b6eb2447b" target="_blank" rel="noopener">Read on Medium</a>
+          </article>
+          <article class="writing-card">
+            <time datetime="2025-10-28">Oct 28, 2025</time>
+            <h3>The Illusion of Caring: How Whiteness Rebrands Itself as Progress</h3>
+            <p>A piece examining systems, image management, and how institutional narratives get mistaken for meaningful change.</p>
+            <a class="button" href="https://medium.com/@alanmotley/the-illusion-of-caring-how-whiteness-rebrands-itself-as-progress-c2df4a193fe2" target="_blank" rel="noopener">Read on Medium</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="resume">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Resume</h2>
+            <p>A detailed view of experience across consulting, enterprise systems, creative production, digital optimization, and AI-focused work.</p>
+          </div>
+        </div>
+        <div class="resume-shell">
+          <div class="resume-bar">
+            <strong>Alan Motley — Resume</strong>
+            <div class="resume-actions">
+              <a class="button" href="https://docs.google.com/document/d/16ialPoU7HJwtpiC7MH2rvaKF3k_TYZ4P/export?format=pdf" target="_blank" rel="noopener">Download PDF</a>
+              <a class="button" href="https://docs.google.com/document/d/16ialPoU7HJwtpiC7MH2rvaKF3k_TYZ4P/view" target="_blank" rel="noopener">Open Doc</a>
+            </div>
+          </div>
+          <iframe class="resume-frame" src="https://docs.google.com/document/d/16ialPoU7HJwtpiC7MH2rvaKF3k_TYZ4P/preview" title="Alan Motley Resume"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
       <div>Let’s build something that moves — together.</div>
-      <div style="height:6px"></div>
-      <div>© 2026 Alan Motley</div>
-      <nav class="social" aria-label="Social links">
-        <a href="mailto:am@alanmotley.com" rel="noopener">Email</a>
+      <div class="footer-links">
+        <a href="mailto:am@alanmotley.com">Email</a>
         <a href="https://medium.com/@alanmotley" target="_blank" rel="noopener">Medium</a>
         <a href="https://muckrack.com/alanmotley" target="_blank" rel="noopener">Muckrack</a>
         <a href="https://www.linkedin.com/in/alanmotley/" target="_blank" rel="noopener">LinkedIn</a>
         <a href="https://www.instagram.com/alanmotley" target="_blank" rel="noopener">Instagram</a>
-      </nav>
-    </footer>
-  </main>
-</div>
-<script>
-(function(){
-  function forceMail(el){ if(!el) return; el.addEventListener('click', function(e){ var addr = el.getAttribute('data-mail'); var href = el.getAttribute('href'); if(addr && (!href || href.indexOf('mailto:') !== 0)){ e.preventDefault(); window.location.href = 'mailto:' + addr; return; } if(href && href.indexOf('mailto:') === 0){ e.preventDefault(); window.location.href = href; } }); }
-  forceMail(document.querySelector('.cta-row a.btn[data-mail]'));
-})();
-(function(){ var v = document.querySelector('.aperture > video'); if(!v) return; function ready(){ v.classList.add('ready'); } v.addEventListener('loadeddata', ready, { once:true }); setTimeout(ready, 1500); })();
-(function(){ var nav = document.getElementById('side-nav'); if(!nav || !('IntersectionObserver' in window)) return; var links = Array.prototype.slice.call(nav.querySelectorAll('a[href^="#"]')); var map = new Map(links.map(function(l){ return [l.getAttribute('href'), l]; })); var obs = new IntersectionObserver(function(entries){ entries.forEach(function(entry){ var id = '#' + entry.target.id; var link = map.get(id); if(link && entry.isIntersecting){ links.forEach(function(x){ x.classList.remove('active'); }); link.classList.add('active'); } }); }, { rootMargin: '-40% 0px -55% 0px', threshold: 0.01 }); Array.prototype.forEach.call(document.querySelectorAll('main section[id]'), function(sec){ obs.observe(sec); }); })();
-(function(){ var ul = document.getElementById('medium-list'); if(!ul || !window.fetch) return; function getThumb(item){ var t = item.thumbnail || (item.enclosure && (item.enclosure.link || item.enclosure.url)) || null; if(!t && item.content){ var m = item.content.match(/<img[^>]+src="([^"]+)"/i); if(m && m[1]) t = m[1]; } return t; } var rss = encodeURIComponent('https://medium.com/feed/@alanmotley'); var url = 'https://api.rss2json.com/v1/api.json?rss_url=' + rss; fetch(url, { headers:{ 'Accept':'application/json' } }).then(function(res){ if(!res.ok) throw new Error('feed'); return res.json(); }).then(function(data){ if(!data.items || !data.items.length) return; var items = data.items.slice(0,2); var frag = document.createDocumentFragment(); items.forEach(function(item){ var d = new Date(item.pubDate); var li = document.createElement('li'); li.className = 'post'; var thumbWrap = document.createElement('div'); thumbWrap.className = 'thumb'; var imgSrc = getThumb(item); if(imgSrc){ var img = document.createElement('img'); img.loading = 'lazy'; img.decoding = 'async'; img.src = imgSrc; img.alt = ''; thumbWrap.appendChild(img); } else { thumbWrap.textContent = '—'; } var timeEl = document.createElement('time'); timeEl.setAttribute('datetime', d.toISOString().slice(0,10)); timeEl.textContent = d.toLocaleString('en-US', { month:'short', day:'2-digit', year:'numeric' }); var a = document.createElement('a'); a.className = 'title'; a.href = item.link; a.target = '_blank'; a.rel = 'noopener'; a.textContent = item.title; var actions = document.createElement('div'); actions.className = 'row-actions'; var read = document.createElement('a'); read.className = 'pill-link'; read.href = item.link; read.target = '_blank'; read.rel = 'noopener'; read.textContent = 'Read'; actions.appendChild(read); li.appendChild(thumbWrap); li.appendChild(timeEl); li.appendChild(a); li.appendChild(actions); frag.appendChild(li); }); ul.innerHTML = ''; ul.appendChild(frag); }).catch(function(){}); })();
-(function(){ var banner = document.querySelector('.banner'); var box = document.querySelector('.frame-box'); if(!banner || !box) return; var rafId = null, target = 0, current = 0, MAX = 0.2; function onMove(e){ var rect = banner.getBoundingClientRect(); var x = (e.clientX - rect.left) / rect.width; var y = (e.clientY - rect.top) / rect.height; target = ((x - 0.5) * 2) * 0.2 + ((y - 0.45) * 2) * 0.05; if (target > MAX) target = MAX; if (target < -MAX) target = -MAX; if(!rafId) rafId = requestAnimationFrame(tick); } function tick(){ current += (target - current) * 0.18; box.style.setProperty('--tilt', current.toFixed(4) + 'deg'); if (Math.abs(target - current) > 0.001){ rafId = requestAnimationFrame(tick); } else { rafId = null; } } function reset(){ target = 0; if(!rafId) rafId = requestAnimationFrame(tick); } banner.addEventListener('mousemove', onMove); banner.addEventListener('mouseleave', reset); })();
-(function(){ var section = document.getElementById('linkedin-posts'); if (!section) return; var stats = section.querySelectorAll('.linkedin-stat-value[data-target]'); if (!stats.length) return; var animated = false; function animate() { if (animated) return; animated = true; stats.forEach(function(el) { var target = parseInt(el.getAttribute('data-target'), 10); if (isNaN(target)) return; var suffix = el.getAttribute('data-suffix') || ''; var duration = 1200; var startTime = null; function step(timestamp) { if (!startTime) startTime = timestamp; var progress = Math.min((timestamp - startTime) / duration, 1); var current = Math.floor(progress * target); el.textContent = current.toLocaleString('en-US') + suffix; if (progress < 1) requestAnimationFrame(step); else el.textContent = target.toLocaleString('en-US') + suffix; } requestAnimationFrame(step); }); } if ('IntersectionObserver' in window) { var io = new IntersectionObserver(function(entries) { entries.forEach(function(entry) { if (entry.isIntersecting) { animate(); io.disconnect(); } }); }, { threshold: 0.3 }); io.observe(section); } else { window.addEventListener('load', function() { setTimeout(animate, 500); }); } })();
-(function(){ var h2 = document.getElementById('typed-hero'); if(!h2) return; var wrap = h2.querySelector('.typed-wrap'); var text = h2.getAttribute('data-text') || ''; if(!wrap) return; var meas = document.createElement('span'); meas.style.visibility = 'hidden'; meas.style.position = 'absolute'; meas.style.left = '-9999px'; meas.style.top = '-9999px'; meas.style.whiteSpace = 'normal'; meas.style.maxWidth = getComputedStyle(h2).width; meas.style.font = getComputedStyle(h2).font; meas.style.letterSpacing = getComputedStyle(h2).letterSpacing; meas.textContent = text; document.body.appendChild(meas); h2.style.minHeight = Math.ceil(meas.getBoundingClientRect().height) + 'px'; document.body.removeChild(meas); var i = 0; function delayFor(ch){ var base = 22 + Math.random() * 55; if (ch === ' ') base += 30 + Math.random() * 60; if (/[.,!?]/.test(ch)) base += 220 + Math.random() * 260; return base; } function typeNext(){ if(i >= text.length) return; var ch = text.charAt(i); wrap.textContent += ch; i++; setTimeout(typeNext, delayFor(ch)); } setTimeout(typeNext, 220); })();
-</script>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      function forceMail(el){
+        if(!el) return;
+        el.addEventListener('click', function(e){
+          var addr = el.getAttribute('data-mail');
+          var href = el.getAttribute('href');
+          if(addr && (!href || href.indexOf('mailto:') !== 0)){
+            e.preventDefault();
+            window.location.href = 'mailto:' + addr;
+          }
+        });
+      }
+      forceMail(document.querySelector('.btn[data-mail]'));
+    })();
+
+    (function(){
+      var v = document.querySelector('.aperture > video');
+      if(!v) return;
+      function ready(){ v.classList.add('ready'); }
+      v.addEventListener('loadeddata', ready, { once:true });
+      setTimeout(ready, 1200);
+    })();
+
+    (function(){
+      var h2 = document.getElementById('typed-hero');
+      if(!h2) return;
+      var wrap = h2.querySelector('.typed-wrap');
+      var text = h2.getAttribute('data-text') || '';
+      if(!wrap) return;
+      var meas = document.createElement('span');
+      meas.style.visibility = 'hidden';
+      meas.style.position = 'absolute';
+      meas.style.left = '-9999px';
+      meas.style.top = '-9999px';
+      meas.style.whiteSpace = 'normal';
+      meas.style.maxWidth = getComputedStyle(h2).width;
+      meas.style.font = getComputedStyle(h2).font;
+      meas.style.letterSpacing = getComputedStyle(h2).letterSpacing;
+      meas.textContent = text;
+      document.body.appendChild(meas);
+      h2.style.minHeight = Math.ceil(meas.getBoundingClientRect().height) + 'px';
+      document.body.removeChild(meas);
+      var i = 0;
+      function delayFor(ch){
+        var base = 18 + Math.random() * 42;
+        if (ch === ' ') base += 25 + Math.random() * 50;
+        if (/[.,!?]/.test(ch)) base += 120 + Math.random() * 180;
+        return base;
+      }
+      function typeNext(){
+        if(i >= text.length) return;
+        wrap.textContent += text.charAt(i);
+        i++;
+        setTimeout(typeNext, delayFor(text.charAt(i - 1)));
+      }
+      setTimeout(typeNext, 180);
+    })();
+
+    (function(){
+      var links = document.querySelectorAll('.nav-links a');
+      if(!('IntersectionObserver' in window) || !links.length) return;
+      var map = new Map(Array.from(links).map(function(link){ return [link.getAttribute('href'), link]; }));
+      var obs = new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
+          if(!entry.isIntersecting) return;
+          var id = '#' + entry.target.id;
+          if(!map.has(id)) return;
+          links.forEach(function(l){ l.classList.remove('active'); });
+          map.get(id).classList.add('active');
+        });
+      }, { rootMargin:'-35% 0px -55% 0px', threshold:0.01 });
+      document.querySelectorAll('main section[id]').forEach(function(sec){ obs.observe(sec); });
+    })();
+  </script>
 </body>
 </html>
