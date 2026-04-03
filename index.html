@@ -59,9 +59,9 @@
       --pine: #36554A;
       --oxblood: #7A3030;
       --max: 1280px;
-      --radius-sm: 16px;
-      --radius-md: 24px;
-      --radius-lg: 32px;
+      --radius-sm: 12px;
+      --radius-md: 16px;
+      --radius-lg: 20px;
       --space-1: 8px;
       --space-2: 12px;
       --space-3: 18px;
@@ -74,6 +74,7 @@
       --surface-1: rgba(255, 255, 255, 0.78);
       --surface-2: rgba(255, 255, 255, 0.56);
       --surface-3: linear-gradient(180deg, rgba(233, 237, 242, 0.94) 0%, rgba(246, 248, 250, 0.98) 100%);
+      --surface-ink: linear-gradient(180deg, rgba(15, 17, 21, 0.98) 0%, rgba(22, 26, 33, 0.94) 100%);
       --shadow: 0 24px 60px rgba(15, 17, 21, 0.08);
       --shadow-soft: 0 14px 36px rgba(15, 17, 21, 0.05);
       --shadow-strong: 0 28px 70px rgba(20, 31, 41, 0.14);
@@ -148,7 +149,6 @@
       font-size: 14px;
       color: var(--steel);
       position: relative;
-      border-radius: 999px;
       transition: color 0.2s ease, background 0.2s ease;
     }
     .nav-links a::after {
@@ -170,6 +170,18 @@
     .nav-links a:hover::after { transform: scaleX(1); }
 
     .hero { padding: 42px 0 clamp(72px, 7vw, 96px); position: relative; }
+    .hero .container {
+      position: relative;
+    }
+    .hero .container::before {
+      content: "";
+      position: absolute;
+      inset: 18px 30px auto auto;
+      width: min(34vw, 360px);
+      height: 1px;
+      background: linear-gradient(90deg, rgba(15, 17, 21, 0.08), rgba(51, 75, 110, 0.34), rgba(54, 85, 74, 0.12));
+      pointer-events: none;
+    }
     .hero::after {
       content: "";
       position: absolute;
@@ -204,7 +216,7 @@
       align-items: center;
       font-size: 12px;
       text-transform: uppercase;
-      letter-spacing: 0.20em;
+      letter-spacing: 0.16em;
       color: var(--steel);
       margin-bottom: 28px;
     }
@@ -219,23 +231,26 @@
       margin: 0 0 20px;
       font-family: Sora, Inter, sans-serif;
       font-size: clamp(4.8rem, 9.2vw, 8.8rem);
-      line-height: 0.88;
-      letter-spacing: -0.065em;
+      line-height: 0.86;
+      letter-spacing: -0.072em;
       max-width: 7.4ch;
       font-weight: 800;
       text-wrap: balance;
+      color: var(--charcoal);
     }
     .accent-line {
-      display: block;
-      margin-top: 0.14em;
-      color: var(--slate);
+      color: inherit;
     }
     .hero-copy .lead {
       margin: 0;
       max-width: 62ch;
       color: var(--steel);
       font-size: clamp(1.02rem, 1.45vw, 1.12rem);
-      line-height: 1.88;
+      line-height: 1.82;
+    }
+    .hero-copy .lead strong {
+      color: var(--charcoal);
+      font-weight: 600;
     }
     .actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 34px; }
     .btn {
@@ -246,10 +261,11 @@
       min-height: 48px;
       padding: 0 18px;
       border: 1px solid rgba(15, 17, 21, 0.12);
-      border-radius: 999px;
+      border-radius: 0;
       font-weight: 700;
-      font-size: 14px;
-      letter-spacing: 0.01em;
+      font-size: 13px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
       background: rgba(255, 255, 255, 0.82);
       box-shadow: var(--shadow-soft);
       transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease, box-shadow 0.18s ease, color 0.18s ease;
@@ -289,17 +305,28 @@
       padding-top: 24px;
       border-top: 1px solid var(--line);
     }
+    .hero-quote::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: -1px;
+      width: min(180px, 32%);
+      height: 1px;
+      background: linear-gradient(90deg, var(--slate), rgba(51, 75, 110, 0));
+    }
     .hero-quote p {
       margin: 0;
       color: var(--charcoal);
-      font-size: 1.08rem;
-      line-height: 1.8;
-      max-width: 560px;
+      font-size: 1.02rem;
+      line-height: 1.68;
+      max-width: 30ch;
       letter-spacing: -0.01em;
     }
     .hero-quote span {
       color: var(--steel);
-      font-size: 0.9rem;
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
       white-space: nowrap;
     }
     .hero-quote .quote-text {
@@ -336,20 +363,29 @@
       justify-content: center;
       align-items: start;
     }
+    .hero-metrics::before {
+      content: "Selected signals";
+      grid-column: 1 / -1;
+      margin-bottom: 4px;
+      color: var(--steel);
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
     .metric { padding-right: 18px; min-height: 100%; }
     .metric:not(:last-child) { border-right: 1px solid var(--line); }
     .metric strong {
       display: block;
       font-family: Sora, Inter, sans-serif;
-      font-size: 1.52rem;
-      margin-bottom: 8px;
+      font-size: 1.4rem;
+      margin-bottom: 10px;
       letter-spacing: -0.045em;
     }
     .metric span {
       display: block;
       color: var(--steel);
-      line-height: 1.62;
-      font-size: 0.96rem;
+      line-height: 1.58;
+      font-size: 0.92rem;
       max-width: 34ch;
     }
 
@@ -362,24 +398,39 @@
       position: relative;
     }
     .portrait { clip-path: polygon(0 0, 100% 0, 100% 86%, 86% 100%, 0 100%); padding: 16px; }
+    .portrait::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(15, 17, 21, 0.04));
+      pointer-events: none;
+      z-index: 0;
+    }
     .portrait-frame {
       aspect-ratio: 4 / 4.75;
       overflow: hidden;
       background: #000;
       clip-path: polygon(0 0, 100% 0, 100% 88%, 88% 100%, 0 100%);
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06);
     }
     .portrait-frame video { width: 100%; height: 100%; object-fit: cover; }
     .portrait-meta {
       display: grid;
-      grid-template-columns: 1fr auto;
+      grid-template-columns: minmax(0, 1fr);
       gap: 16px;
       align-items: start;
       margin-top: 16px;
     }
-    .portrait-meta strong { display: block; font-size: 1rem; margin-bottom: 6px; }
+    .portrait-meta strong {
+      display: block;
+      font-size: 1rem;
+      margin-bottom: 6px;
+      font-family: Sora, Inter, sans-serif;
+      letter-spacing: -0.02em;
+    }
     .portrait-meta span { display: block; color: var(--steel); font-size: 0.95rem; line-height: 1.68; }
     .signal {
-      padding: 22px 22px 20px;
+      padding: 24px 24px 22px;
       clip-path: polygon(0 0, 100% 0, 100% 78%, 94% 100%, 0 100%);
       background:
         linear-gradient(180deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.56)),
@@ -390,7 +441,7 @@
       font-size: 1rem;
       font-family: Sora, Inter, sans-serif;
     }
-    .signal p { margin: 0; color: var(--steel); line-height: 1.68; }
+    .signal p { margin: 0; color: var(--steel); line-height: 1.62; font-size: 0.95rem; }
     .signal-list { display: grid; gap: 10px; margin-top: 16px; }
     .signal-row {
       display: grid;
@@ -401,10 +452,14 @@
       border-top: 1px solid var(--line);
       font-size: 0.92rem;
     }
+    .signal-row span {
+      color: var(--charcoal);
+      font-size: 0.9rem;
+    }
     .signal-row strong {
       color: var(--oxblood);
-      font-size: 0.84rem;
-      letter-spacing: 0.08em;
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
     }
 
@@ -415,20 +470,34 @@
       align-items: end;
       margin-bottom: 34px;
     }
+    .section-head > div:first-child {
+      position: relative;
+      padding-top: 20px;
+    }
+    .section-head > div:first-child::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 54px;
+      height: 1px;
+      background: linear-gradient(90deg, var(--slate), rgba(51, 75, 110, 0.12));
+    }
     .section-head h2 {
       margin: 0 0 10px;
       max-width: 10ch;
       font-family: Sora, Inter, sans-serif;
       font-size: clamp(2.5rem, 4vw, 4.1rem);
       line-height: 0.94;
-      letter-spacing: -0.055em;
+      letter-spacing: -0.05em;
       text-wrap: balance;
     }
     .section-head p {
       margin: 0;
       max-width: 62ch;
       color: var(--steel);
-      line-height: 1.8;
+      line-height: 1.74;
+      font-size: 1rem;
     }
 
     .diag-grid {
@@ -453,10 +522,30 @@
       background: linear-gradient(90deg, rgba(51, 75, 110, 0.28), rgba(54, 85, 74, 0.18), transparent 72%);
       pointer-events: none;
     }
+    .slab::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0 auto;
+      width: 72px;
+      height: 72px;
+      background: linear-gradient(135deg, transparent 0 50%, rgba(51, 75, 110, 0.05) 50% 100%);
+      pointer-events: none;
+      display: none;
+    }
     .cut-a { clip-path: polygon(0 0, 100% 0, 100% 88%, 94% 100%, 0 100%); }
     .cut-b { clip-path: polygon(0 0, 94% 0, 100% 12%, 100% 100%, 0 100%); }
     .cut-c { clip-path: polygon(0 0, 100% 0, 100% 100%, 6% 100%, 0 86%); }
     .cut-d { clip-path: polygon(0 12%, 6% 0, 100% 0, 100% 100%, 0 100%); }
+    .slab.cut-a,
+    .slab.cut-b,
+    .slab.cut-c,
+    .slab.cut-d,
+    .media.cut-a,
+    .media.cut-b,
+    .media.cut-c,
+    .media.cut-d {
+      clip-path: none;
+    }
     .span-7 { grid-column: span 7; }
     .span-5 { grid-column: span 5; }
     .span-6 { grid-column: span 6; }
@@ -465,22 +554,72 @@
     .slab h3 {
       margin: 0 0 10px;
       font-family: Sora, Inter, sans-serif;
-      font-size: 1.18rem;
-      letter-spacing: -0.02em;
+      font-size: 1.14rem;
+      letter-spacing: -0.015em;
       text-transform: none;
     }
-    .slab p { margin: 0; color: var(--steel); line-height: 1.78; }
+    .slab p {
+      margin: 0;
+      color: var(--steel);
+      line-height: 1.72;
+      font-size: 0.98rem;
+    }
     .tag-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
     .tag {
       display: inline-flex;
       align-items: center;
       padding: 7px 12px;
       border: 1px solid rgba(51, 75, 110, 0.16);
-      border-radius: 999px;
+      border-radius: 0;
       background: rgba(255, 255, 255, 0.9);
       color: var(--slate);
-      font-size: 0.83rem;
-      letter-spacing: 0.01em;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    #about .diag-grid,
+    #capabilities .diag-grid,
+    #perspective .diag-grid {
+      gap: 24px;
+    }
+
+    #about .slab,
+    #capabilities .slab,
+    #perspective .slab {
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.64), rgba(255, 255, 255, 0.54)),
+        linear-gradient(135deg, rgba(51, 75, 110, 0.025), rgba(54, 85, 74, 0.02));
+      box-shadow: none;
+      border-color: rgba(15, 17, 21, 0.08);
+    }
+
+    #about .slab::after,
+    #capabilities .slab::after,
+    #perspective .slab::after {
+      width: 56px;
+      height: 56px;
+      background: linear-gradient(135deg, transparent 0 50%, rgba(51, 75, 110, 0.035) 50% 100%);
+    }
+
+    #about .slab h3,
+    #capabilities .slab h3,
+    #perspective .slab h3 {
+      margin-bottom: 14px;
+    }
+
+    #capabilities .slab {
+      min-height: 100%;
+      padding-top: 34px;
+    }
+
+    #capabilities .slab h3::before {
+      content: "";
+      display: block;
+      width: 42px;
+      height: 1px;
+      margin-bottom: 16px;
+      background: linear-gradient(90deg, var(--slate), rgba(51, 75, 110, 0.12));
     }
 
     .media {
@@ -490,6 +629,13 @@
       background: #05070b;
       position: relative;
       box-shadow: 0 16px 34px rgba(5, 7, 11, 0.12);
+    }
+    .media::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0) 65%, rgba(15, 17, 21, 0.04) 100%);
+      pointer-events: none;
     }
     .media.cut-a { clip-path: polygon(0 0, 100% 0, 100% 88%, 94% 100%, 0 100%); }
     .media.cut-b { clip-path: polygon(0 0, 94% 0, 100% 12%, 100% 100%, 0 100%); }
@@ -536,15 +682,28 @@
     .number-rail .item strong {
       display: block;
       font-family: Sora, Inter, sans-serif;
-      font-size: 1.56rem;
+      font-size: 1.42rem;
       margin-bottom: 8px;
       letter-spacing: -0.05em;
     }
     .number-rail .item span {
       display: block;
       color: var(--steel);
-      line-height: 1.62;
-      font-size: 0.93rem;
+      line-height: 1.58;
+      font-size: 0.9rem;
+    }
+    .number-rail .item {
+      position: relative;
+      padding-top: 16px;
+    }
+    .number-rail .item::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 36px;
+      height: 1px;
+      background: rgba(51, 75, 110, 0.24);
     }
 
     .transition-callout {
@@ -565,7 +724,7 @@
       display: block;
       font-size: 11px;
       text-transform: uppercase;
-      letter-spacing: 0.18em;
+      letter-spacing: 0.16em;
       color: var(--steel);
       margin-bottom: 12px;
     }
@@ -574,8 +733,8 @@
       margin: 0;
       max-width: none;
       color: var(--charcoal);
-      font-size: 1.02rem;
-      line-height: 1.78;
+      font-size: 1rem;
+      line-height: 1.72;
       letter-spacing: -0.01em;
       position: relative;
       padding-left: 22px;
@@ -623,6 +782,15 @@
       clip-path: polygon(0 0, 96% 0, 100% 10%, 100% 100%, 4% 100%, 0 90%);
       pointer-events: none;
     }
+    .portal::after {
+      content: "";
+      position: absolute;
+      inset: auto auto 0 0;
+      width: min(34%, 260px);
+      height: 1px;
+      background: linear-gradient(90deg, rgba(15, 17, 21, 0.12), rgba(51, 75, 110, 0.24), transparent);
+      pointer-events: none;
+    }
     .portal-grid {
       display: grid;
       grid-template-columns: 1.06fr 0.94fr;
@@ -638,7 +806,23 @@
       flex-wrap: wrap;
       gap: 18px;
       color: var(--steel);
-      font-size: 0.92rem;
+      font-size: 0.86rem;
+    }
+    .portal-rail span {
+      padding: 6px 0;
+      color: var(--charcoal);
+      letter-spacing: 0.02em;
+    }
+    #norynthe .portal .btn.primary {
+      min-width: 190px;
+      justify-content: center;
+      background: linear-gradient(135deg, var(--charcoal), var(--slate));
+      border-color: rgba(15, 17, 21, 0.18);
+      box-shadow: 0 20px 44px rgba(15, 17, 21, 0.16);
+    }
+    #norynthe .portal .btn.primary:hover {
+      border-color: rgba(15, 17, 21, 0.28);
+      box-shadow: 0 24px 50px rgba(15, 17, 21, 0.2);
     }
 
     .cred-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px; }
@@ -650,7 +834,7 @@
       border: 1px solid var(--line);
       background: rgba(255, 255, 255, 0.78);
       box-shadow: var(--shadow-soft);
-      border-radius: var(--radius-sm);
+      border-radius: 0;
       clip-path: none;
     }
 
@@ -663,12 +847,11 @@
       background: rgba(255, 255, 255, 0.8);
       border: 1px solid var(--line);
       box-shadow: var(--shadow-soft);
-      border-radius: var(--radius-md);
     }
     .quote,
     .essay { clip-path: none; }
     .quote p,
-    .essay p { margin: 0 0 14px; color: var(--steel); line-height: 1.84; }
+    .essay p { margin: 0 0 14px; color: var(--steel); line-height: 1.76; }
     .quote .quote-text::before {
       content: "\201C";
       color: var(--slate);
@@ -688,8 +871,8 @@
       font-family: Sora, Inter, sans-serif;
     }
     .quote span,
-    .essay time { color: var(--steel); font-size: 0.9rem; }
-    .essay h3 { font-size: 1.14rem; line-height: 1.44; letter-spacing: -0.02em; }
+    .essay time { color: var(--steel); font-size: 0.84rem; }
+    .essay h3 { font-size: 1.08rem; line-height: 1.4; letter-spacing: -0.015em; }
     .essay .btn { margin-top: 4px; }
 
     .resume-shell {
@@ -697,7 +880,6 @@
       border: 1px solid var(--line);
       box-shadow: var(--shadow);
       overflow: hidden;
-      border-radius: var(--radius-lg);
       clip-path: none;
     }
     .resume-top {
@@ -708,12 +890,24 @@
       padding: 16px 18px;
       border-bottom: 1px solid var(--line);
     }
+    .resume-top strong {
+      font-family: Sora, Inter, sans-serif;
+      font-size: 0.96rem;
+      letter-spacing: -0.02em;
+    }
     .resume-actions { display: flex; flex-wrap: wrap; gap: 10px; }
     .resume-frame { width: 100%; height: 820px; border: 0; display: block; background: #fff; }
 
     .blink-dot {
       display: inline-block;
-      color: var(--oxblood);
+      width: 0.18em;
+      height: 0.18em;
+      margin-left: 0.06em;
+      vertical-align: baseline;
+      transform: translate(0.02em, 0.01em);
+      border-radius: 999px;
+      background: var(--oxblood);
+      box-shadow: 0 0 0 0.06em rgba(122, 48, 48, 0.14);
       animation: blinkDot 1.15s steps(1) infinite;
     }
     @keyframes blinkDot {
@@ -727,6 +921,320 @@
       display: block;
       margin: 2px 0 18px;
       object-fit: contain;
+    }
+
+    .hero-copy,
+    .section-head,
+    .slab,
+    .quote,
+    .essay,
+    .resume-shell,
+    .portal {
+      position: relative;
+    }
+
+    .hero-copy > *,
+    .section-head > *,
+    .slab > *,
+    .quote > *,
+    .essay > *,
+    .resume-shell > *,
+    .portal > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-side .shape-card:first-child {
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.66)),
+        linear-gradient(135deg, rgba(51, 75, 110, 0.05), rgba(54, 85, 74, 0.04));
+      box-shadow: var(--shadow-strong);
+    }
+
+    .hero-side .shape-card:first-child::after {
+      content: "";
+      position: absolute;
+      inset: auto -10% -18% auto;
+      width: 68%;
+      height: 60%;
+      background: radial-gradient(circle, rgba(51, 75, 110, 0.14), transparent 64%);
+      pointer-events: none;
+    }
+    .hero-side .shape-card:last-child {
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.76), rgba(255, 255, 255, 0.62)),
+        linear-gradient(135deg, rgba(122, 48, 48, 0.035), rgba(51, 75, 110, 0.03));
+    }
+
+    #work .slab,
+    #norynthe .slab {
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(255, 255, 255, 0.72)),
+        linear-gradient(135deg, rgba(51, 75, 110, 0.03), rgba(54, 85, 74, 0.03));
+      box-shadow: var(--shadow);
+    }
+
+    #work .slab h3,
+    #norynthe .slab h3,
+    #recommendations .quote strong,
+    #writing .essay h3 {
+      color: var(--charcoal);
+    }
+
+    #work .slab:hover,
+    .quote:hover,
+    .essay:hover,
+    .cred-grid img:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 24px 50px rgba(15, 17, 21, 0.1);
+    }
+
+    .slab,
+    .quote,
+    .essay,
+    .cred-grid img {
+      transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+    }
+
+    .media img,
+    .media iframe,
+    .portrait-frame video {
+      transition: transform 0.5s ease, filter 0.3s ease;
+    }
+
+    .media:hover img,
+    .portrait:hover .portrait-frame video {
+      transform: scale(1.03);
+      filter: saturate(1.03) contrast(1.02);
+    }
+
+    .micro,
+    .transition-callout .label {
+      color: var(--slate);
+    }
+
+    .micro::before {
+      background: linear-gradient(90deg, var(--slate), rgba(51, 75, 110, 0.18));
+    }
+
+    .section {
+      position: relative;
+    }
+
+    .section + .section::before {
+      content: "";
+      display: block;
+      width: min(220px, 28vw);
+      height: 1px;
+      margin: 0 auto clamp(36px, 4vw, 48px);
+      background: linear-gradient(90deg, transparent, rgba(51, 75, 110, 0.22), transparent);
+    }
+
+    #about .section-head h2,
+    #capabilities .section-head h2,
+    #work .section-head h2,
+    #perspective .section-head h2,
+    #credibility .section-head h2,
+    #recommendations .section-head h2,
+    #writing .section-head h2,
+    #resume .section-head h2 {
+      max-width: 12ch;
+    }
+
+    #norynthe .section-head h2 {
+      margin-bottom: 14px;
+    }
+
+    #norynthe .section-head p {
+      max-width: 34ch;
+      font-size: 1.02rem;
+      line-height: 1.72;
+    }
+
+    .quote-grid,
+    .writing-grid {
+      align-items: stretch;
+    }
+
+    .quote {
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.84), rgba(255, 255, 255, 0.76)),
+        linear-gradient(135deg, rgba(51, 75, 110, 0.025), rgba(122, 48, 48, 0.025));
+    }
+
+    .essay {
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.74)),
+        linear-gradient(135deg, rgba(54, 85, 74, 0.03), rgba(51, 75, 110, 0.02));
+    }
+
+    .cred-grid img {
+      min-height: 104px;
+    }
+
+    .resume-top {
+      background: linear-gradient(180deg, rgba(233, 237, 242, 0.58), rgba(255, 255, 255, 0.4));
+    }
+
+    #norynthe .portal .section-head h2,
+    #norynthe .portal h3,
+    #norynthe .portal p,
+    #norynthe .portal-rail span {
+      color: var(--charcoal);
+    }
+
+    #work .slab:first-child {
+      background:
+        linear-gradient(180deg, rgba(15, 17, 21, 0.96), rgba(26, 31, 39, 0.94)),
+        linear-gradient(135deg, rgba(51, 75, 110, 0.24), rgba(54, 85, 74, 0.18));
+      border-color: rgba(233, 237, 242, 0.08);
+      box-shadow: 0 28px 60px rgba(15, 17, 21, 0.18);
+      clip-path: polygon(0 0, 100% 0, 100% 88%, 94% 100%, 0 100%);
+    }
+
+    #work .slab:first-child::before {
+      background: linear-gradient(90deg, rgba(246, 248, 250, 0.34), rgba(84, 121, 151, 0.34), transparent 72%);
+    }
+    #work .slab:first-child::after {
+      display: block;
+    }
+
+    #work .slab:first-child h3,
+    #work .slab:first-child p,
+    #work .slab:first-child .tag {
+      color: var(--bone);
+    }
+
+    #work .slab:first-child .tag {
+      background: rgba(255, 255, 255, 0.06);
+      border-color: rgba(255, 255, 255, 0.12);
+    }
+
+    #work .slab:first-child .btn {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.16);
+      color: var(--bone);
+      box-shadow: none;
+    }
+
+    #work .slab:first-child .btn:hover {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: rgba(255, 255, 255, 0.24);
+      box-shadow: 0 18px 28px rgba(0, 0, 0, 0.12);
+    }
+    #work .slab:first-child .media.cut-a {
+      clip-path: polygon(0 0, 100% 0, 100% 88%, 94% 100%, 0 100%);
+    }
+
+    #recommendations .quote-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    #recommendations .quote {
+      border-left: 2px solid rgba(51, 75, 110, 0.18);
+      border-top: 0;
+      border-right: 0;
+      border-bottom: 0;
+      background: transparent;
+      box-shadow: none;
+      padding: 8px 0 8px 24px;
+      position: relative;
+    }
+
+    #recommendations .quote::before,
+    #recommendations .quote::after {
+      display: none;
+    }
+
+    #recommendations .quote p {
+      color: var(--charcoal);
+      line-height: 1.72;
+      margin-bottom: 18px;
+      font-size: 0.98rem;
+    }
+    #recommendations .quote .context {
+      margin: 0 0 16px;
+      color: var(--steel);
+      font-size: 0.82rem;
+      line-height: 1.6;
+      letter-spacing: 0.02em;
+    }
+
+    #linkedin-signal .slab {
+      text-align: left;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.84), rgba(255, 255, 255, 0.74)),
+        linear-gradient(135deg, rgba(51, 75, 110, 0.03), rgba(54, 85, 74, 0.03));
+    }
+
+    #linkedin-signal .slab h3 {
+      font-size: clamp(2.3rem, 4vw, 3.4rem);
+      letter-spacing: -0.06em;
+      margin-bottom: 12px;
+    }
+    #linkedin-signal .slab p {
+      max-width: 24ch;
+    }
+
+    #credibility .cred-grid {
+      gap: 18px;
+    }
+
+    #credibility .cred-grid img {
+      padding: 18px;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.74)),
+        linear-gradient(135deg, rgba(51, 75, 110, 0.02), rgba(54, 85, 74, 0.02));
+    }
+
+    #writing .essay {
+      display: grid;
+      align-content: start;
+      gap: 4px;
+      padding-top: 32px;
+    }
+
+    #writing time {
+      display: inline-flex;
+      width: fit-content;
+      padding-bottom: 10px;
+      border-bottom: 1px solid rgba(51, 75, 110, 0.14);
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.76rem;
+      color: var(--slate);
+    }
+
+    #writing .essay p {
+      margin-top: 4px;
+      margin-bottom: 18px;
+    }
+
+    #about .transition-callout,
+    #perspective .slab:last-child {
+      box-shadow: 0 18px 34px rgba(15, 17, 21, 0.06);
+    }
+
+    @media (min-width: 1081px) {
+      .hero-copy {
+        padding-top: 18px;
+      }
+      .hero-side {
+        padding-top: 4px;
+      }
+      .portrait-meta .btn {
+        align-self: start;
+        justify-self: start;
+      }
+    }
+
+    footer p {
+      max-width: 44ch;
+      margin: 0 auto;
+      line-height: 1.72;
+      font-size: 0.96rem;
     }
 
     #work .section-head {
@@ -746,8 +1254,11 @@
     .footer-links a {
       padding: 8px 12px;
       border: 1px solid var(--line);
-      border-radius: 999px;
+      border-radius: 0;
       background: rgba(255, 255, 255, 0.55);
+      font-size: 0.8rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
     }
 
     @media (max-width: 1080px) {
@@ -771,11 +1282,28 @@
         font-size: clamp(3.4rem, 18vw, 5.4rem);
         line-height: 0.92;
       }
+      .btn {
+        font-size: 12px;
+        letter-spacing: 0.05em;
+      }
+      .hero .container::before,
+      .hero::after,
+      .slab::after {
+        display: none;
+      }
+      .blink-dot {
+        width: 0.18em;
+        height: 0.18em;
+        transform: translate(0.02em, 0);
+      }
       .hero-metrics,
       .number-rail,
       .quote-grid,
       .writing-grid,
       .section-head { grid-template-columns: 1fr; }
+      #recommendations .quote-grid {
+        grid-template-columns: 1fr;
+      }
       .metric { padding-right: 0; }
       .metric:not(:last-child) {
         border-right: 0;
@@ -786,12 +1314,22 @@
       .resume-frame { height: 620px; }
       .container { padding: 0 18px; }
       .hero-quote { grid-template-columns: 1fr; }
+      .hero-quote p {
+        max-width: none;
+      }
+      .hero-metrics::before {
+        margin-bottom: 10px;
+      }
+      .section + .section::before {
+        width: min(160px, 42vw);
+        margin-bottom: 30px;
+      }
       .slab,
       .quote,
       .essay,
       .resume-shell,
       .cred-grid img {
-        border-radius: 20px;
+        border-radius: 0;
       }
       .slab,
       .signal,
@@ -855,7 +1393,7 @@
       <div class="container hero-grid">
         <div class="hero-copy">
           <div class="micro">Governance, narrative, and authorship</div>
-          <h1>Strategy, systems, and authorship <span class="accent-line">for the AI era</span><span class="blink-dot">.</span></h1>
+          <h1>Strategy, systems, and authorship <span class="accent-line">for the AI era</span><span class="blink-dot" aria-hidden="true"></span></h1>
           <p class="lead">I'm a creative technologist, AI systems strategist, and founder shaping work where intelligence, governance, narrative, and production meet. I help turn complex ideas into systems, experiences, and signals people can trust.</p>
           <div class="actions">
             <a class="btn primary" href="#work">View selected work</a>
@@ -1172,37 +1710,37 @@
         <div class="section-head">
           <div>
             <h2>Recommendations</h2>
-            <p>Proof that clarity, creativity, and delivery can coexist - and that the work lands with both technical and human credibility.</p>
+            <p>Proof that clarity, creativity, and delivery can coexist - and that the work lands with both technical and human credibility. These recommendations reflect a wider range of the work: consulting, technical strategy, client communication, creative execution, leadership, and delivery under real constraints.</p>
           </div>
         </div>
         <div class="quote-grid">
           <article class="quote">
-            <p class="quote-text">This isn't a student exercise - this is a production-ready architecture for AI-augmented creative workflows... governable, accountable, and built for real deployment.</p>
-            <strong>Thiago Meireles Grabe</strong>
-            <span>Professional Industry Defense Reviewer · Woolf University</span>
-          </article>
-          <article class="quote">
-            <p class="quote-text">Alan combines the rare combination of technological prowess and creativity that makes him a powerhouse consultant.</p>
-            <strong>Jeff Roach</strong>
-            <span>Managing Partner · Manager</span>
-          </article>
-          <article class="quote">
-            <p class="quote-text">Alan is the definition of great... you can expect Alan to deliver excellence.</p>
+            <p class="quote-text">Alan is the definition of great. His strong work ethic coupled with his dedicated professional attitude makes him the ideal candidate for everything. Whether he is client facing or heads down with the team, you can expect Alan to deliver excellence in a way that makes you want to be included in his orbit.</p>
             <strong>Candice Bonfiglio</strong>
             <span>Senior Peer</span>
           </article>
           <article class="quote">
-            <p class="quote-text">Excellent at scoping requirements and communicating complex technical concepts clearly to clients.</p>
+            <p class="quote-text">One of Alan's standout skills is managing client relations, which can be a challenge in the IT service industry. He's excellent at scoping technology requirements, handling change requests, and communicating complex technical concepts clearly to clients. This ensured that everyone was on the same page, with little to no miscommunication between the development team and stakeholders.</p>
             <strong>Anish Sharda</strong>
             <span>Colleague</span>
           </article>
           <article class="quote">
-            <p class="quote-text">Remarkable blend of technical expertise, creativity, and enthusiasm... his ability to inspire and motivate created a collaborative environment where goals were exceeded.</p>
+            <p class="quote-text">Alan consistently demonstrated a remarkable blend of technical expertise, creativity, and enthusiasm that greatly contributed to our team's success. His ability to inspire and motivate those around him created a collaborative environment where ideas flourished and goals were exceeded.</p>
             <strong>Katherine Zatt</strong>
             <span>Teammate</span>
           </article>
           <article class="quote">
-            <p class="quote-text">Brought a consistent stream of energy and creativity... built a world-class production studio during Covid with little supervision and delivered an impactful solution.</p>
+            <p class="quote-text">Alan is a hard-working professional deeply committed to solving complex problems and delivering innovative solutions. His proficiency in AI, encompassing both tooling and solutions, has been instrumental in advancing our projects and driving efficiency. Alan's ability to enhance cloud productivity has significantly streamlined our operations, resulting in measurable improvements in workflow and output.</p>
+            <strong>Jeremy Perkins</strong>
+            <span>Manager</span>
+          </article>
+          <article class="quote">
+            <p class="quote-text">Alan combines the rare combination of technological prowess and creativity that makes him a powerhouse consultant. He put in the work to make our customers successful and will excel in any role that allows him to keep those two skill sets together to drive results.</p>
+            <strong>Jeff Roach</strong>
+            <span>Manager</span>
+          </article>
+          <article class="quote">
+            <p class="quote-text">Alan brought a consistent stream of energy and creativity to our team. He took on the need to build a new way to represent the Surface product line during Covid and built a world-class production studio with little supervision or guidance. He delivered an impactful solution consumed by commercial customers of Surface across the globe.</p>
             <strong>Frank Buchholz</strong>
             <span>Director of Product Marketing · Manager</span>
           </article>
