@@ -672,6 +672,98 @@
     }
     .slab-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
 
+    .surface-hub-composition {
+      margin-top: 18px;
+      position: relative;
+      display: block;
+      min-height: 360px;
+      padding: 0;
+      border: 0;
+      background:
+        linear-gradient(180deg, rgba(224, 233, 240, 0.9) 0%, rgba(243, 246, 248, 0.96) 26%, rgba(255, 255, 255, 0.99) 100%),
+        radial-gradient(circle at 64% 18%, rgba(143, 177, 203, 0.08), transparent 30%),
+        radial-gradient(circle at 84% 90%, rgba(255, 255, 255, 0.92), transparent 24%),
+        radial-gradient(circle at 42% 78%, rgba(184, 167, 106, 0.03), transparent 22%),
+        radial-gradient(ellipse at 50% 94%, rgba(15, 17, 21, 0.04), rgba(15, 17, 21, 0) 52%),
+        linear-gradient(180deg, rgba(249, 250, 252, 1), rgba(255, 255, 255, 0.99));
+      box-shadow: none;
+      overflow: hidden;
+      isolation: isolate;
+    }
+    .surface-hub-composition::before {
+      display: none;
+    }
+    .surface-hub-composition::after {
+      display: none;
+    }
+    .surface-hub-screen {
+      position: absolute;
+      top: 22px;
+      left: 10%;
+      width: 79%;
+      aspect-ratio: 16 / 10;
+      overflow: hidden;
+      background:
+        linear-gradient(180deg, #8fb1cb 0%, #9ab5c8 14%, #c8c3b0 38%, #b8a76a 100%);
+      border-radius: 4px;
+      box-shadow: none;
+      transform: perspective(1200px) rotateX(4deg);
+      transform-origin: center center;
+      z-index: 2;
+    }
+    .surface-hub-screen::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 52% 34%, rgba(255, 255, 255, 0.18), transparent 28%),
+        linear-gradient(180deg, rgba(66, 87, 103, 0) 54%, rgba(66, 87, 103, 0.16) 100%);
+      pointer-events: none;
+      z-index: 2;
+    }
+    .surface-hub-screen::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 56%;
+      width: 26%;
+      aspect-ratio: 1.18 / 1;
+      transform: translate(-50%, -50%);
+      background:
+        linear-gradient(180deg, rgba(33, 43, 51, 0.82), rgba(33, 43, 51, 0.94));
+      clip-path: polygon(0 0, 100% 0, 100% 70%, 62% 100%, 0 100%);
+      box-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.08),
+        0 10px 18px rgba(15, 17, 21, 0.14);
+      opacity: 0.7;
+      pointer-events: none;
+      z-index: 1;
+    }
+    .surface-hub-frame {
+      position: relative;
+      z-index: 3;
+      width: min(175%, 860px);
+      max-width: none;
+      margin: -36px auto 0;
+      display: block;
+      filter: none;
+      transform: translateX(-22%);
+      mask-image:
+        linear-gradient(180deg, black 0%, black 84%, transparent 100%),
+        linear-gradient(90deg, transparent 0%, black 14%, black 86%, transparent 100%);
+      mask-composite: intersect;
+      -webkit-mask-image:
+        linear-gradient(180deg, black 0%, black 84%, transparent 100%),
+        linear-gradient(90deg, transparent 0%, black 14%, black 86%, transparent 100%);
+      -webkit-mask-composite: source-in;
+    }
+    .surface-hub-composition:hover .surface-hub-frame {
+      transform: translateX(-22%);
+    }
+    .surface-hub-composition:hover .surface-hub-screen::after {
+      transform: translate(-50%, -52%);
+    }
+
     .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
     .creative-ai-pair {
       align-items: stretch;
@@ -1171,6 +1263,12 @@
     #work .slab:first-child .media.cut-a {
       clip-path: none;
     }
+    #work .slab .media.cut-b {
+      clip-path: none;
+    }
+    .work-surface-card {
+      padding-bottom: 18px;
+    }
 
     #recommendations .quote-grid {
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1372,6 +1470,19 @@
       .hero-quote { grid-template-columns: 1fr; }
       .hero-quote p {
         max-width: none;
+      }
+      .surface-hub-composition {
+        min-height: 300px;
+        padding: 0;
+      }
+      .surface-hub-screen {
+        top: 22px;
+        left: 8%;
+        width: 82%;
+      }
+      .surface-hub-frame {
+        width: min(170%, 700px);
+        margin-top: -24px;
       }
       .creative-ai-image,
       .creative-ai-video {
@@ -1623,14 +1734,13 @@
             </div>
           </article>
 
-          <article class="slab span-5 cut-b">
+          <article class="slab span-5 cut-b work-surface-card">
             <h3>Explore Surface &amp; Sustainability Experience</h3>
             <p><strong>Creative lead, technologist, and consultant.</strong> Led UX and digital experience work across Explore Surface and sustainability scenarios, including early GPT-powered support for more dynamic interaction.</p>
-            <div class="media cut-b">
-              <a href="https://exploresurface.microsoft.com/" target="_blank" rel="noopener">
-                <img src="https://i.ibb.co/rGynjHQb/Screenshot-11-11-2025-185624-exploresurface-microsoft-com.jpg" alt="Explore Surface website preview" loading="lazy" decoding="async">
-              </a>
-            </div>
+            <a class="surface-hub-composition" href="https://exploresurface.microsoft.com/" target="_blank" rel="noopener">
+              <span class="surface-hub-screen" aria-hidden="true"></span>
+              <img class="surface-hub-frame" src="assets/surface-hub.webp" alt="Surface Hub device displaying the Explore Surface experience" loading="lazy" decoding="async">
+            </a>
           </article>
 
           <article class="slab span-6 cut-c">
