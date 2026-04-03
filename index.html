@@ -397,6 +397,78 @@
       .hero{padding-top:22px}
       .hero-quote{grid-template-columns:1fr}
     }
+
+    .hero-copy{
+      position:relative;
+    }
+    .hero-copy::before{
+      content:"“";
+      position:absolute;
+      top:72px;
+      right:22px;
+      font-size:clamp(7rem, 12vw, 10rem);
+      line-height:.8;
+      color:rgba(51,75,110,.08);
+      font-weight:900;
+      pointer-events:none;
+    }
+    .hero-quote{
+      position:relative;
+    }
+    .hero-quote p{
+      position:relative;
+      padding-left:26px;
+      max-width:620px;
+    }
+    .hero-quote p::before{
+      content:"“";
+      position:absolute;
+      left:0;
+      top:-10px;
+      font-size:2.6rem;
+      line-height:1;
+      color:var(--slate);
+      font-weight:800;
+    }
+    .hero-quote p::after{
+      content:"”";
+      display:inline-block;
+      margin-left:6px;
+      color:var(--slate);
+      font-weight:800;
+    }
+    .section-head h2{
+      max-width:10ch;
+    }
+    .section-head p{
+      max-width:700px;
+    }
+    .slab h3{
+      font-size:1.18rem;
+      text-transform:none;
+    }
+    .quote p::before{
+      content:"“";
+      color:var(--slate);
+      font-weight:800;
+      margin-right:4px;
+    }
+    .quote p::after{
+      content:"”";
+      color:var(--slate);
+      font-weight:800;
+      margin-left:4px;
+    }
+    .portal::after{
+      content:"";
+      position:absolute;
+      width:180px;
+      height:1px;
+      right:38px;
+      top:38px;
+      background:linear-gradient(90deg, transparent, rgba(51,75,110,.35));
+    }
+
   </style>
 </head>
 <body>
@@ -433,7 +505,7 @@
             <a class="btn ghost" href="mailto:am@alanmotley.com">Email me</a>
           </div>
           <div class="hero-quote">
-            <p>Governable intelligence is not just about what a system can do. It is about how it behaves, how it frames, and whether people can trust it when the stakes are real.</p>
+            <p>Governable intelligence is not just about what a system can do. It is about what it presents as credible, what it leaves out, and whether that framing still holds when the stakes are real.</p>
             <span>Alan Motley</span>
           </div>
           <div class="hero-metrics">
@@ -531,7 +603,7 @@
         <div class="section-head">
           <div>
             <h2>Selected Work</h2>
-            <p>A curated body of work across AI systems, creative production, enterprise strategy, and modern digital experiences.</p>
+            <p>Selected work across AI systems, creative production, enterprise strategy, and modern digital experiences — shaped with structure, trust, and authorship in mind.</p>
           </div>
         </div>
 
@@ -600,7 +672,7 @@
         <div class="section-head">
           <div>
             <h2>Perspective</h2>
-            <p>My work is driven by a simple belief: the future of AI is not just about capability. It is about structure, framing, governance, and whether people can actually trust what systems produce.</p>
+            <p>My work is driven by a simple belief: the future of AI is not just about capability. It is about framing, governance, and whether people can actually trust what systems produce.</p>
           </div>
         </div>
 
@@ -623,7 +695,7 @@
           <div class="section-head" style="margin-bottom:0;">
             <div>
               <h2>Now Building: Norynthe</h2>
-              <p>Independent standards for trusted intelligence.</p>
+              <p>Independent standards for trusted intelligence — and a clearer outside view of what AI systems are actually doing.</p>
             </div>
           </div>
           <div class="portal-grid">
@@ -640,6 +712,7 @@
             <span>Independent standard</span>
             <span>Outside the model</span>
             <span>Placeholder site today · larger company in motion</span>
+            <span>“A standard outside the model.”</span>
           </div>
           <div class="slab-actions" style="margin-top:22px;">
             <a class="btn primary" href="https://norynthe.com" target="_blank" rel="noopener">Visit Norynthe</a>
