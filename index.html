@@ -504,6 +504,17 @@
       background:linear-gradient(90deg, transparent, rgba(51,75,110,.35));
     }
 
+
+    .blink-dot{
+      display:inline-block;
+      color:var(--oxblood);
+      animation:blinkDot 1.15s steps(1) infinite;
+    }
+    @keyframes blinkDot{
+      0%, 49%{opacity:1}
+      50%, 100%{opacity:.18}
+    }
+
   </style>
 </head>
 <body>
@@ -532,7 +543,7 @@
       <div class="container hero-grid">
         <div class="hero-copy">
           <div class="micro">Governance, narrative, and modern production</div>
-          <h1>Strategy, systems, and authorship for the AI era.</h1>
+          <h1>Strategy, systems, and authorship for the AI era<span class="blink-dot">.</span></h1>
           <p class="lead">I’m a creative technologist, AI systems strategist, and founder shaping work where intelligence, governance, narrative, and production meet. I help turn complex ideas into systems, experiences, and signals people can trust.</p>
           <div class="actions">
             <a class="btn primary" href="#work">View selected work</a>
@@ -752,7 +763,7 @@
             <span>A standard outside the model.</span>
           </div>
           <div class="slab-actions" style="margin-top:22px;">
-            <a class="btn primary" href="https://norynthe.com" target="_blank" rel="noopener">Visit Norynthe.</a>
+            <a class="btn primary" href="https://www.norynthe.com/" target="_blank" rel="noopener">Visit Norynthe.</a>
           </div>
         </div>
       </div>
@@ -787,24 +798,34 @@
         </div>
         <div class="quote-grid">
           <article class="quote">
-            <p class="quote-text">This isn’t a student exercise—this is a production-ready architecture for AI-augmented creative workflows… governable, accountable, and built for real deployment.</p>
+            <p>This isn’t a student exercise—this is a production-ready architecture for AI-augmented creative workflows… governable, accountable, and built for real deployment.</p>
             <strong>Thiago Meireles Grabe</strong>
             <span>Professional Industry Defense Reviewer · Woolf University</span>
           </article>
           <article class="quote">
-            <p class="quote-text">Alan combines the rare combination of technological prowess and creativity that makes him a powerhouse consultant.</p>
+            <p>Alan combines the rare combination of technological prowess and creativity that makes him a powerhouse consultant.</p>
             <strong>Jeff Roach</strong>
             <span>Managing Partner · Manager</span>
           </article>
           <article class="quote">
-            <p class="quote-text">Alan is the definition of great… you can expect Alan to deliver excellence.</p>
+            <p>Alan is the definition of great… you can expect Alan to deliver excellence.</p>
             <strong>Candice Bonfiglio</strong>
             <span>Senior Peer</span>
           </article>
           <article class="quote">
-            <p class="quote-text">Excellent at scoping requirements and communicating complex technical concepts clearly to clients.</p>
+            <p>Excellent at scoping requirements and communicating complex technical concepts clearly to clients.</p>
             <strong>Anish Sharda</strong>
             <span>Colleague</span>
+          </article>
+          <article class="quote">
+            <p>Remarkable blend of technical expertise, creativity, and enthusiasm… his ability to inspire and motivate created a collaborative environment where goals were exceeded.</p>
+            <strong>Katherine Zatt</strong>
+            <span>Teammate</span>
+          </article>
+          <article class="quote">
+            <p>Brought a consistent stream of energy and creativity… built a world-class production studio during Covid with little supervision and delivered an impactful solution.</p>
+            <strong>Frank Buchholz</strong>
+            <span>Director of Product Marketing · Manager</span>
           </article>
         </div>
       </div>
