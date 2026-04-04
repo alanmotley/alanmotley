@@ -939,6 +939,45 @@
       opacity: 1;
       pointer-events: none;
     }
+    .portal-signal {
+      position: absolute;
+      z-index: 1;
+      display: grid;
+      gap: 0.24rem;
+      width: 144px;
+      justify-items: end;
+      text-align: right;
+      color: rgba(88, 97, 106, 0.84);
+      font-size: 0.58rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      pointer-events: none;
+      will-change: transform;
+    }
+    .portal-signal::before {
+      content: "";
+      width: 64px;
+      height: 1px;
+      margin-bottom: 0.16rem;
+      background: linear-gradient(90deg, rgba(51, 75, 110, 0.16), transparent);
+    }
+    .portal-signal strong {
+      color: rgba(15, 17, 21, 0.82);
+      font-weight: 600;
+    }
+    .portal-signal-a {
+      top: 36%;
+      left: 62%;
+      animation: portalFloatA 14s ease-in-out infinite alternate;
+    }
+    .portal-signal-b {
+      top: 56%;
+      left: 78%;
+      animation: portalFloatB 16s ease-in-out infinite alternate;
+    }
+    .portal-signal-b::before {
+      background: linear-gradient(90deg, rgba(54, 85, 74, 0.18), transparent);
+    }
     .portal > * {
       position: relative;
       z-index: 1;
@@ -1145,6 +1184,16 @@
 
     #norynthe .slab::before {
       background: linear-gradient(90deg, rgba(51, 75, 110, 0.18), rgba(122, 48, 48, 0.12), transparent 72%);
+    }
+
+    @keyframes portalFloatA {
+      from { transform: translate3d(-3px, -4px, 0); }
+      to { transform: translate3d(5px, 4px, 0); }
+    }
+
+    @keyframes portalFloatB {
+      from { transform: translate3d(3px, -3px, 0); }
+      to { transform: translate3d(-5px, 5px, 0); }
     }
 
     #work .slab h3,
@@ -1541,6 +1590,7 @@
       .portrait,
       .transition-callout,
       .portal,
+      .portal-signal,
       .media,
       .media.cut-a,
       .media.cut-b,
@@ -1834,6 +1884,14 @@
     <section class="section" id="norynthe">
       <div class="container">
         <div class="portal">
+          <div class="portal-signal portal-signal-a">
+            <strong>Observation</strong>
+            <span>Outside the model</span>
+          </div>
+          <div class="portal-signal portal-signal-b">
+            <strong>Signal</strong>
+            <span>Inference under review</span>
+          </div>
           <div class="section-head" style="margin-bottom: 0;">
             <div>
               <h2>Now Building:</h2>
