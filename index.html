@@ -660,6 +660,10 @@
       background: linear-gradient(180deg, rgba(255, 255, 255, 0) 65%, rgba(15, 17, 21, 0.04) 100%);
       pointer-events: none;
     }
+    .media.cut-a { clip-path: polygon(0 0, 100% 0, 100% 88%, 94% 100%, 0 100%); }
+    .media.cut-b { clip-path: polygon(0 0, 94% 0, 100% 12%, 100% 100%, 0 100%); }
+    .media.cut-c { clip-path: polygon(0 0, 100% 0, 100% 100%, 6% 100%, 0 86%); }
+    .media.cut-d { clip-path: polygon(0 12%, 6% 0, 100% 0, 100% 100%, 0 100%); }
     .media img,
     .media iframe {
       width: 100%;
@@ -1137,6 +1141,47 @@
         linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(255, 255, 255, 0.72)),
         linear-gradient(135deg, rgba(51, 75, 110, 0.03), rgba(54, 85, 74, 0.03));
       box-shadow: var(--shadow);
+    }
+    #work .diag-grid {
+      gap: 22px;
+    }
+    #work .slab {
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+      padding: 32px;
+    }
+    #work .slab > p {
+      max-width: 56ch;
+    }
+    #work .slab .tag-row,
+    #work .slab .slab-actions {
+      margin-top: 20px;
+    }
+    #work .slab .media,
+    #work .slab .surface-hub-composition,
+    #work .slab .two-col {
+      margin-top: auto;
+    }
+    #work .slab .media {
+      margin-top: 24px;
+    }
+    #work .slab .surface-hub-composition {
+      margin-top: 24px;
+    }
+    #work .slab .two-col {
+      margin-top: 24px !important;
+    }
+    .work-video-card {
+      display: flex;
+      flex-direction: column;
+    }
+    .work-video-card p {
+      max-width: 50ch;
+    }
+    .work-video-card .media.video {
+      margin-top: auto;
+      width: 100%;
     }
 
     #norynthe .slab {
@@ -1681,18 +1726,18 @@
             </a>
           </article>
 
-          <article class="slab span-6 cut-c">
+          <article class="slab span-6 cut-c work-video-card">
             <h3>Beneath the Surface</h3>
             <p><strong>Program management and production leadership</strong> for Microsoft's technical YouTube series - aligning content, audience, execution, and delivery quality.</p>
-            <div class="media video">
+            <div class="media video cut-c">
               <iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLNA-j_cL4mUSMy6sCtGa4bam0nrkXD1As" title="Beneath the Surface - Playlist" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
           </article>
 
-          <article class="slab span-6 cut-d">
+          <article class="slab span-6 cut-d work-video-card">
             <h3>AI in a Minute</h3>
             <p><strong>Concept and script development</strong> for Microsoft Cloud storytelling that translated AI topics into accessible, business-facing narrative.</p>
-            <div class="media video">
+            <div class="media video cut-d">
               <iframe src="https://www.youtube-nocookie.com/embed/om7iYSucLrk" title="AI in a Minute: Generative AI" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
           </article>
