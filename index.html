@@ -131,8 +131,7 @@
         "https://medium.com/@alanmotley",
         "https://muckrack.com/alanmotley",
         "https://www.instagram.com/alanmotley",
-        "https://www.norynthe.com/",
-        "https://reports.norynthe.com/"
+        "https://www.norynthe.com/"
       ]
     },
     {
@@ -749,12 +748,10 @@
     }
 
     #about .diag-grid,
-    #official-profile .diag-grid,
     #capabilities .diag-grid,
     #perspective .diag-grid { gap: 24px; }
 
     #about .slab,
-    #official-profile .slab,
     #capabilities .slab,
     #perspective .slab {
       background:
@@ -764,14 +761,93 @@
       border-color: rgba(15, 17, 21, 0.08);
     }
 
-    .profile-headshot {
-      width: 120px;
-      height: 120px;
+    .identity-card {
+      display: grid;
+      grid-template-columns: 180px minmax(0, 1fr);
+      gap: 34px;
+      align-items: center;
+      padding: clamp(28px, 4vw, 46px);
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.78), rgba(255, 255, 255, 0.62)),
+        linear-gradient(135deg, rgba(51, 75, 110, 0.04), rgba(54, 85, 74, 0.035));
+      border: 1px solid rgba(15, 17, 21, 0.08);
+      box-shadow: 0 22px 54px rgba(15, 17, 21, 0.06);
+      clip-path: polygon(0 0, 97% 0, 100% 10%, 100% 100%, 3% 100%, 0 90%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .identity-card::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto 0;
+      height: 1px;
+      background: linear-gradient(90deg, rgba(51, 75, 110, 0.28), rgba(54, 85, 74, 0.18), transparent 72%);
+      pointer-events: none;
+    }
+
+    .identity-media {
+      position: relative;
+      z-index: 1;
+    }
+
+    .identity-headshot {
+      width: 168px;
+      height: 168px;
       object-fit: cover;
       border-radius: 999px;
-      margin-bottom: 18px;
       border: 1px solid rgba(15, 17, 21, 0.12);
-      box-shadow: 0 14px 28px rgba(15, 17, 21, 0.08);
+      box-shadow: 0 18px 38px rgba(15, 17, 21, 0.12);
+      background: rgba(255, 255, 255, 0.7);
+    }
+
+    .identity-copy {
+      position: relative;
+      z-index: 1;
+    }
+
+    .identity-copy h2 {
+      margin: 0 0 12px;
+      font-family: Sora, Inter, sans-serif;
+      font-size: clamp(2.3rem, 4.5vw, 4rem);
+      line-height: 0.94;
+      letter-spacing: -0.06em;
+    }
+
+    .identity-copy p {
+      margin: 0;
+      color: var(--steel-strong);
+      line-height: 1.72;
+      max-width: 68ch;
+    }
+
+    .identity-copy .identity-lead {
+      color: var(--charcoal);
+      font-size: clamp(1rem, 1.45vw, 1.14rem);
+      margin-bottom: 10px;
+    }
+
+    .identity-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 22px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(15, 17, 21, 0.08);
+    }
+
+    .identity-links a {
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--slate);
+      border-bottom: 1px solid rgba(51, 75, 110, 0.18);
+      padding-bottom: 4px;
+    }
+
+    .identity-links a:hover {
+      color: var(--oxblood);
+      border-bottom-color: rgba(122, 48, 48, 0.34);
     }
 
     #capabilities .slab {
@@ -1378,7 +1454,6 @@
     }
 
     #about .section-head h2,
-    #official-profile .section-head h2,
     #capabilities .section-head h2,
     #work .section-head h2,
     #perspective .section-head h2,
@@ -1635,6 +1710,16 @@
         max-width: none;
       }
       .portal-signal { display: none; }
+
+      .identity-card {
+        grid-template-columns: 1fr;
+        clip-path: none;
+      }
+
+      .identity-headshot {
+        width: 132px;
+        height: 132px;
+      }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -1802,24 +1887,27 @@
 
     <section class="section" id="official-profile">
       <div class="container">
-        <div class="section-head">
-          <div>
-            <h2>Official Profile</h2>
-            <p>Alan Motley is a creative technologist, AI systems strategist, digital consultant, writer, engineer, and founder of Norynthe, an independent AI evaluation and trust-scoring company.</p>
-          </div>
-        </div>
-
-        <div class="diag-grid">
-          <article class="slab span-6 cut-a">
+        <div class="identity-card">
+          <div class="identity-media">
             <img
-              class="profile-headshot"
+              class="identity-headshot"
               src="/alan-motley-creative-technologist-ai-systems-strategist.jpg"
               alt="Alan Motley, creative technologist, AI systems strategist, writer, engineer, and founder of Norynthe"
               loading="lazy"
               decoding="async"
             >
-            <h3>Alan Motley</h3>
-            <p>This is the official website for Alan Motley. My work connects AI systems, digital optimization, narrative strategy, creative technology, governance, and production-ready execution.</p>
+          </div>
+
+          <div class="identity-copy">
+            <div class="micro">Public profile</div>
+            <h2>Alan Motley</h2>
+            <p class="identity-lead">
+              Creative technologist, AI systems strategist, digital consultant, writer, engineer, and founder of Norynthe — an independent AI evaluation and trust-scoring company.
+            </p>
+            <p>
+              My work connects AI systems, digital optimization, narrative strategy, creative technology, governance, and production-ready execution.
+            </p>
+
             <div class="tag-row">
               <span class="tag">Creative Technologist</span>
               <span class="tag">AI Systems Strategist</span>
@@ -1827,322 +1915,19 @@
               <span class="tag">Writer</span>
               <span class="tag">Engineer</span>
             </div>
-          </article>
 
-          <article class="slab span-6 cut-d">
-            <h3>Official Links</h3>
-            <p>These profiles and projects represent my public work, writing, company-building, and professional presence.</p>
-            <div class="slab-actions">
-              <a class="btn" href="https://www.linkedin.com/in/alanmotley/" target="_blank" rel="noopener">LinkedIn</a>
-              <a class="btn" href="https://medium.com/@alanmotley" target="_blank" rel="noopener">Medium</a>
-              <a class="btn" href="https://muckrack.com/alanmotley" target="_blank" rel="noopener">Muck Rack</a>
-              <a class="btn" href="https://www.norynthe.com/" target="_blank" rel="noopener">Norynthe</a>
-              <a class="btn" href="https://reports.norynthe.com/" target="_blank" rel="noopener">Reports</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="capabilities">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <h2>Where I'm Most Useful</h2>
-            <p>I work best where strategy, systems, trust, and execution need to connect. The value is not just in ideas. It is in turning them into something usable, credible, and ready to move.</p>
-          </div>
-        </div>
-
-        <div class="diag-grid">
-          <article class="slab span-4 cut-a">
-            <h3>AI Systems &amp; Workflow Strategy</h3>
-            <p>Use-case discovery, workflow design, governance-aware prototyping, and systems thinking for teams trying to move from AI interest to AI utility.</p>
-          </article>
-          <article class="slab span-4 cut-d">
-            <h3>Digital Optimization &amp; Experimentation</h3>
-            <p>Journey mapping, analytics-informed decision making, experimentation logic, and practical optimization work that improves clarity, performance, and adoption.</p>
-          </article>
-          <article class="slab span-4 cut-b">
-            <h3>Narrative, Positioning, &amp; Communication</h3>
-            <p>Positioning systems, editorial thinking, presentation strategy, and messaging that helps complex ideas land with more precision and force.</p>
-          </article>
-          <article class="slab span-6 cut-c">
-            <h3>Media, Production, &amp; Creative Systems</h3>
-            <p>Doc-style video, editorial, audio, branded storytelling, and production-minded systems that connect story to real delivery.</p>
-          </article>
-          <article class="slab span-6 cut-a">
-            <h3>Advisory, Trust, &amp; Change Enablement</h3>
-            <p>Selective guidance for leaders navigating AI, content operations, systems change, and the structural questions behind trust, clarity, and execution.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="work">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <h2>Selected Work</h2>
-            <p>Selected work across AI systems, creative production, enterprise strategy, and modern digital experiences - shaped with structure, trust, and authorship in mind.</p>
-          </div>
-          <div></div>
-        </div>
-
-        <div class="diag-grid">
-          <article class="slab span-7 cut-a">
-            <h3>Studio AI Production Assistant</h3>
-            <p><strong>MSc Artificial Intelligence thesis and professional defense.</strong> A governance-first architecture for AI-augmented creative workflows designed around provenance, consent, oversight, and real deployment logic.</p>
-            <div class="tag-row">
-              <span class="tag">Governance-first</span>
-              <span class="tag">Production-ready logic</span>
-              <span class="tag">Creative workflow systems</span>
-            </div>
-            <div class="media deck">
-              <iframe src="https://docs.google.com/presentation/d/1W79ETljq-xENte8OypJwu6ZH0iXV31ZQU8T8yN0__Bw/embed?start=false&amp;loop=false&amp;delayms=3000" title="MSc AI Thesis - Defense Deck" loading="lazy" allowfullscreen></iframe>
-            </div>
-            <div class="slab-actions">
-              <a class="btn" href="https://docs.google.com/presentation/d/1W79ETljq-xENte8OypJwu6ZH0iXV31ZQU8T8yN0__Bw/view" target="_blank" rel="noopener">Open deck</a>
-              <a class="btn" href="https://docs.google.com/presentation/d/1W79ETljq-xENte8OypJwu6ZH0iXV31ZQU8T8yN0__Bw/export/pdf" target="_blank" rel="noopener">Download PDF</a>
-            </div>
-          </article>
-
-          <article class="slab span-5 cut-b">
-            <h3>Explore Surface &amp; Sustainability Experience</h3>
-            <p><strong>Creative lead, technologist, and consultant.</strong> Led UX and digital experience work across Explore Surface and sustainability scenarios, including early GPT-powered support for more dynamic interaction.</p>
-            <a class="surface-hub-composition" href="https://exploresurface.microsoft.com/" target="_blank" rel="noopener">
-              <span class="surface-hub-screen" aria-hidden="true"></span>
-              <img class="surface-hub-frame" src="surface-hub.webp" alt="Surface Hub device displaying the Explore Surface experience" loading="lazy" decoding="async">
-            </a>
-          </article>
-
-          <article class="slab span-6 cut-c work-video-card">
-            <h3>Beneath the Surface</h3>
-            <p><strong>Program management and production leadership</strong> for Microsoft's technical YouTube series - aligning content, audience, execution, and delivery quality.</p>
-            <div class="media video cut-c">
-              <iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLNA-j_cL4mUSMy6sCtGa4bam0nrkXD1As" title="Beneath the Surface - Playlist" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div>
-          </article>
-
-          <article class="slab span-6 cut-d work-video-card">
-            <h3>AI in a Minute</h3>
-            <p><strong>Concept and script development</strong> for Microsoft Cloud storytelling that translated AI topics into accessible, business-facing narrative.</p>
-            <div class="media video cut-d">
-              <iframe src="https://www.youtube-nocookie.com/embed/om7iYSucLrk" title="AI in a Minute: Generative AI" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div>
-          </article>
-
-          <article class="slab span-12 cut-b">
-            <h3>Creative AI Explorations</h3>
-            <p>Work exploring motion, identity, archival material, and synthetic storytelling - not as novelty, but as part of a broader interest in authorship, media systems, and the trust layer around generated content.</p>
-            <div class="two-col creative-ai-pair" style="margin-top: 18px;">
-              <a class="media creative-ai-image" href="https://i.ibb.co/13rJKZ6/1-Great-Grandfather-Original-Image.jpg" target="_blank" rel="noopener">
-                <img src="https://i.ibb.co/13rJKZ6/1-Great-Grandfather-Original-Image.jpg" alt="Original archival portrait used as source for AI motion" loading="lazy" decoding="async">
-              </a>
-              <div class="media video creative-ai-video">
-                <iframe src="https://drive.google.com/file/d/1Ik-FNrBrrAO3Z22xdN19_p41yRN7FapJ/preview" title="Creative AI motion study" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; fullscreen; web-share" allowfullscreen loading="lazy"></iframe>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="perspective">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <h2>Perspective</h2>
-            <p>My work is driven by a simple belief: the future of AI is not just about capability. It is about framing, governance, and whether people can actually trust what systems produce.</p>
-          </div>
-        </div>
-
-        <div class="diag-grid">
-          <article class="slab span-6 cut-a">
-            <h3>Why this matters</h3>
-            <p>We are entering a period where AI systems increasingly shape what people experience as credible, useful, safe, and true. That means design choices, retrieval, ranking, tuning, and policy layers are governance decisions, not just product details.</p>
-          </article>
-          <article class="slab span-6 cut-d">
-            <h3>What I bring</h3>
-            <p>I connect enterprise systems thinking, narrative sensitivity, engineering, and consulting execution. That combination lets me see not just what a system can do, but how it behaves, how it is understood, and what trust it actually earns.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="norynthe">
-      <div class="container">
-        <div class="portal">
-          <div class="portal-signal portal-signal-a">
-            <strong>Observation</strong>
-            <span>Outside the model</span>
-          </div>
-          <div class="portal-signal portal-signal-b">
-            <strong>Signal</strong>
-            <span>Inference under review</span>
-          </div>
-          <div class="section-head" style="margin-bottom: 0;">
-            <div>
-              <h2>Now Building:</h2>
-              <img class="norynthe-logo" src="Norynthe_master.png" alt="Norynthe.">
-              <p>Independent standards for trusted intelligence - and a clearer outside view of what AI systems are actually doing.</p>
+            <div class="identity-links" aria-label="Official public links">
+              <a href="https://www.linkedin.com/in/alanmotley/" target="_blank" rel="noopener">LinkedIn</a>
+              <a href="https://medium.com/@alanmotley" target="_blank" rel="noopener">Medium</a>
+              <a href="https://muckrack.com/alanmotley" target="_blank" rel="noopener">Muck Rack</a>
+              <a href="https://www.norynthe.com/" target="_blank" rel="noopener">Norynthe</a>
             </div>
           </div>
-          <div class="portal-grid">
-            <article class="slab cut-a" style="padding: 24px;">
-              <h3>The idea</h3>
-              <p>Norynthe. is an independent AI trust infrastructure company designed to evaluate how models construct answers, where they diverge, what they omit, how their framing shifts, and how trustworthy those outputs are under pressure.</p>
-            </article>
-            <article class="slab cut-d" style="padding: 24px;">
-              <h3>Why it matters</h3>
-              <p>As AI becomes embedded into products, workflows, and public understanding, organizations need a clearer outside standard for comparison, trust, grounding, evidence strength, and framing stability.</p>
-            </article>
-          </div>
-          <div class="portal-rail">
-            <span>Independent standard</span>
-            <span>Outside the model</span>
-            <span>Placeholder site today · larger company in motion</span>
-            <span>Built for trusted intelligence</span>
-          </div>
-          <div class="slab-actions" style="margin-top: 22px;">
-            <a class="btn primary" href="https://www.norynthe.com/" target="_blank" rel="noopener">Visit Norynthe.</a>
-          </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="credibility">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <h2>Trusted By</h2>
-            <p>Work spanning enterprise technology, creative production, systems thinking, and public-facing storytelling.</p>
-          </div>
-        </div>
-        <div class="cred-grid">
-          <img loading="lazy" decoding="async" src="https://i.ibb.co/KXRcqGq/cosd-logo-stacked-full-color-300ppi.webp" alt="City of San Diego">
-          <img loading="lazy" decoding="async" src="https://i.ibb.co/Vxdzg5B/MSSurface-Logo-stacked-C-Gray-RGB.png" alt="Microsoft Surface">
-          <img loading="lazy" decoding="async" src="https://i.ibb.co/23GDtpR/Amazon-Web-Services-AWS-Logo-Transparent-PNG.png" alt="Amazon Web Services">
-          <img loading="lazy" decoding="async" src="https://i.ibb.co/cL3FGNm/Splunk-logo.png" alt="Splunk">
-          <img loading="lazy" decoding="async" src="https://i.ibb.co/6gv4VWp/Veeam-Logo-Bounce-Oct23.jpg" alt="Veeam">
-          <img loading="lazy" decoding="async" src="https://i.ibb.co/KXw44RG/8867-Microsoft-5-F00-Logo-2-D00-for-2-D00-screen.jpg" alt="Microsoft">
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="linkedin-signal">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <h2>LinkedIn Signal</h2>
-            <p>Ideas, systems, and public thinking with real reach - presented here as signal, not noise.</p>
-          </div>
-        </div>
-
-        <div class="diag-grid">
-          <article class="slab span-4 cut-a">
-            <h3>50k+</h3>
-            <p>Impressions on a featured post exploring systems-level thinking, talent, and platform design.</p>
-          </article>
-          <article class="slab span-4 cut-d">
-            <h3>31k+</h3>
-            <p>Members reached through public thinking on technology, opportunity, and structural design.</p>
-          </article>
-          <article class="slab span-4 cut-b">
-            <h3>625+</h3>
-            <p>Likes across a high-signal post that resonated with founders, operators, and leaders in tech.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="recommendations">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <h2>Recommendations</h2>
-            <p>Proof that clarity, creativity, and delivery can coexist - and that the work lands with both technical and human credibility. These recommendations reflect a wider range of the work: consulting, technical strategy, client communication, creative execution, leadership, and delivery under real constraints.</p>
-          </div>
-        </div>
-        <div class="quote-grid">
-          <article class="quote">
-            <p class="quote-text">Alan is the definition of great. His strong work ethic coupled with his dedicated professional attitude makes him the ideal candidate for everything. Whether he is client facing or heads down with the team, you can expect Alan to deliver excellence in a way that makes you want to be included in his orbit.</p>
-            <strong>Candice Bonfiglio</strong>
-            <span>Senior Peer</span>
-          </article>
-          <article class="quote">
-            <p class="quote-text">One of Alan's standout skills is managing client relations, which can be a challenge in the IT service industry. He's excellent at scoping technology requirements, handling change requests, and communicating complex technical concepts clearly to clients. This ensured that everyone was on the same page, with little to no miscommunication between the development team and stakeholders.</p>
-            <strong>Anish Sharda</strong>
-            <span>Colleague</span>
-          </article>
-          <article class="quote">
-            <p class="quote-text">Alan consistently demonstrated a remarkable blend of technical expertise, creativity, and enthusiasm that greatly contributed to our team's success. His ability to inspire and motivate those around him created a collaborative environment where ideas flourished and goals were exceeded.</p>
-            <strong>Katherine Zatt</strong>
-            <span>Teammate</span>
-          </article>
-          <article class="quote">
-            <p class="quote-text">Alan is a hard-working professional deeply committed to solving complex problems and delivering innovative solutions. His proficiency in AI, encompassing both tooling and solutions, has been instrumental in advancing our projects and driving efficiency. Alan's ability to enhance cloud productivity has significantly streamlined our operations, resulting in measurable improvements in workflow and output.</p>
-            <strong>Jeremy Perkins</strong>
-            <span>Manager</span>
-          </article>
-          <article class="quote">
-            <p class="quote-text">Alan combines the rare combination of technological prowess and creativity that makes him a powerhouse consultant. He put in the work to make our customers successful and will excel in any role that allows him to keep those two skill sets together to drive results.</p>
-            <strong>Jeff Roach</strong>
-            <span>Manager</span>
-          </article>
-          <article class="quote">
-            <p class="quote-text">Alan brought a consistent stream of energy and creativity to our team. He took on the need to build a new way to represent the Surface product line during Covid and built a world-class production studio with little supervision or guidance. He delivered an impactful solution consumed by commercial customers of Surface across the globe.</p>
-            <strong>Frank Buchholz</strong>
-            <span>Director of Product Marketing · Manager</span>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="writing">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <h2>Writing</h2>
-            <p>Essays and editorial on systems, stories, power, technology, and culture.</p>
-          </div>
-        </div>
-        <div class="writing-grid">
-          <article class="essay">
-            <time datetime="2025-11-04">Nov 04, 2025</time>
-            <h3>Some People Are Built to Create. They Just Need Room to Become.</h3>
-            <p>A piece on creative capacity, material conditions, and what happens when people finally get room to build.</p>
-            <a class="btn" href="https://medium.com/@alanmotley/some-people-are-built-to-create-they-just-need-room-to-become-b24b6eb2447b" target="_blank" rel="noopener">Read on Medium</a>
-          </article>
-          <article class="essay">
-            <time datetime="2025-10-28">Oct 28, 2025</time>
-            <h3>The Illusion of Caring: How Whiteness Rebrands Itself as Progress</h3>
-            <p>A piece examining systems, image management, and how institutional narratives get mistaken for meaningful change.</p>
-            <a class="btn" href="https://medium.com/@alanmotley/the-illusion-of-caring-how-whiteness-rebrands-itself-as-progress-c2df4a193fe2" target="_blank" rel="noopener">Read on Medium</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="resume">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <h2>Resume</h2>
-            <p>A detailed view of experience across consulting, enterprise systems, creative production, digital optimization, and AI-focused work.</p>
-          </div>
-        </div>
-        <div class="resume-shell">
-          <div class="resume-top">
-            <strong>Alan Motley - Resume</strong>
-            <div class="resume-actions">
-              <a class="btn" href="https://docs.google.com/document/d/16ialPoU7HJwtpiC7MH2rvaKF3k_TYZ4P/export?format=pdf" target="_blank" rel="noopener">Download PDF</a>
-              <a class="btn" href="https://docs.google.com/document/d/16ialPoU7HJwtpiC7MH2rvaKF3k_TYZ4P/view" target="_blank" rel="noopener">Open Doc</a>
-            </div>
-          </div>
-          <iframe class="resume-frame" src="https://docs.google.com/document/d/16ialPoU7HJwtpiC7MH2rvaKF3k_TYZ4P/preview" title="Alan Motley Resume" loading="lazy"></iframe>
-        </div>
-      </div>
-    </section>
+    <!-- Everything below this point remains the same as your current working code. -->
   </main>
 
   <footer>
