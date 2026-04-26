@@ -6,7 +6,7 @@
   <title>Alan Motley | Creative Technologist, AI Systems Strategist, and Founder</title>
   <meta
     name="description"
-    content="Alan Motley is a creative technologist, AI systems strategist, and founder building governable intelligence, narrative systems, and modern production workflows."
+    content="Alan Motley is a creative technologist, AI systems strategist, digital consultant, writer, engineer, and founder of Norynthe, an independent AI evaluation and trust-scoring company."
   >
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="theme-color" content="#F6F8FA">
@@ -51,18 +51,51 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "ProfilePage",
+      "@id": "https://www.alanmotley.com/#profilepage",
+      "url": "https://www.alanmotley.com/",
+      "name": "Alan Motley | Official Website",
+      "description": "Official website of Alan Motley, creative technologist, AI systems strategist, digital consultant, writer, engineer, and founder of Norynthe.",
+      "inLanguage": "en",
+      "mainEntity": {
+        "@id": "https://www.alanmotley.com/#person"
+      },
+      "isPartOf": {
+        "@id": "https://www.alanmotley.com/#website"
+      }
+    },
+    {
       "@type": "Person",
       "@id": "https://www.alanmotley.com/#person",
       "name": "Alan Motley",
+      "givenName": "Alan",
+      "familyName": "Motley",
       "alternateName": [
         "Alan Motley Seattle",
         "Alan Motley AI",
-        "Alan Motley Creative Technologist"
+        "Alan Motley Creative Technologist",
+        "Alan Motley Norynthe"
       ],
       "url": "https://www.alanmotley.com/",
-      "image": "https://www.alanmotley.com/WSAM.png",
-      "jobTitle": "Creative Technologist, AI Systems Strategist, and Founder",
-      "description": "Alan Motley is a creative technologist, AI systems strategist, founder, and engineer building governable intelligence, narrative systems, and modern production workflows.",
+      "mainEntityOfPage": {
+        "@id": "https://www.alanmotley.com/#profilepage"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "@id": "https://www.alanmotley.com/#headshot",
+        "url": "https://www.alanmotley.com/alan-motley-creative-technologist-ai-systems-strategist.jpg",
+        "contentUrl": "https://www.alanmotley.com/alan-motley-creative-technologist-ai-systems-strategist.jpg",
+        "caption": "Alan Motley, creative technologist, AI systems strategist, and founder of Norynthe"
+      },
+      "jobTitle": [
+        "Creative Technologist",
+        "AI Systems Strategist",
+        "Digital Consultant",
+        "Writer",
+        "Engineer",
+        "Founder"
+      ],
+      "description": "Alan Motley is a creative technologist, AI systems strategist, digital consultant, writer, engineer, and founder of Norynthe, an independent AI evaluation and trust-scoring company.",
       "email": "mailto:am@alanmotley.com",
       "homeLocation": {
         "@type": "Place",
@@ -72,27 +105,45 @@
         "Artificial Intelligence",
         "AI governance",
         "AI evaluation",
+        "AI trust scoring",
         "Digital optimization",
         "Creative technology",
         "Narrative systems",
         "Model evaluation",
-        "Trust scoring",
         "Marketing technology",
-        "Product strategy"
+        "Product strategy",
+        "Enterprise AI",
+        "AI reporting",
+        "Governable intelligence"
       ],
       "founder": {
         "@type": "Organization",
         "@id": "https://www.norynthe.com/#organization",
         "name": "Norynthe",
-        "url": "https://www.norynthe.com/"
+        "url": "https://www.norynthe.com/",
+        "description": "Norynthe is an independent AI evaluation and trust-scoring company."
+      },
+      "worksFor": {
+        "@id": "https://www.norynthe.com/#organization"
       },
       "sameAs": [
         "https://www.linkedin.com/in/alanmotley/",
         "https://medium.com/@alanmotley",
         "https://muckrack.com/alanmotley",
         "https://www.instagram.com/alanmotley",
-        "https://www.norynthe.com/"
+        "https://www.norynthe.com/",
+        "https://reports.norynthe.com/"
       ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.norynthe.com/#organization",
+      "name": "Norynthe",
+      "url": "https://www.norynthe.com/",
+      "founder": {
+        "@id": "https://www.alanmotley.com/#person"
+      },
+      "description": "Norynthe is an independent AI evaluation and trust-scoring company focused on model comparison, benchmark-driven scoring, and governance-ready AI reporting."
     },
     {
       "@type": "WebSite",
@@ -110,6 +161,7 @@
       "@id": "https://www.alanmotley.com/#webpage",
       "url": "https://www.alanmotley.com/",
       "name": "Alan Motley | Creative Technologist, AI Systems Strategist, and Founder",
+      "description": "Alan Motley is a creative technologist, AI systems strategist, digital consultant, writer, engineer, and founder of Norynthe.",
       "isPartOf": {
         "@id": "https://www.alanmotley.com/#website"
       },
@@ -117,8 +169,7 @@
         "@id": "https://www.alanmotley.com/#person"
       },
       "primaryImageOfPage": {
-        "@type": "ImageObject",
-        "url": "https://www.alanmotley.com/WSAM.png"
+        "@id": "https://www.alanmotley.com/#headshot"
       },
       "inLanguage": "en"
     }
@@ -698,10 +749,12 @@
     }
 
     #about .diag-grid,
+    #official-profile .diag-grid,
     #capabilities .diag-grid,
     #perspective .diag-grid { gap: 24px; }
 
     #about .slab,
+    #official-profile .slab,
     #capabilities .slab,
     #perspective .slab {
       background:
@@ -709,6 +762,16 @@
         linear-gradient(135deg, rgba(51, 75, 110, 0.025), rgba(54, 85, 74, 0.02));
       box-shadow: none;
       border-color: rgba(15, 17, 21, 0.08);
+    }
+
+    .profile-headshot {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 999px;
+      margin-bottom: 18px;
+      border: 1px solid rgba(15, 17, 21, 0.12);
+      box-shadow: 0 14px 28px rgba(15, 17, 21, 0.08);
     }
 
     #capabilities .slab {
@@ -1315,6 +1378,7 @@
     }
 
     #about .section-head h2,
+    #official-profile .section-head h2,
     #capabilities .section-head h2,
     #work .section-head h2,
     #perspective .section-head h2,
@@ -1599,6 +1663,7 @@
       </div>
       <nav class="nav-links" aria-label="Primary">
         <a href="#about">About</a>
+        <a href="#official-profile">Profile</a>
         <a href="#capabilities">Capabilities</a>
         <a href="#work">Work</a>
         <a href="#perspective">Perspective</a>
@@ -1612,6 +1677,7 @@
   <div class="mobile-nav-wrap">
     <nav class="mobile-nav container" aria-label="Section shortcuts">
       <a href="#about">About</a>
+      <a href="#official-profile">Profile</a>
       <a href="#capabilities">Capabilities</a>
       <a href="#work">Work</a>
       <a href="#perspective">Perspective</a>
@@ -1730,6 +1796,50 @@
             </div>
             <span class="byline">Alan Motley</span>
           </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="official-profile">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Official Profile</h2>
+            <p>Alan Motley is a creative technologist, AI systems strategist, digital consultant, writer, engineer, and founder of Norynthe, an independent AI evaluation and trust-scoring company.</p>
+          </div>
+        </div>
+
+        <div class="diag-grid">
+          <article class="slab span-6 cut-a">
+            <img
+              class="profile-headshot"
+              src="/alan-motley-creative-technologist-ai-systems-strategist.jpg"
+              alt="Alan Motley, creative technologist, AI systems strategist, writer, engineer, and founder of Norynthe"
+              loading="lazy"
+              decoding="async"
+            >
+            <h3>Alan Motley</h3>
+            <p>This is the official website for Alan Motley. My work connects AI systems, digital optimization, narrative strategy, creative technology, governance, and production-ready execution.</p>
+            <div class="tag-row">
+              <span class="tag">Creative Technologist</span>
+              <span class="tag">AI Systems Strategist</span>
+              <span class="tag">Founder of Norynthe</span>
+              <span class="tag">Writer</span>
+              <span class="tag">Engineer</span>
+            </div>
+          </article>
+
+          <article class="slab span-6 cut-d">
+            <h3>Official Links</h3>
+            <p>These profiles and projects represent my public work, writing, company-building, and professional presence.</p>
+            <div class="slab-actions">
+              <a class="btn" href="https://www.linkedin.com/in/alanmotley/" target="_blank" rel="noopener">LinkedIn</a>
+              <a class="btn" href="https://medium.com/@alanmotley" target="_blank" rel="noopener">Medium</a>
+              <a class="btn" href="https://muckrack.com/alanmotley" target="_blank" rel="noopener">Muck Rack</a>
+              <a class="btn" href="https://www.norynthe.com/" target="_blank" rel="noopener">Norynthe</a>
+              <a class="btn" href="https://reports.norynthe.com/" target="_blank" rel="noopener">Reports</a>
+            </div>
+          </article>
         </div>
       </div>
     </section>
