@@ -14,6 +14,7 @@
   <link rel="canonical" href="https://www.alanmotley.com/">
 
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Alan Motley">
   <meta property="og:url" content="https://www.alanmotley.com/">
   <meta property="og:title" content="Alan Motley, MSc (AI), MBA | AI Systems Strategist, Creative Technologist, and Founder">
   <meta
@@ -33,6 +34,7 @@
     content="Business and AI strategy, governable intelligence, narrative systems, and modern production workflows - built with clarity, structure, and real-world execution."
   >
   <meta name="twitter:image" content="https://www.alanmotley.com/WSAM.png">
+  <meta name="twitter:image:alt" content="Alan Motley - Strategy, systems, and authorship for the AI era">
 
   <!-- Favicons / Search Icon -->
   <link rel="icon" href="/favicon.ico" sizes="any">
@@ -1751,7 +1753,7 @@
     }
   </style>
 </head>
-<body>
+<body data-analytics-page="Alan Motley Home">
   <a class="skip-link" href="#main-content">Skip to content</a>
 
   <header class="site-header">
@@ -2262,6 +2264,90 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    (function () {
+      function cleanText(value) {
+        return String(value || "").replace(/\s+/g, " ").trim().slice(0, 96);
+      }
+
+      function pageName() {
+        return document.body.dataset.analyticsPage || cleanText(document.title.split("|")[0]) || "Alan Motley Home";
+      }
+
+      function sectionForHash(hash) {
+        if (!hash || hash === "#") return "Top";
+        var target = document.querySelector(hash);
+        var heading = target && target.querySelector("h1, h2, h3");
+        return cleanText(heading && heading.textContent) || hash.replace("#", "");
+      }
+
+      function linkRole(link) {
+        if (link.closest(".hero-ctas, .cta-row, .button-row")) return "primary_cta";
+        if (link.closest(".nav-links, .mobile-nav")) return "navigation";
+        if (link.closest(".footer-links, footer")) return "footer";
+        if (link.closest(".work-card, .writing-card, .identity-links")) return "content_card";
+        return "inline";
+      }
+
+      function eventForLink(link, href) {
+        if (href.indexOf("mailto:") === 0) return "contact_clicked";
+        if (href.charAt(0) === "#") return "page_section_opened";
+        if (href.indexOf("www.norynthe.com") !== -1) return "norynthe_clicked";
+        if (href.indexOf("medium.com") !== -1) return "writing_opened";
+        if (href.indexOf("docs.google.com/document/") !== -1) return "resume_opened";
+        if (href.indexOf("docs.google.com/presentation/") !== -1) return "deck_opened";
+        return "site_link_clicked";
+      }
+
+      function materialForLink(link, href, text) {
+        if (href.indexOf("mailto:") === 0) return "Email";
+        if (href.charAt(0) === "#") return sectionForHash(href);
+        if (href.indexOf("www.norynthe.com") !== -1) return "Norynthe";
+        if (href.indexOf("medium.com") !== -1) return text || "Medium article";
+        if (href.indexOf("docs.google.com/document/") !== -1) return "Resume";
+        if (href.indexOf("docs.google.com/presentation/") !== -1) return "Thesis deck";
+        return text || href;
+      }
+
+      function destinationForLink(href) {
+        if (href.indexOf("mailto:") === 0) return "mailto:am@alanmotley.com";
+        try {
+          return new URL(href, window.location.href).href;
+        } catch (error) {
+          return href;
+        }
+      }
+
+      function track(eventName, params) {
+        if (typeof window.gtag !== "function") return;
+        window.gtag("event", eventName, Object.assign({
+          event_category: "Alan Motley Personal Site",
+          site_area: "Personal Site",
+          page_name: pageName(),
+          transport_type: "beacon"
+        }, params));
+      }
+
+      document.addEventListener("click", function (event) {
+        var link = event.target.closest("a[href]");
+        if (!link) return;
+
+        var href = link.getAttribute("href") || "";
+        var text = cleanText(link.textContent || link.getAttribute("aria-label"));
+        var eventName = eventForLink(link, href);
+        var material = materialForLink(link, href, text);
+
+        track(eventName, {
+          link_text: text || material,
+          material: material,
+          link_role: linkRole(link),
+          destination: destinationForLink(href),
+          source_area: linkRole(link)
+        });
+      });
+    })();
+  </script>
 
   <script>
     (function () {
