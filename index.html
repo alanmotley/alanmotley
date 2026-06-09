@@ -195,24 +195,76 @@
 }
 </script>
   <script>
-    (function (c, l, a, r, i, t, y) {
-      c[a] = c[a] || function () {
-        (c[a].q = c[a].q || []).push(arguments);
-      };
-      t = l.createElement(r);
-      t.async = 1;
-      t.src = "https://www.clarity.ms/tag/" + i;
-      y = l.getElementsByTagName(r)[0];
-      y.parentNode.insertBefore(t, y);
-    })(window, document, "clarity", "script", "x3hvxrfa22");
-  </script>
+    window.NORYNTHE_PULSE_OWNER_MODE_COMMAND = false;
+    window.NORYNTHE_PULSE_OWNER_MODE = (function () {
+      const key = "norynthe_pulse_owner_mode_v1";
+      const cookie = "norynthe_pulse_owner_mode";
+      const enableValues = ["1", "true", "yes", "on", "enable", "enabled"];
+      const disableValues = ["0", "false", "no", "off", "disable", "disabled"];
+      const params = new URLSearchParams(window.location.search);
+      const value = String(params.get("pulse_owner") || "").replace(/\s+/g, " ").trim().toLowerCase();
 
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5KLCRKBJH8"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag("js", new Date());
-    gtag("config", "G-5KLCRKBJH8", { anonymize_ip: true, send_page_view: true });
+      if (enableValues.includes(value) || disableValues.includes(value)) {
+        const enabled = enableValues.includes(value);
+        window.NORYNTHE_PULSE_OWNER_MODE_COMMAND = true;
+        try {
+          if (enabled) {
+            window.localStorage.setItem(key, "1");
+          } else {
+            window.localStorage.removeItem(key);
+          }
+        } catch (error) {}
+
+        const parts = [
+          cookie + "=" + (enabled ? "1" : ""),
+          "path=/",
+          "max-age=" + (enabled ? 60 * 60 * 24 * 400 : 0),
+          "SameSite=Lax"
+        ];
+        const host = window.location.hostname.replace(/^www\./, "");
+        if (host.endsWith("norynthe.com")) parts.push("domain=.norynthe.com");
+        if (host.endsWith("alanmotley.com")) parts.push("domain=.alanmotley.com");
+        if (window.location.protocol === "https:") parts.push("Secure");
+        document.cookie = parts.join("; ");
+
+        try {
+          params.delete("pulse_owner");
+          const nextQuery = params.toString();
+          window.history.replaceState(null, document.title, window.location.pathname + (nextQuery ? "?" + nextQuery : "") + window.location.hash);
+        } catch (error) {}
+      }
+
+      try {
+        if (window.localStorage.getItem(key) === "1") return true;
+      } catch (error) {}
+      return document.cookie.split(";").some(function (part) {
+        return part.trim() === cookie + "=1";
+      });
+    }());
+
+    if (!window.NORYNTHE_PULSE_OWNER_MODE && !window.NORYNTHE_PULSE_OWNER_MODE_COMMAND) {
+      (function (c, l, a, r, i, t, y) {
+        c[a] = c[a] || function () {
+          (c[a].q = c[a].q || []).push(arguments);
+        };
+        t = l.createElement(r);
+        t.async = 1;
+        t.src = "https://www.clarity.ms/tag/" + i;
+        y = l.getElementsByTagName(r)[0];
+        y.parentNode.insertBefore(t, y);
+      })(window, document, "clarity", "script", "x3hvxrfa22");
+
+      const gaId = "G-5KLCRKBJH8";
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = window.gtag || function gtag() { window.dataLayer.push(arguments); };
+      window.gtag("js", new Date());
+      window.gtag("config", gaId, { anonymize_ip: true, send_page_view: true });
+
+      const script = document.createElement("script");
+      script.async = true;
+      script.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(gaId);
+      document.head.appendChild(script);
+    }
   </script>
 
   <style>
