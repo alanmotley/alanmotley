@@ -46,7 +46,15 @@
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..900&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300..900&family=Sora:wght@400;500;600;700;800&display=swap"
+    rel="preload"
+    as="style"
+    onload="this.onload=null;this.rel='stylesheet'"
+  >
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..900&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  </noscript>
 
  <script type="application/ld+json">
 {
@@ -243,27 +251,37 @@
     }());
 
     if (!window.NORYNTHE_PULSE_OWNER_MODE && !window.NORYNTHE_PULSE_OWNER_MODE_COMMAND) {
-      (function (c, l, a, r, i, t, y) {
-        c[a] = c[a] || function () {
-          (c[a].q = c[a].q || []).push(arguments);
+      window.addEventListener("load", function () {
+        const startAnalytics = function () {
+          (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () {
+              (c[a].q = c[a].q || []).push(arguments);
+            };
+            t = l.createElement(r);
+            t.async = 1;
+            t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0];
+            y.parentNode.insertBefore(t, y);
+          })(window, document, "clarity", "script", "x3hvxrfa22");
+
+          const gaId = "G-5KLCRKBJH8";
+          window.dataLayer = window.dataLayer || [];
+          window.gtag = window.gtag || function gtag() { window.dataLayer.push(arguments); };
+          window.gtag("js", new Date());
+          window.gtag("config", gaId, { anonymize_ip: true, send_page_view: true });
+
+          const script = document.createElement("script");
+          script.async = true;
+          script.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(gaId);
+          document.head.appendChild(script);
         };
-        t = l.createElement(r);
-        t.async = 1;
-        t.src = "https://www.clarity.ms/tag/" + i;
-        y = l.getElementsByTagName(r)[0];
-        y.parentNode.insertBefore(t, y);
-      })(window, document, "clarity", "script", "x3hvxrfa22");
 
-      const gaId = "G-5KLCRKBJH8";
-      window.dataLayer = window.dataLayer || [];
-      window.gtag = window.gtag || function gtag() { window.dataLayer.push(arguments); };
-      window.gtag("js", new Date());
-      window.gtag("config", gaId, { anonymize_ip: true, send_page_view: true });
-
-      const script = document.createElement("script");
-      script.async = true;
-      script.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(gaId);
-      document.head.appendChild(script);
+        if ("requestIdleCallback" in window) {
+          window.requestIdleCallback(startAnalytics, { timeout: 2500 });
+        } else {
+          window.setTimeout(startAnalytics, 1200);
+        }
+      }, { once: true });
     }
   </script>
 
@@ -1877,8 +1895,8 @@
         <div class="hero-side">
           <div class="shape-card portrait">
             <div class="portrait-frame">
-              <video autoplay muted loop playsinline preload="metadata" poster="/alan-motley-creative-technologist-ai-systems-strategist.jpg" aria-label="Portrait motion reel">
-                <source src="https://media.giphy.com/media/eJesqlXse6Ipe9mFuq/giphy.mp4" type="video/mp4">
+              <video autoplay muted loop playsinline preload="none" poster="/alan-motley-creative-technologist-ai-systems-strategist.jpg" aria-label="Portrait motion reel">
+                <source data-src="https://media.giphy.com/media/eJesqlXse6Ipe9mFuq/giphy.mp4" type="video/mp4">
               </video>
             </div>
             <div class="portrait-meta">
@@ -2109,27 +2127,28 @@
             <div>
               <h2>Now Building:</h2>
               <img class="norynthe-logo" src="Norynthe_master.png" alt="Norynthe.">
-              <p>Independent standards for trusted intelligence - and a clearer outside view of what AI systems are actually doing.</p>
+              <p>Independent infrastructure for AI trust, with a dedicated research layer for rigorous, evidence-based evaluation.</p>
             </div>
           </div>
           <div class="portal-grid">
             <article class="slab cut-a" style="padding: 24px;">
               <h3>The idea</h3>
-              <p>Norynthe. is an independent AI trust infrastructure company designed to evaluate how models construct answers, where they diverge, what they omit, how their framing shifts, and how trustworthy those outputs are under pressure.</p>
+              <p>Norynthe. develops independent evaluation systems, governed methodologies, and evidence-linked reporting so organizations can assess AI with evidence instead of assumption.</p>
             </article>
             <article class="slab cut-d" style="padding: 24px;">
-              <h3>Why it matters</h3>
-              <p>As AI becomes embedded into products, workflows, and public understanding, organizations need a clearer outside standard for comparison, trust, grounding, evidence strength, and framing stability.</p>
+              <h3>The Norynthe Papers</h3>
+              <p>The research layer of the Norynthe ecosystem publishes methodology, position papers, benchmark analysis, and evidence-based thinking on AI trust and evaluation.</p>
             </article>
           </div>
           <div class="portal-rail">
             <span>Independent standard</span>
             <span>Outside the model</span>
-            <span>Placeholder site today · larger company in motion</span>
+            <span>Research-led methodology</span>
             <span>Built for trusted intelligence</span>
           </div>
           <div class="slab-actions" style="margin-top: 22px;">
             <a class="btn primary" href="https://www.norynthe.com/" target="_blank" rel="noopener">Visit Norynthe.</a>
+            <a class="btn" href="https://papers.norynthe.com/" target="_blank" rel="noopener">Read The Norynthe Papers</a>
           </div>
         </div>
       </div>
@@ -2359,7 +2378,7 @@
       function eventForLink(link, href) {
         if (href.indexOf("mailto:") === 0) return "contact_clicked";
         if (href.charAt(0) === "#") return "page_section_opened";
-        if (href.indexOf("www.norynthe.com") !== -1) return "norynthe_clicked";
+        if (href.indexOf("norynthe.com") !== -1) return "norynthe_clicked";
         if (href.indexOf("medium.com") !== -1) return "writing_opened";
         if (href.indexOf("docs.google.com/document/") !== -1) return "resume_opened";
         if (href.indexOf("docs.google.com/presentation/") !== -1) return "deck_opened";
@@ -2369,7 +2388,8 @@
       function materialForLink(link, href, text) {
         if (href.indexOf("mailto:") === 0) return "Email";
         if (href.charAt(0) === "#") return sectionForHash(href);
-        if (href.indexOf("www.norynthe.com") !== -1) return "Norynthe";
+        if (href.indexOf("papers.norynthe.com") !== -1) return "The Norynthe Papers";
+        if (href.indexOf("norynthe.com") !== -1) return "Norynthe";
         if (href.indexOf("medium.com") !== -1) return text || "Medium article";
         if (href.indexOf("docs.google.com/document/") !== -1) return "Resume";
         if (href.indexOf("docs.google.com/presentation/") !== -1) return "Thesis deck";
@@ -2419,14 +2439,22 @@
     (function () {
       var motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
 
+      function loadDeferredVideo(video) {
+        var source = video.querySelector("source[data-src]");
+        if (!source) return;
+        source.src = source.dataset.src;
+        source.removeAttribute("data-src");
+        video.load();
+      }
+
       function syncMotionPreference() {
         document.querySelectorAll("video[autoplay]").forEach(function (video) {
           if (motionQuery.matches) {
             video.pause();
             video.removeAttribute("autoplay");
-            video.setAttribute("controls", "controls");
           } else {
             video.removeAttribute("controls");
+            loadDeferredVideo(video);
             var playAttempt = video.play();
             if (playAttempt && typeof playAttempt.catch === "function") {
               playAttempt.catch(function () {});
@@ -2435,7 +2463,16 @@
         });
       }
 
-      syncMotionPreference();
+      window.addEventListener("load", function () {
+        var startMotion = function () {
+          syncMotionPreference();
+        };
+        if ("requestIdleCallback" in window) {
+          window.requestIdleCallback(startMotion, { timeout: 1800 });
+        } else {
+          window.setTimeout(startMotion, 600);
+        }
+      }, { once: true });
 
       if (typeof motionQuery.addEventListener === "function") {
         motionQuery.addEventListener("change", syncMotionPreference);
