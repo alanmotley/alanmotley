@@ -1,16 +1,22 @@
-## Hi there 👋
+# Alan Motley, MSc, MBA
 
-<!--
-**alanmotley/alanmotley** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+AI researcher, entrepreneur, composer, and founder of [Norynthe](https://norynthe.com/).
 
-Here are some ideas to get you started:
+I build independent AI trust, assurance, and evaluation systems that operate outside the model. My work connects technical evaluation, governance, research, and practical institutional decision-making.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## Current work
+
+- **[Norynthe](https://norynthe.com/)** — independent AI trust and evaluation
+- **[The Norynthe Papers](https://papers.norynthe.com/)** — research, methods, and publications
+- **[Norynthe AI Assurance Method](https://papers.norynthe.com/methods/ai-assurance-method-v0-1/)** — a public method for structured AI assurance
+
+## Selected repositories
+
+- [Norynthe public site](https://github.com/alanmotley/norynthe)
+- [The Norynthe Papers](https://github.com/alanmotley/papers-norynthe)
+- [AlanMotley.com](https://github.com/alanmotley/alanmotley)
+
+## Elsewhere
+
+- [AlanMotley.com](https://alanmotley.com/)
+- [LinkedIn](https://www.linkedin.com/in/alanmotley/)
