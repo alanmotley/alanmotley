@@ -488,9 +488,14 @@
 
   <footer>
     <div class="footer-inner">
-      <span>© 2026 Alan Motley. All rights reserved.</span>
+      <span>© <span data-current-year>2026</span> Alan Motley. All rights reserved.</span>
       <span><a href="/">Home</a> · <a href="/privacy.html">Privacy</a></span>
     </div>
   </footer>
+  <script>
+    document.querySelectorAll('[data-current-year]').forEach((element) => {
+      element.textContent = String(new Date().getFullYear());
+    });
+  </script>
 </body>
 </html>
