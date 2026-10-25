@@ -1516,20 +1516,21 @@
       margin-top: auto;
       width: 100%;
     }
-    .portfolio-feature {
-      padding: clamp(24px, 4vw, 48px);
-      background: linear-gradient(135deg, rgba(237, 244, 248, 0.92), rgba(255, 255, 255, 0.72));
-      border-color: rgba(51, 75, 110, 0.14);
-    }
-    .portfolio-feature .section-head { margin-bottom: 28px; }
-    .portfolio-feature .section-head h2 { max-width: 15ch; }
-    .portfolio-feature .section-head > p { max-width: 34ch; }
-    .portfolio-feature-grid { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(240px, .75fr); gap: clamp(22px, 4vw, 48px); align-items: center; }
-    .portfolio-feature-video { position: relative; overflow: hidden; background: #102b3a; }
-    .portfolio-feature-video video { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
-    .media-credit { display: block; padding: 10px 12px; color: rgba(255,255,255,.78); background: rgba(16,43,58,.92); font-size: .72rem; letter-spacing: .04em; }
+    .portfolio-feature { position: relative; min-height: clamp(520px, 58vw, 700px); padding: clamp(34px, 6vw, 86px); overflow: hidden; color: #fff; background: #263642; border: 0; border-radius: 0; clip-path: polygon(0 0, 100% 0, 100% 91%, 96% 100%, 0 100%); }
+    .portfolio-feature::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(13, 25, 38, .76) 0%, rgba(13, 25, 38, .42) 48%, rgba(13, 25, 38, .10) 100%), linear-gradient(0deg, rgba(16, 28, 38, .56), transparent 54%); pointer-events: none; }
+    .portfolio-feature .portfolio-feature-video { position: absolute; inset: 0; z-index: 0; margin: 0; }
+    .portfolio-feature-video video { display: block; width: 100%; height: 100%; object-fit: cover; }
+    .portfolio-feature .portfolio-feature-content { position: relative; z-index: 1; display: flex; min-height: clamp(450px, 50vw, 610px); flex-direction: column; justify-content: space-between; align-items: flex-start; }
+    .portfolio-feature .section-head { display: block; margin: 0; max-width: 760px; }
+    .portfolio-feature .section-head h2 { max-width: 11ch; margin: 18px 0 24px; color: #fff; font-size: clamp(52px, 8vw, 112px); line-height: .88; letter-spacing: -.07em; }
+    .portfolio-feature .section-head > p { max-width: 600px; margin: 0; color: rgba(255,255,255,.9); font-size: clamp(16px, 1.7vw, 23px); line-height: 1.35; }
+    .portfolio-feature .micro { color: rgba(255,255,255,.82); }
+    .portfolio-feature .micro::before { background: #e6a5a0; }
     .portfolio-feature-copy { display: flex; flex-direction: column; align-items: flex-start; gap: 20px; }
-    @media (max-width: 760px) { .portfolio-feature-grid { grid-template-columns: 1fr; } }
+    .portfolio-feature-copy p { display: none; }
+    .portfolio-feature .btn.primary { background: #fff; color: #1c3448; }
+    .portfolio-feature .media-credit { margin: 0; padding: 0; color: rgba(255,255,255,.82); background: transparent; font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; }
+    @media (max-width: 760px) { .portfolio-feature { min-height: 620px; padding: 28px; clip-path: none; } .portfolio-feature .portfolio-feature-content { min-height: 560px; } .portfolio-feature .section-head h2 { font-size: clamp(48px, 14vw, 76px); } }
 
     #norynthe .slab {
       background:
@@ -2122,23 +2123,20 @@
 
     <section class="section" id="creative-portfolio">
       <div class="container">
-        <div class="portfolio-feature slab cut-a">
-          <div class="section-head">
-            <div>
-              <p class="micro">Creative portfolio</p>
-              <h2>Production, place, and the work of looking closely.</h2>
-            </div>
-            <p>Film, photography, journalism, and digital storytelling—from the Pacific Northwest to the places that stay with me.</p>
+        <div class="portfolio-feature">
+          <div class="media portfolio-feature-video">
+            <video autoplay muted loop playsinline preload="metadata" poster="https://portfolio.alanmotley.com/assets/drone-hero-poster.jpg" aria-label="Aerial film of Discovery Park">
+              <source src="https://portfolio.alanmotley.com/assets/drone-hero.mp4" type="video/mp4">
+            </video>
           </div>
-          <div class="portfolio-feature-grid">
-            <div class="media portfolio-feature-video">
-              <video autoplay muted loop playsinline preload="metadata" poster="https://portfolio.alanmotley.com/assets/drone-hero-poster.jpg" aria-label="Aerial film of Discovery Park">
-                <source src="https://portfolio.alanmotley.com/assets/drone-hero.mp4" type="video/mp4">
-              </video>
-              <span class="media-credit">Discovery Park · DJI Air 3 · Filmed and edited by Alan Motley</span>
+          <div class="portfolio-feature-content">
+            <div class="section-head">
+              <p class="micro">Creative portfolio</p>
+              <h2>Stories with a point of view.</h2>
+              <p>I build the conditions for good work to land — from street-level interviews and documentary film to production systems and digital experiences.</p>
             </div>
             <div class="portfolio-feature-copy">
-              <p>This is the part of my practice where strategy becomes something people can see, hear, and enter: a documentary frame, a public story, a still image, or a digital experience with a point of view.</p>
+              <span class="media-credit">Discovery Park · DJI Air 3 drone film · Filmed and edited by Alan Motley</span>
               <a class="btn primary" href="https://portfolio.alanmotley.com/" target="_blank" rel="noopener">Open the creative portfolio ↗</a>
             </div>
           </div>
