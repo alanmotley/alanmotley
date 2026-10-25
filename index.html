@@ -1516,6 +1516,20 @@
       margin-top: auto;
       width: 100%;
     }
+    .portfolio-feature {
+      padding: clamp(24px, 4vw, 48px);
+      background: linear-gradient(135deg, rgba(237, 244, 248, 0.92), rgba(255, 255, 255, 0.72));
+      border-color: rgba(51, 75, 110, 0.14);
+    }
+    .portfolio-feature .section-head { margin-bottom: 28px; }
+    .portfolio-feature .section-head h2 { max-width: 15ch; }
+    .portfolio-feature .section-head > p { max-width: 34ch; }
+    .portfolio-feature-grid { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(240px, .75fr); gap: clamp(22px, 4vw, 48px); align-items: center; }
+    .portfolio-feature-video { position: relative; overflow: hidden; background: #102b3a; }
+    .portfolio-feature-video video { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+    .media-credit { display: block; padding: 10px 12px; color: rgba(255,255,255,.78); background: rgba(16,43,58,.92); font-size: .72rem; letter-spacing: .04em; }
+    .portfolio-feature-copy { display: flex; flex-direction: column; align-items: flex-start; gap: 20px; }
+    @media (max-width: 760px) { .portfolio-feature-grid { grid-template-columns: 1fr; } }
 
     #norynthe .slab {
       background:
@@ -1866,6 +1880,7 @@
         <a href="/about/">About</a>
         <a href="#capabilities">Capabilities</a>
         <a href="#work">Work</a>
+        <a href="#creative-portfolio">Creative Portfolio</a>
         <a href="#perspective">Perspective</a>
         <a href="#norynthe">Norynthe.</a>
         <a href="#writing">Writing</a>
@@ -1880,6 +1895,7 @@
       <a href="/about/">About</a>
       <a href="#capabilities">Capabilities</a>
       <a href="#work">Work</a>
+      <a href="#creative-portfolio">Creative Portfolio</a>
       <a href="#perspective">Perspective</a>
       <a href="#norynthe">Norynthe.</a>
       <a href="#writing">Writing</a>
@@ -2100,6 +2116,32 @@
               </div>
             </div>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="creative-portfolio">
+      <div class="container">
+        <div class="portfolio-feature slab cut-a">
+          <div class="section-head">
+            <div>
+              <p class="micro">Creative portfolio</p>
+              <h2>Production, place, and the work of looking closely.</h2>
+            </div>
+            <p>Film, photography, journalism, and digital storytelling—from the Pacific Northwest to the places that stay with me.</p>
+          </div>
+          <div class="portfolio-feature-grid">
+            <div class="media portfolio-feature-video">
+              <video autoplay muted loop playsinline preload="metadata" poster="https://portfolio.alanmotley.com/assets/drone-hero-poster.jpg" aria-label="Aerial film of Discovery Park">
+                <source src="https://portfolio.alanmotley.com/assets/drone-hero.mp4" type="video/mp4">
+              </video>
+              <span class="media-credit">Discovery Park · DJI Air 3 · Filmed and edited by Alan Motley</span>
+            </div>
+            <div class="portfolio-feature-copy">
+              <p>This is the part of my practice where strategy becomes something people can see, hear, and enter: a documentary frame, a public story, a still image, or a digital experience with a point of view.</p>
+              <a class="btn primary" href="https://portfolio.alanmotley.com/" target="_blank" rel="noopener">Open the creative portfolio ↗</a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
