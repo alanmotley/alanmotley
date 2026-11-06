@@ -420,8 +420,14 @@
       clip-path: polygon(0 0, 100% 0, 100% 78%, 78% 100%, 0 100%);
       box-shadow: var(--shadow);
     }
-    .brand-copy strong { display: block; font-size: 14px; letter-spacing: 0.02em; }
+    .brand-copy strong { display: flex; align-items: center; height: 42px; font-size: 18px; font-weight: 800; letter-spacing: -0.04em; color: var(--pine); }
     .brand-copy span { display: block; font-size: 12px; color: var(--steel-strong); margin-top: 2px; }
+    .strategy-bridge { margin-top: 20px; display: inline-flex; gap: 10px; align-items: center; font-size: 12px; color: var(--steel-strong); }
+    .strategy-bridge a { color: var(--pine); font-weight: 700; border-bottom: 1px solid rgba(41,78,96,.35); padding-bottom: 2px; }
+    .strategy-rail { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:28px; border-top:1px solid rgba(41,78,96,.3); border-bottom:1px solid rgba(41,78,96,.3); padding:12px 0; }
+    .strategy-rail span { font-size:10px; font-weight:800; letter-spacing:.12em; color:var(--pine); }
+    .strategy-rail span + span { border-left:1px solid rgba(41,78,96,.25); padding-left:12px; }
+    @media(max-width:800px){.strategy-rail{grid-template-columns:1fr;gap:8px}.strategy-rail span + span{border-left:0;padding-left:0}}
     .nav-links { display: flex; gap: 8px; flex-wrap: wrap; }
     .nav-links a {
       padding: 10px 12px;
@@ -1871,6 +1877,159 @@
     }
   </style>
   <script src="norynthe-pulse-tracker.js?v=20260902-year" defer data-pulse-site="alanmotley"></script>
+<style>
+  /* Local AM Creative-aligned strategy direction */
+  .shape-card, .slab, .work-card, .writing-card, .recommendation-card, .resume-shell {
+    clip-path: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    border: 1px solid #d6e0e4 !important;
+    background: #fff !important;
+  }
+  .shape-card::after, .slab::after, .work-card::after { display: none !important; }
+      .cut-a, .cut-b, .cut-c, .cut-d,
+      .media.cut-a, .media.cut-b, .media.cut-c, .media.cut-d,
+      .portfolio-feature { clip-path: none !important; }
+  #creative-portfolio { padding-top: 0 !important; padding-bottom: 0 !important; }
+  #creative-portfolio::before { display: none !important; }
+  #creative-portfolio > .container { max-width: none !important; padding-left: 0 !important; padding-right: 0 !important; }
+  #creative-portfolio .portfolio-feature { min-height: min(760px, calc(100vh - 78px)) !important; }
+  #creative-portfolio .portfolio-feature .portfolio-feature-content { width: min(100%, var(--max)) !important; min-height: min(690px, calc(100vh - 148px)) !important; margin: 0 auto !important; padding: 0 30px !important; box-sizing: border-box !important; }
+  .section { border-bottom: 1px solid #d6e0e4; }
+  .section:nth-of-type(even) { background: #eef3f5; }
+  .section-head h2, .hero-copy h1, .hero-quote .quote-text { letter-spacing: -0.07em; }
+  .tag { border-radius: 0 !important; background: #eef3f5 !important; border: 1px solid #cddce1 !important; }
+  body { background: #f5f8f9 !important; }
+  body::before { display: none !important; }
+  .site-header { background: #eef3f5 !important; box-shadow: none !important; }
+  .brand-mark { clip-path: none !important; border-radius: 0 !important; box-shadow: none !important; }
+  .hero { padding-top: clamp(70px, 9vw, 120px) !important; padding-bottom: clamp(70px, 8vw, 112px) !important; background: #111a20 !important; border-bottom: 1px solid #263943; color: #f5f8f9 !important; }
+  .hero .micro, .hero .hero-copy > p, .hero .hero-copy .strategy-bridge, .hero .hero-quote, .hero .hero-quote span { color: rgba(245,248,249,.84) !important; }
+  .hero .hero-copy h1 { color: #f5f8f9 !important; }
+  .hero .hero-copy .strategy-bridge a { color: #f5f8f9 !important; border-color: rgba(245,248,249,.45) !important; }
+  .hero .hero-quote .quote-text,
+  .hero .hero-quote .quote-text::before,
+  .hero .hero-quote .quote-text::after,
+  .hero .hero-quote strong { color: #f5f8f9 !important; }
+  .hero .hero-quote .quote-text { opacity: .92 !important; }
+  .hero .strategy-rail { border-color: rgba(245,248,249,.28) !important; }
+  .hero .strategy-rail span { color: #f5f8f9 !important; }
+  .hero .shape-card { color: #111a20 !important; }
+  .hero .shape-card * { color: #111a20 !important; }
+  .hero .shape-card .portrait-meta strong,
+  .hero .shape-card .portrait-meta span,
+  .hero .shape-card .signal h3,
+  .hero .shape-card .signal p,
+  .hero .shape-card .signal-row span { color: #111a20 !important; }
+  .hero .shape-card .signal-row strong { color: var(--oxblood) !important; }
+  .hero-grid { gap: clamp(34px, 5vw, 72px) !important; }
+  .hero-side { gap: 16px !important; }
+  .hero .shape-card { border-color: #cbd8dd !important; }
+  .hero .portrait { padding: 0 !important; background: transparent !important; border: 0 !important; }
+  .hero .portrait-frame { border: 1px solid rgba(245,248,249,.22) !important; }
+  .hero .portrait-meta { padding: 0 2px 2px !important; }
+  .hero .portrait-meta { margin-top: 18px !important; gap: 8px !important; }
+  .hero .portrait-meta { position: relative !important; z-index: 3 !important; display: grid !important; }
+  .hero .portrait-meta > div { display: block !important; visibility: visible !important; opacity: 1 !important; min-height: 74px !important; }
+  .hero .portrait-clean { display: block !important; overflow: visible !important; background: transparent !important; border: 0 !important; }
+  .hero .portrait-clean .portrait-frame { width: 100% !important; margin: 0 !important; }
+  .hero .portrait-caption { display: block !important; position: relative !important; z-index: 5 !important; margin-top: 18px !important; color: #f5f8f9 !important; }
+  .hero .portrait-caption strong { display: block !important; color: #f5f8f9 !important; font: 800 1.02rem/1.25 Sora, Inter, sans-serif !important; margin: 0 0 7px !important; }
+  .hero .portrait-caption p { display: block !important; color: rgba(245,248,249,.74) !important; font: 400 .92rem/1.55 Inter, sans-serif !important; margin: 0 0 16px !important; max-width: 34ch !important; }
+  .hero .portrait-caption .btn { display: inline-flex !important; color: #111a20 !important; background: #f5f8f9 !important; border: 1px solid #f5f8f9 !important; }
+  .hero .hero-metrics { border-top-color: rgba(245,248,249,.28) !important; }
+  .hero .hero-metrics::before { color: rgba(245,248,249,.68) !important; }
+  .hero .hero-metrics .metric { color: #f5f8f9 !important; }
+  .hero .hero-metrics .metric:not(:last-child) { border-right-color: rgba(245,248,249,.24) !important; }
+  .hero .hero-metrics .metric strong { color: #f5f8f9 !important; }
+  .hero .hero-metrics .metric span { color: rgba(245,248,249,.72) !important; }
+  .hero .actions .btn:not(.primary):not(.ghost) { background: #f5f8f9 !important; color: #111a20 !important; border-color: #f5f8f9 !important; opacity: 1 !important; }
+  .hero .portrait-meta strong { color: #f5f8f9 !important; font-size: 1.02rem !important; line-height: 1.25 !important; }
+  .hero .portrait-meta span { color: rgba(245,248,249,.72) !important; font-size: .92rem !important; line-height: 1.55 !important; max-width: 34ch !important; }
+  .hero .portrait-meta .btn { color: #111a20 !important; background: #f5f8f9 !important; border-color: #f5f8f9 !important; }
+  .hero .signal { padding: 26px 26px 22px !important; }
+  .btn { border-radius: 0 !important; letter-spacing: .08em !important; font-weight: 800 !important; }
+  .section-head p { max-width: 52ch !important; }
+  .slab h3 { letter-spacing: -.035em !important; }
+  .slab p { max-width: 58ch; }
+  .section + .section { border-top: 1px solid rgba(45,77,91,.12); }
+  .section:not(#creative-portfolio) { color: #111a20 !important; }
+  .section:not(#creative-portfolio) h2,
+  .section:not(#creative-portfolio) h3,
+  .section:not(#creative-portfolio) strong { color: #111a20 !important; }
+  .section:not(#creative-portfolio) p { color: #4b5c66 !important; }
+  .section-head p { line-height: 1.62 !important; }
+  .slab p, .essay p, .recommendation-card p { line-height: 1.68 !important; }
+  .diag-grid { gap: clamp(16px, 2vw, 24px) !important; }
+  #work .diag-grid { align-items: stretch !important; }
+  #work .work-video-card { display: flex !important; flex-direction: column !important; }
+  #work .work-video-card .media.video { margin-top: auto !important; aspect-ratio: 16 / 9 !important; min-height: 0 !important; }
+  #work .work-video-card .media.video iframe,
+  #work .work-video-card .media.video video { width: 100% !important; height: 100% !important; object-fit: cover !important; }
+  footer { background: #111a20 !important; color: rgba(245,248,249,.8) !important; }
+  footer { padding: 46px 0 54px !important; border-top: 1px solid rgba(245,248,249,.2) !important; text-align: left !important; }
+  footer .container { display: grid !important; grid-template-columns: minmax(220px, .8fr) minmax(0, 1.6fr) !important; gap: 34px !important; align-items: end !important; }
+  footer p { margin-left: 0 !important; color: rgba(245,248,249,.74) !important; }
+  .footer-links { justify-content: flex-end !important; gap: 8px !important; margin-top: 0 !important; }
+  .footer-links a { color: rgba(245,248,249,.78) !important; background: transparent !important; border-color: rgba(245,248,249,.24) !important; padding: 10px 13px !important; font-size: .7rem !important; letter-spacing: .1em !important; transition: background .2s ease, color .2s ease, border-color .2s ease !important; }
+  .footer-links a:hover { color: #111a20 !important; background: #f5f8f9 !important; border-color: #f5f8f9 !important; }
+  .footer-links .footer-featured { color: #111a20 !important; background: #e6a5a0 !important; border-color: #e6a5a0 !important; }
+  .footer-links .footer-featured:hover { background: #f5f8f9 !important; border-color: #f5f8f9 !important; }
+  @media (max-width: 760px) { footer .container { grid-template-columns: 1fr !important; } .footer-links { justify-content: flex-start !important; } }
+  .hero-copy::before { display: none !important; }
+  .micro { font-size: 0.72rem !important; font-weight: 800 !important; letter-spacing: .16em !important; text-transform: uppercase !important; max-width: none !important; }
+  .micro::before { content: ""; width: 42px; height: 1px; background: #a65d62; display: inline-block; flex: 0 0 auto; }
+  .hero-copy h1 { max-width: 8ch; font-size: clamp(4.2rem, 8vw, 8rem) !important; line-height: .86 !important; }
+  .hero-side { padding-top: 0 !important; }
+  .section { padding-top: clamp(21px, 2.4vw, 34px) !important; padding-bottom: clamp(21px, 2.4vw, 34px) !important; }
+  .section + .section::before { margin-bottom: 14px !important; }
+  .section:nth-of-type(even) { background: #e8f0f2 !important; }
+  #about, #writing { background: #f5f8f9 !important; }
+  #capabilities { background: #e8f0f2 !important; }
+  #work { background: #f5f1ed !important; }
+  #perspective { background: #e9eff1 !important; }
+  #resume { background: #e8f0f2 !important; }
+  #credibility { background: #f1f5f5 !important; }
+  #recommendations { background: #f3eee9 !important; }
+  #creative-portfolio { background: #f5f8f9 !important; }
+  #linkedin-signal { background: #dce9ed !important; }
+  #work .slab, #recommendations .recommendation-card { border-color: #d9cfc7 !important; }
+  #capabilities .slab, #perspective .slab, #resume .resume-shell { border-color: #cbd8dd !important; }
+  #credibility .cred-grid img { background: #fff !important; border-color: #d6e0e4 !important; }
+  #norynthe { background: #f5f8f9 !important; color: #111a20 !important; padding-top: 0 !important; padding-bottom: 0 !important; }
+  #norynthe > .container { max-width: none !important; padding: 0 !important; }
+  #norynthe .portal { min-height: 0 !important; padding: clamp(48px, 7vw, 96px) max(30px, calc((100vw - var(--max)) / 2 + 30px)) !important; background: #f5f8f9 !important; border: 0 !important; clip-path: none !important; box-shadow: none !important; }
+  #norynthe .portal-signal { display: none !important; }
+  #norynthe .section-head { max-width: 760px !important; }
+  #norynthe .section-head h2, #norynthe .section-head p { color: #111a20 !important; }
+  #norynthe .section-head > div:first-child::before { background: #a65d62 !important; }
+  #norynthe .norynthe-logo { width: min(420px, 72vw) !important; max-height: 120px !important; object-fit: contain !important; object-position: left center !important; margin: 10px 0 20px !important; filter: none !important; }
+  #norynthe .portal-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 16px !important; }
+  #norynthe .portal-grid .slab { background: #fff !important; border-color: #cbd8dd !important; color: #111a20 !important; }
+  #norynthe .portal-grid .slab h3, #norynthe .portal-grid .slab p { color: #111a20 !important; }
+  #norynthe .portal-rail { border-color: #9fb4bc !important; }
+  #norynthe .portal-rail span { color: #2d4d5b !important; }
+  #norynthe .slab-actions .btn { color: #111a20 !important; background: #f5f8f9 !important; border-color: #f5f8f9 !important; }
+  @media (max-width: 760px) { #norynthe .portal-grid { grid-template-columns: 1fr !important; } }
+  .section-head { margin-bottom: 42px !important; }
+  .section-head > div:first-child::before { background: #a65d62 !important; width: 42px !important; }
+  .section-head h2 { font-size: clamp(3rem, 5.5vw, 6rem) !important; line-height: .88 !important; }
+  .slab { padding: clamp(26px, 3vw, 40px) !important; }
+  .slab::before { background: #2d4d5b !important; }
+  .strategy-rail { border-color: #a8bbc2 !important; }
+  .strategy-rail span { color: #2d4d5b !important; }
+      /* The legacy dark treatment for the first work card must not override
+         the shared light strategy surface. */
+      #work .slab:first-child,
+      #work .slab:first-child h3,
+      #work .slab:first-child p,
+      #work .slab:first-child .tag,
+      #work .slab:first-child .btn,
+      #work .slab:first-child .slab-actions a { color: #111a20 !important; }
+      #work .slab:first-child .tag { background: #eef3f5 !important; border-color: #cddce1 !important; }
+      #work .slab:first-child .media,
+      #work .slab:first-child iframe { border-radius: 0 !important; overflow: hidden; }
+</style>
 </head>
 <body data-analytics-page="Alan Motley Home">
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -1880,8 +2039,7 @@
       <div class="brand">
         <div class="brand-mark">AM</div>
         <div class="brand-copy">
-          <strong>Alan Motley, MSc (AI), MBA</strong>
-          <span>AI Systems Strategist · Founder of Norynthe · Creative Technologist</span>
+          <strong>Strategy</strong>
         </div>
       </div>
       <nav class="nav-links" aria-label="Primary">
@@ -1917,11 +2075,13 @@
           <div class="micro">Governance, narrative, and authorship</div>
           <h1>Strategy, systems, and authorship <span class="accent-line">for the AI era</span><span class="blink-dot" aria-hidden="true"></span></h1>
           <p class="lead">I'm an AI systems strategist, creative technologist, and founder of Norynthe, an independent AI assurance and evaluation company. With an MSc in Artificial Intelligence and an MBA, I shape work where intelligence, governance, narrative, and production meet.</p>
+          <div class="strategy-bridge">Creative production and storytelling <a href="https://portfolio.alanmotley.com/" target="_blank" rel="noopener">at AM Creative ↗</a></div>
           <div class="actions">
             <a class="btn primary" href="#work">View selected work</a>
             <a class="btn" href="#norynthe">Explore Norynthe.</a>
             <a class="btn ghost" href="mailto:am@alanmotley.com">Email me</a>
           </div>
+          <div class="strategy-rail"><span>01 / AI SYSTEMS</span><span>02 / GOVERNANCE</span><span>03 / NARRATIVE</span></div>
           <div class="hero-quote">
             <p class="quote-text">Governable intelligence is not just about what a system can do. It is about what it presents as credible, what it leaves out, and whether that framing still holds when the stakes are real.</p>
             <span>Alan Motley</span>
@@ -1929,17 +2089,15 @@
         </div>
 
         <div class="hero-side">
-          <div class="shape-card portrait">
+          <div class="shape-card portrait portrait-clean">
             <div class="portrait-frame">
               <video autoplay muted loop playsinline preload="none" poster="/alan-motley-creative-technologist-ai-systems-strategist.jpg" aria-label="Portrait motion reel">
                 <source data-src="https://media.giphy.com/media/eJesqlXse6Ipe9mFuq/giphy.mp4" type="video/mp4">
               </video>
             </div>
-            <div class="portrait-meta">
-              <div>
-                <strong>Alan Motley, MSc (AI), MBA</strong>
-                <span>Building governable intelligence, trust-aware workflows, narrative systems, and modern production environments.</span>
-              </div>
+            <div class="portrait-caption">
+              <strong>Alan Motley, MSc (AI), MBA</strong>
+              <p>Building governable intelligence, trust-aware workflows, narrative systems, and modern production environments.</p>
               <a class="btn" href="#resume">Resume</a>
             </div>
           </div>
@@ -2186,24 +2344,24 @@
             <div>
               <h2>Now Building:</h2>
               <img class="norynthe-logo" src="Norynthe_master.png" alt="Norynthe.">
-              <p>Independent infrastructure for AI trust, with a dedicated research layer for rigorous, evidence-based evaluation.</p>
+              <p>Independent infrastructure for AI assurance, evaluation, and trust—designed to help organizations move from AI experimentation to accountable deployment.</p>
             </div>
           </div>
           <div class="portal-grid">
             <article class="slab cut-a" style="padding: 24px;">
-              <h3>The idea</h3>
-              <p>Norynthe. develops independent evaluation systems, governed methodologies, and evidence-linked reporting so organizations can assess AI with evidence instead of assumption.</p>
+              <h3>The platform</h3>
+              <p>Norynthe develops independent assurance systems, governed evaluation methods, and evidence-linked reporting for organizations building with intelligent systems.</p>
             </article>
             <article class="slab cut-d" style="padding: 24px;">
-              <h3>The Norynthe Papers</h3>
-              <p>The research layer of the Norynthe ecosystem publishes methodology, position papers, benchmark analysis, and evidence-based thinking on AI trust and evaluation.</p>
+              <h3>The research layer</h3>
+              <p>The Norynthe Papers extend the platform with methodology, position papers, benchmark analysis, and evidence-based thinking on AI trust and evaluation.</p>
             </article>
           </div>
           <div class="portal-rail">
-            <span>Independent standard</span>
-            <span>Outside the model</span>
-            <span>Research-led methodology</span>
-            <span>Built for trusted intelligence</span>
+            <span>AI assurance</span>
+            <span>Independent evaluation</span>
+            <span>Trust infrastructure</span>
+            <span>Governed intelligence</span>
           </div>
           <div class="slab-actions" style="margin-top: 22px;">
             <a class="btn primary" href="https://norynthe.com/" target="_blank" rel="noopener">Visit Norynthe.</a>
@@ -2405,7 +2563,7 @@
         <a href="https://www.linkedin.com/in/alanmotley/" target="_blank" rel="noopener">LinkedIn</a>
         <a href="https://www.instagram.com/alanmotley" target="_blank" rel="noopener">Instagram</a>
         <a href="https://bsky.app/profile/alanmotley.com" target="_blank" rel="me noopener">Bluesky</a>
-        <a href="https://portfolio.alanmotley.com/" target="_blank" rel="noopener">Creative Portfolio</a>
+        <a class="footer-featured" href="https://portfolio.alanmotley.com/" target="_blank" rel="noopener">Creative Portfolio ↗</a>
         <a href="/privacy.html">Privacy</a>
       </div>
     </div>
